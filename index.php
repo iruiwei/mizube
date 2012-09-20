@@ -10,5 +10,3 @@
 		echo 'Welcome!!';
 	}
 ?>
-hello world!!!!!
-mogamigawa
