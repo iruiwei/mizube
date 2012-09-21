@@ -41,7 +41,7 @@ if(!isset($_SESSION['result'])){
 				echo " ";
 				echo $data['lat'];
 				echo " ";
-				echo $data['long'];
+				echo $data['lon'];
 				echo " ";
 				echo $data['view'];
 				echo " ";
