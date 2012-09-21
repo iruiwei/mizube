@@ -25,7 +25,7 @@ if(!empty($_POST)){
 <body>
 	
 	<form action="" method="post" enctype="multipart/form-data">
-		ID<input type="text" name="ID" size="10" value="<?php echo htmlspecialchars($_POST['id'],ENT_QUOTES,'UTF-8')?>"/><br>
+		ID<input type="text" name="id" size="10" value="<?php echo htmlspecialchars($_POST['id'],ENT_QUOTES,'UTF-8')?>"/><br>
 		Name<input type="text" name="name" size="10" maxlength="50" value="<?php echo htmlspecialchars($_POST['name'],ENT_QUOTES,'UTF-8')?>"/><br>
 		<input type="submit" value="ok"/><br>
 	</form>
@@ -41,7 +41,7 @@ if(!empty($_POST)){
 		echo " ";
 		echo $data['lat'];
 		echo " ";
-		echo $data['lon'];
+		echo $data['long'];
 		echo " ";
 		echo $data['view'];
 		echo " ";

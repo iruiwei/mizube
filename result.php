@@ -18,9 +18,10 @@ if(!isset($_SESSION['result'])){
 	<!-- Date: 2012-09-20 -->
 </head>
 <body>
+
 <?php
-	$rName=$_SESSION['result']['name'];
 	$rId=$_SESSION['result']['id'];
+	$rName=$_SESSION['result']['name'];
 	if($rId!=''){
 		$sql0=sprintf('select count(*) as cnt from mb_restaurant where rid="%d"',mysql_real_escape_string($rId));
 		$record0=mysql_query($sql0)or die(mysql_error());
@@ -41,7 +42,7 @@ if(!isset($_SESSION['result'])){
 				echo " ";
 				echo $data['lat'];
 				echo " ";
-				echo $data['lon'];
+				echo $data['long'];
 				echo " ";
 				echo $data['view'];
 				echo " ";
