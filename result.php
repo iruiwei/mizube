@@ -22,23 +22,71 @@ if(!isset($_SESSION['result'])){
 	$rName=$_SESSION['result']['name'];
 	$rId=$_SESSION['result']['id'];
 	if($rId!=''){
-		$sql1=sprintf('select * from mb_restaurant where rid="%d"',mysql_real_escape_string($rId));
-		$recordset=mysql_query($sql1)or die(mysql_error());
-		while($data=mysql_fetch_assoc($recordset)){
-			echo $data['name'];
-			echo " ";
-			echo $data['lat'];
-			echo " ";
-			echo $data['long'];
-			echo " ";
-			echo $data['view'];
-			echo " ";
-			echo $data['menu'];
-			echo " ";
-			echo $data['comment'];
-			echo " ";
-			echo '<br />';
+		$sql0=sprintf('select count(*) as cnt from mb_restaurant where rid="%d"',mysql_real_escape_string($rId));
+		$record0=mysql_query($sql0)or die(mysql_error());
+ 		$table0=mysql_fetch_assoc($record0);
+ 		if($table0['cnt']==0){
+			echo 'No result!';
 		}
+		else{
+			echo $table0['cnt'] ." results";
+			echo '<br />';
+			
+			$sql1=sprintf('select * from mb_restaurant where rid="%d"',mysql_real_escape_string($rId));
+			$recordset=mysql_query($sql1)or die(mysql_error());
+			while($data=mysql_fetch_assoc($recordset)){
+				echo $data['rid'];
+				echo " ";
+				echo $data['name'];
+				echo " ";
+				echo $data['lat'];
+				echo " ";
+				echo $data['long'];
+				echo " ";
+				echo $data['view'];
+				echo " ";
+				echo $data['menu'];
+				echo " ";
+				echo $data['comment'];
+				echo " ";
+				echo '<br />';
+			}
+		}
+	}
+	else if ($rId==''&&$rName!=''){
+		$sql0=sprintf('select count(*) as cnt from mb_restaurant where name like "%s"',"%".mysql_real_escape_string($rName)."%");
+		$record0=mysql_query($sql0)or die(mysql_error());
+ 		$table0=mysql_fetch_assoc($record0);
+ 		if($table0['cnt']==0){
+			echo 'No result!';
+		}
+		else{
+			echo $table0['cnt'] ." results";
+			echo '<br />';
+			
+			$sql2=sprintf('select * from mb_restaurant where name like "%s"',"%".mysql_real_escape_string($rName)."%");
+			$recordset=mysql_query($sql2)or die(mysql_error());
+			while($data=mysql_fetch_assoc($recordset)){
+				echo $data['rid'];
+				echo " ";
+				echo $data['name'];
+				echo " ";
+				echo $data['lat'];
+				echo " ";
+				echo $data['long'];
+				echo " ";
+				echo $data['view'];
+				echo " ";
+				echo $data['menu'];
+				echo " ";
+				echo $data['comment'];
+				echo " ";
+				echo '<br />';
+			}
+		}
+	}
+	else{
+		echo "No result";
 	}
 ?>
 
