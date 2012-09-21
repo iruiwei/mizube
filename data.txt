@@ -1,0 +1,123 @@
+
+注意：
+データベースを選んだあとからsqlを実行してください。
+テーブルを１個つづ作ってください。
+３つのデータは同時にインサートできます。
+
+create table mb_restaurant (
+	rid int,
+	tag_id text,
+	lat double,
+	lon double,
+	name varchar(50),
+	view int,
+	uniqueuser int,
+	area_id int,
+	menu text,
+	opentime datetime,
+	closetime datetime,
+	photo varchar(100),
+	phone varchar(30),
+	introduction text,
+	comment text
+)
+
+
+create table mb_area(
+	aid int,
+	area_name varchar(50),
+	lat double,
+	lon double,
+	hashtag int
+)
+
+
+create table mb_shiptime(
+	sid int,
+	departureID int,
+	arrivalID int,
+	depTime datetime,
+	costTime datetime,
+	maxTicket1 int,
+	currentTicket1 int,
+	maxTicket2 int,
+	currentTicket2 int,
+	train	text,
+	walk	text,
+	comment	text
+)
+
+
+create table mb_tag(
+	tag_id int,
+	tag_name varchar(50)
+)
+
+--------------テストデータ---------------
+
+
+INSERT INTO  `mb_restaurant` (
+`rid` ,
+`tag_id` ,
+`lat` ,
+`lon` ,
+`name` ,
+`view` ,
+`uniqueuser` ,
+`area_id` ,
+`menu` ,
+`opentime` ,
+`closetime` ,
+`photo` ,
+`phone` ,
+`introduction` ,
+`comment`
+)
+VALUES (
+'3',  '001',  '765.001',  '435.002',  '工学部',  '23',  '3',  '002',  '205,206',  '2012-09-21 10:00:00',  '2012-09-21 23:00:00',  '',  '',  '711に近い',  '遠い'
+);
+
+
+
+INSERT INTO  `mb_restaurant` (
+`rid` ,
+`tag_id` ,
+`lat` ,
+`lon` ,
+`name` ,
+`view` ,
+`uniqueuser` ,
+`area_id` ,
+`menu` ,
+`opentime` ,
+`closetime` ,
+`photo` ,
+`phone` ,
+`introduction` ,
+`comment`
+)
+VALUES (
+'1',  '001',  '0.11',  '0.11',  '2ndlab',  '100',  '24',  '1',  'ゲソ',  '2012-09-21 10:00:00',  '2012-09-21 22:00:00',  '',  '',  '2ndlab',  'いいね'
+);
+
+
+INSERT INTO  `mb_restaurant` (
+`rid` ,
+`tag_id` ,
+`lat` ,
+`lon` ,
+`name` ,
+`view` ,
+`uniqueuser` ,
+`area_id` ,
+`menu` ,
+`opentime` ,
+`closetime` ,
+`photo` ,
+`phone` ,
+`introduction` ,
+`comment`
+)
+VALUES (
+'2',  '001,002',  '123.4',  '567.8',  '4gokan',  '123',  '22',  '1',  '初号機',  '2012-09-21 01:00:00',  '2012-09-21 23:00:00',  '',  '',  '神戸大学',  '攻殻機動隊'
+);
