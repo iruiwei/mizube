@@ -1,5 +1,6 @@
 <?php
 session_start();
+require('dbconnect.php');
 if(!empty($_POST)){
 	if($_POST['id']=='')
 		$isblank['id']='blank';
@@ -28,7 +29,30 @@ if(!empty($_POST)){
 		Name<input type="text" name="name" size="10" maxlength="50" value="<?php echo htmlspecialchars($_POST['name'],ENT_QUOTES,'UTF-8')?>"/><br>
 		<input type="submit" value="ok"/><br>
 	</form>
-	
+	<br>
+	<?php
+	$count=1;
+	$sql=sprintf('select * from mb_restaurant order by view desc');
+	$record=mysql_query($sql)or die(mysql_error());
+	while($data=mysql_fetch_assoc($record)){
+		echo "rank". $count;
+		echo " ";
+		echo $data['name'];
+		echo " ";
+		echo $data['lat'];
+		echo " ";
+		echo $data['long'];
+		echo " ";
+		echo $data['view'];
+		echo " ";
+		echo $data['menu'];
+		echo " ";
+		echo $data['comment'];
+		echo " ";
+		echo '<br />';
+		$count++;
+	}
+	?>
 
 </body>
 </html>
