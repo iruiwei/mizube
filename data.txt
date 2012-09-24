@@ -121,3 +121,39 @@ INSERT INTO  `mb_restaurant` (
 VALUES (
 '2',  '001,002',  '123.4',  '567.8',  '4gokan',  '123',  '22',  '1',  '初号機',  '2012-09-21 01:00:00',  '2012-09-21 23:00:00',  '',  '',  '神戸大学',  '攻殻機動隊'
 );
+
+
+INSERT INTO  `mb_area` (
+`aid` ,
+`area_name` ,
+`lat` ,
+`lon` ,
+`hashtag`
+)
+VALUES (
+'3',  '2ndlab',  '543.123',  '987.780',  '3'
+);
+
+
+INSERT INTO  `mb_area` (
+`aid` ,
+`area_name` ,
+`lat` ,
+`lon` ,
+`hashtag`
+)
+VALUES (
+'1',  '4gokan',  '123.456',  '789.001',  '1'
+);
+
+
+INSERT INTO  `mb_area` (
+`aid` ,
+`area_name` ,
+`lat` ,
+`lon` ,
+`hashtag`
+)
+VALUES (
+'2',  '工学部',  '456.123',  '100.987',  '2'
+);
