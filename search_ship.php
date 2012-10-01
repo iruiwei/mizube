@@ -69,7 +69,7 @@ require('dbconnect.php');
 		hour
 		<select name="hh">
 		<?php
-			$h=date('G');
+			$h=1;
 			do{
 				?>
 				<option value="<?php echo $h?>"><?php echo $h?></option>
@@ -84,7 +84,7 @@ require('dbconnect.php');
 		minute
 		<select name="mm">
 		<?php
-			$h=date('i');
+			$h=0;
 			do{
 				?>
 				<option value="<?php echo $h?>"><?php echo $h?></option>
