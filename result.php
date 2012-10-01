@@ -40,9 +40,9 @@ if(!isset($_SESSION['result'])){
 				echo " ";
 				echo $data['name'];
 				echo " ";
-				echo $data['lat'];
+				echo $data['lon'];
 				echo " ";
-				echo $data['long'];
+				echo $data['lat'];
 				echo " ";
 				echo $data['view'];
 				echo " ";
@@ -72,9 +72,9 @@ if(!isset($_SESSION['result'])){
 				echo " ";
 				echo $data['name'];
 				echo " ";
-				echo $data['lat'];
+				echo $data['lon'];
 				echo " ";
-				echo $data['long'];
+				echo $data['lat'];
 				echo " ";
 				echo $data['view'];
 				echo " ";
