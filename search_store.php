@@ -40,9 +40,9 @@ if(!empty($_POST)){
 		echo " ";
 		echo $data['name'];
 		echo " ";
-		echo $data['lat'];
+		echo $data['lon'];
 		echo " ";
-		echo $data['long'];
+		echo $data['lat'];
 		echo " ";
 		echo $data['view'];
 		echo " ";
