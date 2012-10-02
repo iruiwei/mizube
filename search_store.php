@@ -54,6 +54,19 @@ if(!empty($_POST)){
 		$count++;
 	}
 	?>
+	
+	<?php
+		$sql=sprintf('select * from mb_tag');
+		$record=mysql_query($sql)or die(mysql_error());
+		while($data=mysql_fetch_assoc($record)){
+			//echo $data['tag_name'];
+			//echo " ";
+			?><a href="tag_result.php?tag=<?php echo $data['tag_id'];?>"><?php echo $data['tag_name'];?></a>
+			<?php echo " ";?>
+	<?php
+		}
+		echo '<br/>';
+	?>
 
 </body>
 </html>
