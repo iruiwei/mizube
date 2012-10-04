@@ -219,18 +219,18 @@ if(!isset($_POST)){
 						echo $data['a1']." ";
 						echo $data['dt1']." ";
 						echo $data['ct1']." ";
-						echo $data['cut1']." ";
 						echo $data['a2']." ";
+						echo $data['cut1']." ";
 						echo $data['a2']." ";
 						echo $data['dt2']." ";
 						echo $data['ct2']." ";
-						echo $data['cut2']." ";
 						echo $data['a3']." ";
+						echo $data['cut2']." ";
 						echo $data['a3']." ";
 						echo $data['dt4']." ";
 						echo $data['ct4']." ";
-						echo $data['cut4']." ";
 						echo $data['a4']." ";
+						echo $data['cut4']." ";
 						echo '<br />';
 					}
 				}
@@ -351,7 +351,8 @@ if(!isset($_POST)){
 				$recordset3=mysql_query($sql3)or die(mysql_error());
 				$data3=mysql_fetch_assoc($recordset3);
 				if($data3['cnt']>0){
-					$sql=sprintf('select 
+					
+					$sqls=sprintf('select 
 									r3.c1,
 									r3.c2,
 									r3.c3,
@@ -419,25 +420,26 @@ if(!isset($_POST)){
 						mysql_real_escape_string($lev), 
 						mysql_real_escape_string($arv),
 						mysql_real_escape_string($t));
-					$table=mysql_query($sql)or die(mysql_error());
+					$tables=mysql_query($sqls)or die(mysql_error());
 					echo "出発"."  "."出発時間"."  "."消費時間"."  "."中継1"."  "."残りチケット"."  "."出発"."  "."出発時間"."  "."消費時間"."  "."中継2"."  "."残りチケット"."  "."出発"."  "."出発時間"."  "."消費時間"."  "."到着"."  "."残りチケット";
 					echo '<br />';
-					while($data=mysql_fetch_assoc($table)){
-						echo $data['a1']." ";
-						echo $data['dt1']." ";
-						echo $data['ct1']." ";
-						echo $data['cut1']." ";
-						echo $data['a2']." ";
-						echo $data['a2']." ";
-						echo $data['dt2']." ";
-						echo $data['ct2']." ";
-						echo $data['cut2']." ";
-						echo $data['a3']." ";
-						echo $data['a3']." ";
-						echo $data['dt4']." ";
-						echo $data['ct4']." ";
-						echo $data['cut4']." ";
-						echo $data['a4']." ";
+					while($datas=mysql_fetch_assoc($tables)){
+						
+						echo $datas['a1']." ";
+						echo $datas['dt1']." ";
+						echo $datas['ct1']." ";
+						echo $datas['a2']." ";
+						echo $datas['cut1']." ";
+						echo $datas['a2']." ";
+						echo $datas['dt2']." ";
+						echo $datas['ct2']." ";
+						echo $datas['a3']." ";
+						echo $datas['cut2']." ";
+						echo $datas['a3']." ";
+						echo $datas['dt4']." ";
+						echo $datas['ct4']." ";
+						echo $datas['a4']." ";
+						echo $datas['cut4']." ";
 						echo '<br />';
 					}
 				}
