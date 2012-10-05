@@ -10,7 +10,7 @@ if(!isset($_SESSION['a_result'])){
 if(!isset($_POST)){
 	header('location:search_ship.php');
 	exit();
-}
+}mb_port
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
@@ -47,8 +47,8 @@ if(!isset($_POST)){
 							currentTicket1 
 						from 
 							mb_shiptime,
-							mb_area mba1,
-							mb_area mba2 
+							mb_port mba1,
+							mb_port mba2 
 						where 
 							departureID="%d" 
 						and 
@@ -95,9 +95,9 @@ if(!isset($_POST)){
 								t1.arrivalID as arv1,
 								t2.arrivalID as arv2 
 							from 
-								mb_area as mba1,
-								mb_area as mba2,
-								mb_area as mba3, 
+								mb_port as mba1,
+								mb_port as mba2,
+								mb_port as mba3, 
 								mb_shiptime as t1 
 							right join 
 								mb_shiptime as t2 
@@ -163,7 +163,7 @@ if(!isset($_POST)){
 									mba4.area_name a4,
 									r4.arrivalID c4 
 								from 
-									mb_area mba4,
+									mb_port mba4,
 									(
 									select 
 										mba1.area_name a1,
@@ -179,9 +179,9 @@ if(!isset($_POST)){
 										r1.arrivalID c2,
 										r2.arrivalID c3 
 									from 
-										mb_area mba1,
-										mb_area mba2,
-										mb_area mba3,
+										mb_port mba1,
+										mb_port mba2,
+										mb_port mba3,
 										mb_shiptime r1 
 									inner join 
 										mb_shiptime r2 
@@ -254,8 +254,8 @@ if(!isset($_POST)){
 							currentTicket1 
 						from 
 							mb_shiptime,
-							mb_area mba1,
-							mb_area mba2 
+							mb_port mba1,
+							mb_port mba2 
 						where 
 							departureID="%d" 
 						and 
@@ -302,9 +302,9 @@ if(!isset($_POST)){
 								t1.arrivalID as arv1,
 								t2.arrivalID as arv2 
 							from 
-								mb_area as mba1,
-								mb_area as mba2,
-								mb_area as mba3, 
+								mb_port as mba1,
+								mb_port as mba2,
+								mb_port as mba3, 
 								mb_shiptime as t1 
 							right join 
 								mb_shiptime as t2 
@@ -371,7 +371,7 @@ if(!isset($_POST)){
 									mba4.area_name a4,
 									r4.arrivalID c4 
 								from 
-									mb_area mba4,
+									mb_port mba4,
 									(
 									select 
 										mba1.area_name a1,
@@ -387,9 +387,9 @@ if(!isset($_POST)){
 										r1.arrivalID c2,
 										r2.arrivalID c3 
 									from 
-										mb_area mba1,
-										mb_area mba2,
-										mb_area mba3,
+										mb_port mba1,
+										mb_port mba2,
+										mb_port mba3,
 										mb_shiptime r1 
 									inner join 
 										mb_shiptime r2 

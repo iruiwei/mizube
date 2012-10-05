@@ -25,7 +25,7 @@ require('dbconnect.php');
 		
 		leave for
 		<?php
-		$sql=sprintf('select aid,area_name from mb_area');
+		$sql=sprintf('select aid,area_name from mb_port');
 		$record=mysql_query($sql)or die(mysql_error());
 		?>
 		<select name="a_leave">
@@ -43,7 +43,7 @@ require('dbconnect.php');
 		
 		to
 		<?php
-		$sql=sprintf('select aid,area_name from mb_area');
+		$sql=sprintf('select aid,area_name from mb_port');
 		$record=mysql_query($sql)or die(mysql_error());
 		?>
 		<select name="a_arrive">
