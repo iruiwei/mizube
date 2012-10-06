@@ -1,0 +1,135 @@
+﻿* {
+	margin: 0;
+	padding: 0;
+}
+header, nav, section, article, aside, footer {
+	display: block;
+}
+body {
+	width: 100%;	
+	background-image: url("img/background.jpg");
+	font-family: Arial, Helvetica, Verdana, “ヒラギノ角ゴPro W3″, “Hiragino Kaku Gothic Pro”, Osaka, “メイリオ”, Meiryo, “ＭＳ Ｐゴシック”, sans-serif;
+	line-height: 1.7;
+}
+h1 {
+	padding:10% 0 10% 15%;
+	text-align: left;	
+	color:  #000000;
+	font-size: 15px;
+}
+h2{
+	padding: 5px 0 0 30px;
+	text-align: left;
+	font-size: 20px;
+	color: #000000;
+}
+h3{
+	padding: 5px 0 5px 0;
+	font-size: 14px;
+	color: #000000;
+}
+/* Header-----------------------------------------------------------------------------*/
+
+header {
+  width: 100%;
+}
+
+#page_top {
+  margin: 0;
+  padding: 0;
+}
+
+/* Nav-----------------------------------------------------------------------------*/
+.nav {
+	width: 100%;
+	margin: 0;
+	padding: 0 0 0 0;
+	}	
+
+/* rest-----------------------------------------------------------------------------*/
+.restaurant{
+	width: 100%;
+	height: 100px;
+	padding: 0;
+	margin: 0;
+	background:  rgba(0,0,0,0.2);
+	border-bottom: dotted 3px;
+	border-bottom-color: #cccccc;
+}
+.rest_left{
+	width: 18%;
+	height: 80px;
+	padding: 10px 1%;
+	margin: 0;
+	float: left;
+}
+.rest_right{
+	width: 72%;
+	height: 80px;
+	padding: 10px 1%;
+	margin: 0;
+	float: left;
+}
+.rest_arrow{
+	width: 6%;
+	height: 100px;
+	padding: 0;
+	float: left;
+	background: url("img/arrow_icon.png") no-repeat center;
+}
+.image_style{
+	width: 80%;
+}
+/* レストラン探す-----------------------------------------------------------------------------*/
+.search_rest{
+	width:99%;
+	background:  rgba(255,255,255, 0.2);
+	border: 3px dotted #cccccc;
+	height: 80px;
+	padding: 30px 30px 0 10px;
+}
+.rest_text{
+	width: 80%;
+	height: 50px;
+	padding: 0;
+	float:left;
+}
+.rest_submit{
+	width: 20%;
+	padding: 0;
+	height: 50px;
+	float: right;
+}
+/* 運行-----------------------------------------------------------------------------*/
+select{
+	width: 80%;
+	margin: 10%;
+	-moz-appearance: button;
+    -webkit-appearance: button;
+    appearance: button;
+    padding: 4px;
+    background: #EAEAEA;
+    border: none;
+    color: #222;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.32) inset;
+}
+
+#submit_botton{
+	width: 100px;
+	margin: 0 40%;
+}
+#ship_info{
+	width: 80%;
+	background:  rgba(0,0,0, 0.2);
+	margin-top: 50px;
+	margin-left: 10%;
+	margin-right: 10%;
+	height: 500px;	
+}
+
+/* Twitter-----------------------------------------------------------------------------*/
+#twitter{
+	width: 60%;
+	height: 100px;
+	padding: 20%;
+}
