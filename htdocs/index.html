@@ -22,7 +22,7 @@
 	  一、 船の整理券の残り枚数をリアルタイムで案内<br>
 	  一、 レストランの場所やメニューを探せます<br></h1>
 	<div class= "nav">
-	<a href="recomen.html"><img src="img/osusume.png" style="width:100%"></a>
+	<a href="barmap/barmap.php"><img src="img/osusume.png" style="width:100%"></a>
 	</div>
 	<div class= "nav">
 	<a href="ship.html"><img src="img/fune.png" style="width:100%"></a>
@@ -30,12 +30,41 @@
 	<div class= "nav">
 	<a href="rest_search.html"><img src="img/resutoran.png" style="width:100%"></a>
 	</div>
-	
-	<div id = "twitter">
-	 	<a class="twitter-timeline" href="https://twitter.com/search?q=%23mizubebar" data-widget-id="251169153229127680">#mizubebar に関するツイート</a>
-		<script>!function(d,s,id){var
-js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-	 </div>
+	 
+	 <div class="twitter">
+	 <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+version: 2,
+type: 'search',
+search: '#mizubebar',
+interval: 30000,
+title: '',
+subject: '水辺バル',
+width: 'auto',
+height: 400,
+theme: {
+shell: {
+background: '#ffffff33',
+color: '#8a8a8a'
+},
+tweets: {
+background: '#ffffff99',
+color: '#444444',
+links: '#1985b5'
+}
+},
+features: {
+scrollbar: false,
+loop: true,
+live: true,
+behavior: 'default'
+}
+}).render().start();
+</script>
+
+</div>
+	 
 	<footer>
 	</footer>	
 </body>
