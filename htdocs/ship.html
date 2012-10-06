@@ -14,11 +14,11 @@
 <body>
 	<header>
 		<div id= "page_top">
-		<h1><a href="index.html">運行情報</a></h1>
+		<a href="index.html"><img src= "img/logo.png" style="width:100%"></a>
+		<img src= "img/line.png" style="width:100%">
 		</div>
 	</header>
 	<form method= "GET" action="">
-	出発
 	 <select>
         <option selected="selected">八軒家浜船着場</option>
         <option>ローズポート</option>
@@ -30,11 +30,70 @@
 		<option>北浜仮設桟橋</option>
 		<option>大正臨時船着場</option>
      </select>
-	 <input type="submit" value="決定" id= "submit_botton">
-	 <div id="ship_info">
-	 運行表
-	 </div>
+	 <input type="submit" value="エリア変更" id= "submit_botton">
 	 </form>
+
+	 <div id="ship_info">
+	 <h3 class="ship_title">運行情報</h3>
+	 <div class="ship_ex">整理券の残り枚数<br>（◎:多数、◯:10毎以下、△：５枚以下、ｘ：なし、運休）
+	 </div>
+	 
+	 <div class="ship_to">八軒家浜船着場 →　北浜	</div>
+
+	 	<div class="ship_info">
+		現在、５分遅れで運行しています。
+	</div>
+
+	
+	 <table>	
+	  <tr>  
+		<th>14</th>  
+		<td colspan="4">10(×)</td>  
+	  </tr>  
+	  <tr>  
+		<th>15</th>  
+		<td>0(△)</td>
+		<td>10(◎)</td>
+		<td>20(◎)</td>
+		<td>30(◎)</td>
+	  </tr>  
+	  <tr>  
+		<th>16</th> 
+		<td>10(◎)</td>		
+		<td colspan="3">30(×)</td>  
+	  </tr>  
+	 </table>  
+	
+
+
+	 <div class="ship_to">八軒家浜船着場 →　大正	</div>
+	 <div class-"ship_table">
+	 <table>	
+	  <tr>  
+		<th>14</th>  
+		<td colspan="4">10(×)</td>  
+	  </tr>  
+	  <tr>  
+		<th>15</th>  
+		<td>0(△)</td>
+		<td>10(◎)</td>
+		<td>20(◎)</td>
+		<td>30(◎)</td>
+	  </tr>  
+	  <tr>  
+		<th>16</th> 
+		<td>10(◎)</td>		
+		<td colspan="3">30(×)</td>  
+	  </tr>  
+	 </table>  
+	</div>
+	 </div>
+	 
+	 <div id="twitter">
+	 	天満橋エリア</br>
+	 	twiiterのエリア情報
+	 </div>
+
 	<footer>
 	</footer>	
 </body>
