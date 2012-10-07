@@ -3,25 +3,25 @@
 ?>
 <html>
 <head>
-<meta charset=shift_jis>
+<meta charset=utf-8>
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true&hl=ja"></script>
 <script type="text/javascript" src="jquery-1.8.2.min.js"></script>
 <script type="text/javascript">
 	var lat=0;
 	var lng=0;
-  function initialize() {
+  	function initialize() {
     var initPos = new google.maps.LatLng(34.682177, 135.497303);
     var myOptions = {
-      noClear : true,
-      center : initPos,
-      zoom : 13,
-      mapTypeId : google.maps.MapTypeId.ROADMAP
+    	noClear : true,
+    	center : initPos,
+    	zoom : 13,
+    	mapTypeId : google.maps.MapTypeId.ROADMAP
     };
-    var map_canvas = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+    //var map_canvas = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
      
     
-    //kml“Ç‚İ‚İ•”•ª
+    //kmlèª­ã¿è¾¼ã¿éƒ¨åˆ†
     
     //var kmlUrl = "http://192.168.11.25/barMap.kml";
     //var kmlUrl = "http://googlemaps.googlermania.com/uploads/kmlsample3.kml";
@@ -29,56 +29,57 @@
     //kmlLayer.setMap(map_canvas);
     
 
-    //ƒ†[ƒU‚ÌˆÊ’uî•ñæ“¾
+    //ãƒ¦ãƒ¼ã‚¶ã®ä½ç½®æƒ…å ±å–å¾—
     navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 
-    //ˆÊ’uî•ñæ“¾¬Œ÷
-@@function successCallback(position){
-    @var gl_text = "ˆÜ“xF" + position.coords.latitude + "<br>";
-@@@gl_text += "Œo“xF" + position.coords.longitude + "<br>";
-@@@document.getElementById("show_result").innerHTML = gl_text;
+    //ä½ç½®æƒ…å ±å–å¾—æˆåŠŸæ™‚
+ã€€ã€€	function successCallback(position){
+    ã€€ 	var gl_text = "ç·¯åº¦ï¼š" + position.coords.latitude + "<br>";
+ã€€ã€€ã€€ 	gl_text += "çµŒåº¦ï¼š" + position.coords.longitude + "<br>";
+ã€€ã€€ã€€		document.getElementById("show_result").innerHTML = gl_text;
 
-      //php‚É’l‘—M
-@@@lat = position.coords.latitude;
-      	 lng = position.coords.longitude;
+      	//phpã«å€¤é€ä¿¡
+ã€€ã€€ã€€		lat = position.coords.latitude;
+    	lng = position.coords.longitude;
       	       	 
       	 
-@@@$(function(){
-  $('#sw').click(
-   function(){
-    $.post(
-     "test_post.php",                      // ƒŠƒNƒGƒXƒgURL
-     {"key1": lat, "key2": lng}, // ƒf[ƒ^	//‚±‚±‚ÉˆÜ“xŒo“x
-     function(data, status) {
-      // ’ÊM¬Œ÷‚Éƒf[ƒ^‚ğ•\¦
-      $("#test_result")
-      .append("status:").append(status).append("<br/>")
-      .append("data:").append(data).append("<br/>");
-     },
-     "html"                                 // ‰“šƒf[ƒ^Œ`®
-    );
-   }
-  );
- });
-
-      //Œ»İˆÊ’uƒ}[ƒJ[‚Ì¶¬
+ã€€ã€€ã€€		$(function(){
+  			$('#sw').click(
+				function(){
+    				$.post(
+     					"test_post.php",                      // ãƒªã‚¯ã‚¨ã‚¹ãƒˆURL
+     					{"key1": lat, "key2": lng}, // ãƒ‡ãƒ¼ã‚¿	//ã“ã“ã«ç·¯åº¦çµŒåº¦
+     					function(data, status) {
+      						// é€šä¿¡æˆåŠŸæ™‚ã«ãƒ‡ãƒ¼ã‚¿ã‚’è¡¨ç¤º
+      						$("#test_result")
+      						.append("status:").append(status).append("<br/>")
+      						.append("data:").append(data).append("<br/>");
+     					},
+     					"html"                                 // å¿œç­”ãƒ‡ãƒ¼ã‚¿å½¢å¼
+    				);
+   				}
+  			);
+ 		}
+		);
+/*
+      //ç¾åœ¨ä½ç½®ãƒãƒ¼ã‚«ãƒ¼ã®ç”Ÿæˆ
       var nowlatlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-@@@var marker = new google.maps.Marker({
+ã€€ã€€ã€€var marker = new google.maps.Marker({
        position: nowlatlng,
        map: map_canvas,
        title: "CurrentPosition"
       });
-      //î•ñƒEƒBƒ“ƒhƒE‚Ì’Ç‰Á
-@@@var info = new google.maps.InfoWindow({content: '<p>You are here!</p>'});
-      //ƒNƒŠƒbƒN‚µ‚½‚çî•ñ’ñ¦
-@@@google.maps.event.addListener(marker, 'click', function(){
+      //æƒ…å ±ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã®è¿½åŠ 
+ã€€ã€€ã€€var info = new google.maps.InfoWindow({content: '<p>You are here!</p>'});
+      //ã‚¯ãƒªãƒƒã‚¯ã—ãŸã‚‰æƒ…å ±æç¤º
+ã€€ã€€ã€€google.maps.event.addListener(marker, 'click', function(){
        info.open(map_canvas, marker);
       });
       
-      //ƒ‹[ƒg•\¦
-      var From = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);	//Œ»İ’n
-      var To = new google.maps.LatLng(34.702643,135.497131);	//–Ú“I’n
-@@@new google.maps.DirectionsService().route({
+      //ãƒ«ãƒ¼ãƒˆè¡¨ç¤º
+      var From = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);	//ç¾åœ¨åœ°
+      var To = new google.maps.LatLng(<?= htmlspecialchars($_POST['key1'], ENT_QUOTES, 'UTF-8'); ?>34.702643,135.497131);	//ç›®çš„åœ°
+ã€€ã€€ã€€new google.maps.DirectionsService().route({
        origin: From,
        destination: To,
        travelMode: google.maps.DirectionsTravelMode.WALKING
@@ -86,16 +87,16 @@
        if (status == google.maps.DirectionsStatus.OK){
         new google.maps.DirectionsRenderer({map: map_canvas}).setDirections(result);
         SetDistance(result);
-	var duration = result.routes[0].legs[0].duration.text; /*XV‰ÓŠ*/
-	gl_text += "Š—vŠÔF" + duration + "<br>"; 	//
+	var duration = result.routes[0].legs[0].duration.text; //æ›´æ–°ç®‡æ‰€
+	gl_text += "æ‰€è¦æ™‚é–“ï¼š" + duration + "<br>"; 	//
 	document.getElementById("show_result").innerHTML = gl_text;
        }
       });
 
-      //ˆÚ“®‹——£ŒvZ
+      //ç§»å‹•è·é›¢è¨ˆç®—
       function SetDistance(routeData)
       {
-	@@@var distance = GetDistanceKm(routeData.routes[0].legs); 
+	ã€€ã€€ã€€var distance = GetDistanceKm(routeData.routes[0].legs); 
 	      if (distance > 100) 
 	      { 
 	       distance = distance.toFixed(0); 
@@ -104,7 +105,7 @@
 	      { 
 	       distance = distance.toFixed(1); 
 	      } 
-	      gl_text += "ˆÚ“®‹——£F"+ distance + "km" +"<br>";
+	      gl_text += "ç§»å‹•è·é›¢ï¼š"+ distance + "km" +"<br>";
 	      document.getElementById("show_result").innerHTML = gl_text;
 	      }
       function GetDistanceKm(legs)
@@ -117,27 +118,27 @@
        return journey / 1000;
       }
         
-      //php‚É’ló‚¯“n‚µ
-@@@
-
+      //phpã«å€¤å—ã‘æ¸¡ã—
+ã€€ã€€ã€€
+*/
     }
 
-@@//ˆÊ’uî•ñæ“¾‚ª‚Å‚«‚È‚¢ê‡
-@@function errorCallback(error) {
+ã€€ã€€//ä½ç½®æƒ…å ±å–å¾—ãŒã§ããªã„å ´åˆ
+ã€€ã€€function errorCallback(error) {
      var err_msg = "";
      switch(error.code){
       case 1:
-       err_msg = "ˆÊ’uî•ñ‚Ì—˜—p‚ª‹–‰Â‚³‚ê‚Ä‚¢‚Ü‚¹‚ñ";
+       err_msg = "ä½ç½®æƒ…å ±ã®åˆ©ç”¨ãŒè¨±å¯ã•ã‚Œã¦ã„ã¾ã›ã‚“";
        break;
       case 2:
-       err_msg = "ƒfƒoƒCƒX‚ÌˆÊ’u‚ª”»’è‚Å‚«‚Ü‚¹‚ñ";
+       err_msg = "ãƒ‡ãƒã‚¤ã‚¹ã®ä½ç½®ãŒåˆ¤å®šã§ãã¾ã›ã‚“";
        break;
       case 3:
-       err_msg = "ƒ^ƒCƒ€ƒAƒEƒg‚µ‚Ü‚µ‚½";
+       err_msg = "ã‚¿ã‚¤ãƒ ã‚¢ã‚¦ãƒˆã—ã¾ã—ãŸ";
        break;
      }
       document.getElementById("show_result").innerHTML = err_msg;
-      //ƒfƒoƒbƒO—p¨@document.getElementById("show_result").innerHTML = error.message;
+      //ãƒ‡ãƒãƒƒã‚°ç”¨â†’ã€€document.getElementById("show_result").innerHTML = error.message;
     }
 
   }
@@ -146,7 +147,7 @@
 </head>
 <body onload="initialize()">
   <div id="map_canvas" style="width:100%; height:70%"></div>
-@<div id="show_result"></div>
+ã€€<div id="show_result"></div>
   
   
   <a href="javascript: void(0)" id="sw">switch</a><br />
