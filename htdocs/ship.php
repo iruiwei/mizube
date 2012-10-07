@@ -1,0 +1,140 @@
+<?php
+session_start();
+
+if(empty($_REQUEST['area'])){
+	$area=1;
+}
+else
+	$area=$_REQUEST['area'];
+
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>水辺バル</title>
+	<meta name="generator" content="TextMate http://macromates.com/">
+	<meta name="author" content="SHEN RUIWEI">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+	<link rel="stylesheet" href="style.css">
+	<!-- Date: 2012-10-08 -->
+</head>
+<body>
+	<header>
+		<div id= "page_top">
+		<a href="index.html"><img src= "img/logo.png" style="width:100%"></a>
+		<img src= "img/line.png" style="width:100%">
+		</div>
+	</header>
+	
+	<form method= "post" action="ship.php">
+	<?php
+	require('dbconnect.php');
+	
+	$sql0=sprintf('select mb_area.id,mb_area.name from mb_area where mb_area.id<>1');
+	$recordset0=mysql_query($sql0)or die(mysql_error());
+	?>
+	<select name='area'>
+        <option value="1" selected="selected">八軒家浜船着場</option>
+		<?php
+		while($data0=mysql_fetch_assoc($recordset0)){
+			?><option value=<?php echo $data0['id'];?>><?php echo $data0['name'];?></option>
+		<?php
+		}
+	?>
+	</select>
+	
+	 <input type="submit" value="エリア変更" id= "submit_botton">
+	 </form>
+	
+	<div id="ship_info">
+	 <h3 class="ship_title">運行情報</h3>
+	 <div class="ship_ex">整理券の残り枚数<br>（◎:多数、◯:10枚以下、△：５枚以下、ｘ：なし、運休）
+	 </div>
+	<?php
+		$sql0=sprintf('select 
+							count(t.departureID) cnt 
+						from(
+							select distinct 
+								departureID 
+							from 
+								mb_shiptime 
+							where 
+								areaId="%d") as t',
+					mysql_real_escape_string($area));
+		$recordset0=mysql_query($sql0)or die(mysql_error());
+		$data0=mysql_fetch_assoc($recordset0);
+		$cnt=$data0['cnt'];
+		$sql1=sprintf('select distinct departureID as did from mb_shiptime where areaId="%d"',mysql_real_escape_string($area));
+		$recordset1=mysql_query($sql1)or die(mysql_error());
+		while($data1=mysql_fetch_row($recordset1)){
+			$sql2=sprintf('select distinct arrivalID as aid from mb_shiptime where departureID="%d"',mysql_real_escape_string($data1[0]));
+			$recordset2=mysql_query($sql2)or die(mysql_error());
+			while($data2=mysql_fetch_row($recordset2)){
+				$sql2n=sprintf('select t1.area_name c1,t2.area_name c2 from mb_port as t1,mb_port as t2 where t1.aid="%d" and t2.aid="%d"',mysql_real_escape_string($data1[0]),mysql_real_escape_string($data2[0]));
+				$recordset2n=mysql_query($sql2n)or die(mysql_error());
+				$data2n=mysql_fetch_assoc($recordset2n);
+	?>
+	 <div class="ship_to"><?php echo $data2n['c1'];?> →　<?php echo $data2n['c2'];?>	</div>
+
+	 	<div class="ship_info">
+		現在、５分遅れで運行しています。
+	</div>
+	<?php
+	$sql3=sprintf('select depTime, currentTicket1 from mb_shiptime where arrivalID="%d" and departureID="%d"',mysql_real_escape_string($data2[0]),mysql_real_escape_string($data1[0]));
+	$recordset3=mysql_query($sql3)or die(mysql_error());
+	$count=0;
+	?>
+	<table>
+	<?php
+	while($data3=mysql_fetch_assoc($recordset3)){
+		$t=strtotime($data3['depTime']);
+		
+		if($count==0||$count!=idate('H',$t)){
+			$count=idate('H',$t);
+			?>
+			<tr>
+				<th><?php echo idate('H',$t)?></th>
+				<td><?php echo idate('i',$t)." ";
+					if($data3['currentTicket1']>=10)
+						echo "◎";
+					else if($data3['currentTicket1']<10&&$data3['currentTicket1']>=5)
+						echo "◯";
+					else if($data3['currentTicket1']<5&&$data3['currentTicket1']>0)
+						echo "△";
+					else echo "ｘ";
+					?></td>
+			</tr>
+		<?php
+		}
+		else{?>
+			<td><?php echo idate('i',$t)." ";
+				if($data3['currentTicket1']>=10)
+					echo "◎";
+				else if($data3['currentTicket1']<10&&$data3['currentTicket1']>=5)
+					echo "◯";
+				else if($data3['currentTicket1']<5&&$data3['currentTicket1']>0)
+					echo "△";
+				else echo "ｘ";
+				?></td>
+		<?php
+		}
+	}
+	?>
+	</table>
+	<?php
+}
+}
+	?>
+	 </div>
+
+	 <div id="twitter">
+	 	天満橋エリア</br>
+	 	twiiterのエリア情報
+	 </div>
+
+</body>
+</html>
