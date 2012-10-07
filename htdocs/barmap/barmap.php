@@ -41,6 +41,8 @@
       //phpに値送信
 　　　lat = position.coords.latitude;
       	 lng = position.coords.longitude;
+      	       	 
+      	 
 　　　$(function(){
   $('#sw').click(
    function(){
@@ -150,6 +152,12 @@
   <a href="javascript: void(0)" id="sw">switch</a><br />
   <div id = "test_result"></div>
   <br>
+	
+<?php
+ 	echo "a";
+	echo "<script>document.write(lat);</script>" ;
+	echo "b";
+?>
 </body>
 
 </html>
