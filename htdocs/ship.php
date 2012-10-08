@@ -86,48 +86,37 @@ else
 	<?php
 	$sql3=sprintf('select depTime, currentTicket1 from mb_shiptime where arrivalID="%d" and departureID="%d"',mysql_real_escape_string($data2[0]),mysql_real_escape_string($data1[0]));
 	$recordset3=mysql_query($sql3)or die(mysql_error());
-	$count=0;
-	?>
-	<table>
-	<?php
+	
+	echo  "<table>";
+	$tempH=0;
 	while($data3=mysql_fetch_assoc($recordset3)){
 		$t=strtotime($data3['depTime']);
+		if($temtH != 0)
+		{
+			echo "</tr>";
+		}
 		
-		if($count==0||$count!=idate('H',$t)){
-			$count=idate('H',$t);
-			?>
-			<tr>
-				<th><?php echo idate('H',$t)?></th>
-				<td><?php echo idate('i',$t)." ";
-					if($data3['currentTicket1']>=10)
+		if($tempH !=idate('H',$t))
+		{
+			echo "<tr><th>".idate('H',$t)."</th>";
+			$tempH =idate('H',$t);
+		}
+		
+			echo "<td>". idate('i',$t)." ";
+			if($data3['currentTicket1']>10)
+			{
 						echo "◎";
-					else if($data3['currentTicket1']<10&&$data3['currentTicket1']>=5)
+					else if($data3['currentTicket1']<10&&$data3['currentTicket1']>5)
 						echo "◯";
 					else if($data3['currentTicket1']<5&&$data3['currentTicket1']>0)
 						echo "△";
 					else echo "ｘ";
-					?></td>
-			</tr>
-		<?php
+			}
+			echo "</td>"
+			
 		}
-		else{?>
-			<td><?php echo idate('i',$t)." ";
-				if($data3['currentTicket1']>=10)
-					echo "◎";
-				else if($data3['currentTicket1']<10&&$data3['currentTicket1']>=5)
-					echo "◯";
-				else if($data3['currentTicket1']<5&&$data3['currentTicket1']>0)
-					echo "△";
-				else echo "ｘ";
-				?></td>
-		<?php
-		}
-	}
-	?>
-	</table>
-	<?php
-}
-}
+		echo "</tr></table>";
+		
 	?>
 	 </div>
 
