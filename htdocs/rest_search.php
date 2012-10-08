@@ -20,9 +20,10 @@ require('dbconnect.php');
 		<h2>レストラン情報をさがす</h2>
 		<img src= "img/line.png" style="width:100%">
 	</header>
+	目的の店が決まっている人は
 	<div class="search_rest">
 		<div class= "rest_text">
-			店番号から
+			店番号からさがす
 			<form method= "GET" action="">
 			<input type= "text" name="" size="3"></input>
 		</div>
@@ -33,7 +34,19 @@ require('dbconnect.php');
 	</div>
 	<div class="search_rest">
 		<div class= "rest_text">
-			エリアから
+			店の名前からさがす
+			<form method= "GET" action="">
+			<input type= "text" name="" size="20"></input>
+		</div>
+		<div class= "rest_submit">
+			<input type="image" src="img/arrow.png" name="" width= "45"></input>
+		</div>
+	</form>
+	</div>
+いろんなお店をさがしてみよう
+	<div class="search_rest">
+		<div class= "rest_text">
+			エリアからさがす
 			<form method= "GET" action="">
 			<?php
 			$sql0=sprintf('select mb_area.id,mb_area.name from mb_area');
@@ -56,7 +69,7 @@ require('dbconnect.php');
 	</div>
 	<div class="search_rest">
 		<div class= "rest_text">
-			ジャンルから
+			ジャンルからさがす
 			<form method= "GET" action="">
 				<?php
 				$sql1=sprintf('select tag_id,tag_name from mb_tag');
@@ -77,17 +90,7 @@ require('dbconnect.php');
 		</div>
 	</form>
 	</div>
-	<div class="search_rest">
-		<div class= "rest_text">
-			店の名前から
-			<form method= "GET" action="">
-			<input type= "text" name="" size="3"></input>
-		</div>
-		<div class= "rest_submit">
-			<input type="image" src="img/arrow.png" name="" width= "45"></input>
-		</div>
-	</form>
-	</div>
+	
 
 </body>
 </html>

@@ -45,6 +45,11 @@ header {
 	margin: 0;
 	padding: 0 0 0 0;
 	}	
+#info{
+	padding: 10px 10px 10px 20px;
+	font-size: 0.8em;
+	color: #333;
+}
 
 /* rest-----------------------------------------------------------------------------*/
 .restaurant{
@@ -83,10 +88,12 @@ header {
 /* レストラン探す-----------------------------------------------------------------------------*/
 .search_rest{
 	width:99%;
-	background:  rgba(255,255,255, 0.2);
-	border: 3px dotted #cccccc;
+	background:  rgba(0,0,0, 0.1);
+	border-color:  #888;
+	border-style: dotted none none none ;
+	border-width:3px;  
 	height: 80px;
-	padding: 30px 30px 0 10px;
+	padding: 20px 20px 0 10px;
 }
 .rest_text{
 	width: 80%;
@@ -108,7 +115,7 @@ select{
     -webkit-appearance: button;
     appearance: button;
     padding: 4px;
-    background: rgba(200,200,255, 0.4);
+    background: rgba(200,200,255, 0.2);
     border: none;
     color: #222;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.32) inset;
