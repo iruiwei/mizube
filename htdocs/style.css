@@ -181,6 +181,35 @@ select{
 	border-right:solid 1px #CCC;
 }
 
+/* ship_search-----------------------------------------------------------------------------*/
+.area{
+	width:350px;
+	margin:0 auto;
+	height: 250px;
+}
+
+.s_point{
+	width: 46px;
+	height:250px;
+	float:left;
+}
+.bar{
+	width: 30px;
+	padding: 115px 0 0 0;
+	float: left;
+}
+#v_bar{
+	width: 350px;
+	height:44px;
+	margin:0 auto;
+}
+#fune{
+	width:152px;
+	height: 250px;
+	float: left;
+	padding: 60px 0 0 0;
+}
+
 /* Twitter-----------------------------------------------------------------------------*/
 .twitter{
 	width: 100%;
