@@ -117,7 +117,8 @@ select{
     padding: 4px;
     background: rgba(200,200,255, 0.2);
     border: none;
-    color: #222;
+    color: #000;
+    font-size: 1.4em;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.32) inset;
 }
 

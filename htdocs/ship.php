@@ -29,7 +29,9 @@ else
 		<img src= "img/line.png" style="width:100%">
 		</div>
 	</header>
-	
+	<div id=""info">
+		エリアを選んでください。
+	</div>
 	<form method= "post" action="ship.php">
 	<?php
 	require('dbconnect.php');
@@ -41,20 +43,18 @@ else
 		<?php
 		
 			while($data0=mysql_fetch_assoc($recordset0)){
-				if(empty($_REQUEST['area'])&&$data0['id']==1){
-					?><option value="1" selected="selected"><?php echo $data0['name'];?></option><?php
+				echo '<option value="'. $data0['id'] .'"';
+				if($_REQUEST['area']==$data0['id']){
+					echo ' selected';
 				}
-				else{
-				?><option value=<?php echo $data0['id'];?>><?php echo $data0['name'];?></option>
-			<?php
-				}
+				echo '>'. $data0['name']. '</option>';
 			}
 		
 		
 	?>
 	</select>
 	
-	 <input type="submit" value="エリア変更" id= "submit_botton">
+	 <input type="submit" value="決定" id= "submit_botton">
 	 </form>
 	
 	<div id="ship_info">
