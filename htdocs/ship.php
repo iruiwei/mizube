@@ -34,16 +34,23 @@ else
 	<?php
 	require('dbconnect.php');
 	
-	$sql0=sprintf('select mb_area.id,mb_area.name from mb_area where mb_area.id<>1');
+	$sql0=sprintf('select mb_area.id,mb_area.name from mb_area');
 	$recordset0=mysql_query($sql0)or die(mysql_error());
 	?>
 	<select name='area'>
-        <option value="1" selected="selected">八軒家浜船着場</option>
 		<?php
-		while($data0=mysql_fetch_assoc($recordset0)){
-			?><option value=<?php echo $data0['id'];?>><?php echo $data0['name'];?></option>
-		<?php
-		}
+		
+			while($data0=mysql_fetch_assoc($recordset0)){
+				if(empty($_REQUEST['area'])&&$data0['id']==1){
+					?><option value="1" selected="selected"><?php echo $data0['name'];?></option><?php
+				}
+				else{
+				?><option value=<?php echo $data0['id'];?>><?php echo $data0['name'];?></option>
+			<?php
+				}
+			}
+		
+		
 	?>
 	</select>
 	
@@ -91,6 +98,7 @@ else
 	$tempH=0;
 	while($data3=mysql_fetch_assoc($recordset3)){
 		$t=strtotime($data3['depTime']);
+<<<<<<< HEAD
 		if($temtH != 0)
 		{
 			echo "</tr>";
@@ -105,18 +113,61 @@ else
 			echo "<td>". idate('i',$t)." ";
 			if($data3['currentTicket1']>10)
 			{
+=======
+		if($count!=0&&$i>3&&$count==idate('H',$t)){
+			?></tr><?php
+		}
+		if($count==0||$count!=idate('H',$t)){
+			if($count!=0&&$count!=idate('H',$t)&&$i<4){
+				?><td colspan="<?php echo (4-$i);?>"><?php echo "  ";?></td></tr><?php  
+			}
+			$count=idate('H',$t);
+			$i=0;
+			?>
+			<tr>
+				<th><?php echo idate('H',$t)?></th>
+				<td><?php echo idate('i',$t)." ";
+					if($data3['currentTicket1']>=10)
+>>>>>>> 船検索完成
 						echo "◎";
 					else if($data3['currentTicket1']<10&&$data3['currentTicket1']>5)
 						echo "◯";
 					else if($data3['currentTicket1']<5&&$data3['currentTicket1']>0)
 						echo "△";
 					else echo "ｘ";
+<<<<<<< HEAD
 			}
 			echo "</td>"
 			
 		}
 		echo "</tr></table>";
 		
+=======
+					?></td>
+			
+		<?php
+		}
+		else{?>
+			<td><?php echo idate('i',$t)." ";
+				if($data3['currentTicket1']>=10)
+					echo "◎";
+				else if($data3['currentTicket1']<10&&$data3['currentTicket1']>=5)
+					echo "◯";
+				else if($data3['currentTicket1']<5&&$data3['currentTicket1']>0)
+					echo "△";
+				else echo "ｘ";
+				?></td>
+				
+		<?php
+		}
+		$i++;
+	}
+	?>
+	</table>
+	<?php
+}
+}
+>>>>>>> 船検索完成
 	?>
 	 </div>
 

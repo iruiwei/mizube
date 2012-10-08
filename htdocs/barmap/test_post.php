@@ -15,16 +15,17 @@
 
 <?php
 
-	
-	$sql=sprintf('select ((%d-lat)*(%d-lat)+(%d-lon)*(%d-lon)) dis, name from mb_restaurant order by dis asc',mysql_real_escape_string($lat),mysql_real_escape_string($lat),mysql_real_escape_string($lon),mysql_real_escape_string($lon));
-	$table=mysql_query($sql)or die(mysql_error());
+	$sql0="select (('".$lat."'-lat)*('".$lat."'-lat)+('".$lon."'-lon)*('".$lon."'-lon)) dis, name from mb_restaurant order by dis asc";
+
+	//$sql=sprintf('select ((34.71512535741886-lat)*(34.71512535741886-lat)+(135.2286013970435-lon)*(135.2286013970435-lon)) dis, name from mb_restaurant order by dis desc');
+	//mysql_real_escape_string($lat),mysql_real_escape_string($lat),mysql_real_escape_string($lon),mysql_real_escape_string($lon)
+	$table=mysql_query($sql0)or die(mysql_error());
 	while($data=mysql_fetch_assoc($table)){
 		echo $data['name']."  ".$data['dis'];
 		echo '<br/>';
 	}
-	
-	
-	echo "data!";
-	echo $area;
+	//echo mysql_real_escape_string($_POST['key1']);
+	//echo '<br>';
+	//echo $t;
 	
 ?>
