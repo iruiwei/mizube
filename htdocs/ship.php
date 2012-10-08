@@ -93,27 +93,12 @@ else
 	<?php
 	$sql3=sprintf('select depTime, currentTicket1 from mb_shiptime where arrivalID="%d" and departureID="%d"',mysql_real_escape_string($data2[0]),mysql_real_escape_string($data1[0]));
 	$recordset3=mysql_query($sql3)or die(mysql_error());
-	
-	echo  "<table>";
-	$tempH=0;
+	$count=0;
+	?>
+	<table>
+	<?php
 	while($data3=mysql_fetch_assoc($recordset3)){
 		$t=strtotime($data3['depTime']);
-<<<<<<< HEAD
-		if($temtH != 0)
-		{
-			echo "</tr>";
-		}
-		
-		if($tempH !=idate('H',$t))
-		{
-			echo "<tr><th>".idate('H',$t)."</th>";
-			$tempH =idate('H',$t);
-		}
-		
-			echo "<td>". idate('i',$t)." ";
-			if($data3['currentTicket1']>10)
-			{
-=======
 		if($count!=0&&$i>3&&$count==idate('H',$t)){
 			?></tr><?php
 		}
@@ -128,21 +113,12 @@ else
 				<th><?php echo idate('H',$t)?></th>
 				<td><?php echo idate('i',$t)." ";
 					if($data3['currentTicket1']>=10)
->>>>>>> 船検索完成
 						echo "◎";
-					else if($data3['currentTicket1']<10&&$data3['currentTicket1']>5)
+					else if($data3['currentTicket1']<10&&$data3['currentTicket1']>=5)
 						echo "◯";
 					else if($data3['currentTicket1']<5&&$data3['currentTicket1']>0)
 						echo "△";
 					else echo "ｘ";
-<<<<<<< HEAD
-			}
-			echo "</td>"
-			
-		}
-		echo "</tr></table>";
-		
-=======
 					?></td>
 			
 		<?php
@@ -167,7 +143,6 @@ else
 	<?php
 }
 }
->>>>>>> 船検索完成
 	?>
 	 </div>
 
