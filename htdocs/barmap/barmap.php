@@ -18,7 +18,7 @@
     	zoom : 13,
     	mapTypeId : google.maps.MapTypeId.ROADMAP
     };
-    //var map_canvas = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+    var map_canvas = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
      
     
     //kml読み込み部分
@@ -61,7 +61,7 @@
   			);
  		}
 		);
-/*
+
       //現在位置マーカーの生成
       var nowlatlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 　　　var marker = new google.maps.Marker({
@@ -120,7 +120,7 @@
         
       //phpに値受け渡し
 　　　
-*/
+
     }
 
 　　//位置情報取得ができない場合
