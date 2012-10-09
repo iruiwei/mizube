@@ -91,7 +91,7 @@ else
 		現在、５分遅れで運行しています。
 	</div>
 	<?php
-	$sql3=sprintf('select depTime, currentTicket1 from mb_shiptime where arrivalID="%d" and departureID="%d"',mysql_real_escape_string($data2[0]),mysql_real_escape_string($data1[0]));
+	$sql3=sprintf('select depTime, currentTicket1, falg from mb_shiptime where arrivalID="%d" and departureID="%d" and falg<>2',mysql_real_escape_string($data2[0]),mysql_real_escape_string($data1[0]));
 	$recordset3=mysql_query($sql3)or die(mysql_error());
 	$count=0;
 	?>
