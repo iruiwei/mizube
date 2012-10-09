@@ -31,10 +31,10 @@ require('dbconnect.php');
 <body>
 <header>
 		<div id= "page_top">
-		<img src= "img/logo.png" style="width:100%">
+		<a href="index.html"><img src= "img/logo.png" style="width:100%"></a>
 		<img src= "img/line.png" style="width:100%">
 		</div>
-		<h1>お店情報をさがす！</h1>
+		<div id="info_top">お店情報をさがす！</div>
 	</header>
 	目的の店が決まっている人は
 	<div class="search_rest">
