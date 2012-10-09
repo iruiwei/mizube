@@ -50,30 +50,39 @@ header {
 	font-size: 0.8em;
 	color: #333;
 }
+#info_top{
+	padding: 10px 10px 10px 10px;
+	font-size: 1.2em;
+	text-align: center;
+}
 
 /* rest-----------------------------------------------------------------------------*/
 .restaurant{
 	width: 100%;
-	height: 100px;
+	height: 170px;
 	padding: 0;
-	margin: 0;
-	background:  rgba(0,0,0,0.2);
+	margin: 0 0 3px 0;
+	background:  rgba(0,0,0,0.1);
 	border-bottom: dotted 3px;
-	border-bottom-color: #cccccc;
+	border-bottom-color: #aaa;
+
 }
 .rest_left{
-	width: 18%;
-	height: 80px;
+	width: 30%;
+
 	padding: 10px 1%;
 	margin: 0;
 	float: left;
+	overflow: hidden;
 }
 .rest_right{
-	width: 72%;
-	height: 80px;
-	padding: 10px 1%;
+	width: 60%;
+	height: 120px;
+	padding: 5px 1%;
 	margin: 0;
 	float: left;
+	overflow: hidden;
+	font-size: 0.8em;
 }
 .rest_arrow{
 	width: 6%;
@@ -82,9 +91,30 @@ header {
 	float: left;
 	background: url("img/arrow_icon.png") no-repeat center;
 }
-.image_style{
-	width: 80%;
+.rest_title{
+	width: 100%;
+	padding:3px 3px 3px 3px ;
+	font-size: 1.1em;
+	text-align: center;
+	background:  rgba(0,0,0,0.3);
+	color: #333;
+
+	   background: #fff;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+    padding: 5px 0 5px 10px;
+    background: -moz-linear-gradient(top, #fff 0%, #eee 50%, #ddd 51%, #fff 100%); /* firefox */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(50%,#eee), color-stop(51%,#ddd), color-stop(100%,#fff)); /* webkit */
 }
+.image_style{
+	width: 100%;
+}
+
+#rest_area a{
+	color: #000;
+	text-decoration: none;
+}
+
 /* レストラン探す-----------------------------------------------------------------------------*/
 .search_rest{
 	width:99%;

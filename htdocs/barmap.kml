@@ -1,0 +1,2343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+  <name>大阪水辺バルマップ（2012）</name>
+  <description><![CDATA[2012年10月13,14日開催の大阪水辺バルマップです！]]></description>
+  <Style id="style129">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/info.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style37">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/info.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style116">
+    <LineStyle>
+      <color>73CC6666</color>
+      <width>8</width>
+    </LineStyle>
+  </Style>
+  <Style id="style131">
+    <LineStyle>
+      <color>73999933</color>
+      <width>8</width>
+    </LineStyle>
+  </Style>
+  <Style id="style125">
+    <LineStyle>
+      <color>73CC33CC</color>
+      <width>5</width>
+    </LineStyle>
+  </Style>
+  <Style id="style48">
+    <LineStyle>
+      <color>73009999</color>
+      <width>8</width>
+    </LineStyle>
+  </Style>
+  <Style id="style29">
+    <LineStyle>
+      <color>730000FF</color>
+      <width>5</width>
+    </LineStyle>
+  </Style>
+  <Style id="style77">
+    <LineStyle>
+      <color>7333CCFF</color>
+      <width>8</width>
+    </LineStyle>
+  </Style>
+  <Style id="style49">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/marina.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style102">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/marina.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style8">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/marina.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style87">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/marina.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style91">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/marina.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style134">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/marina.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style111">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/marina.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style43">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/marina.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style69">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/marina.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style33">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/purple-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style56">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/purple-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style9">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/purple-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style78">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/purple-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style14">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/purple-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style133">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/purple-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style50">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/purple-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style100">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/purple-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style26">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/purple-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style81">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/purple-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style106">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/purple-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style44">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/purple-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style58">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/purple-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style114">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/purple-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style93">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/purple-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style54">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/yellow-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style10">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/yellow-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style126">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/yellow-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style27">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/yellow-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style108">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/yellow-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style40">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/yellow-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style13">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/yellow-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style31">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/yellow-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style107">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/yellow-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style62">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/yellow-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style20">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/yellow-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style97">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/yellow-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style95">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/yellow-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style86">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/yellow-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style119">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/yellow-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style74">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/yellow-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style41">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/yellow-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style18">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/yellow-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style21">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/yellow-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style63">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/yellow-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style7">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/yellow-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style23">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/yellow-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style103">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/yellow-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style98">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/ltblue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style11">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/ltblue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style113">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/ltblue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style70">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/ltblue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style36">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/ltblue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style130">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/ltblue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style34">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/ltblue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style38">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/ltblue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style68">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/ltblue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style104">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/ltblue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style45">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/ltblue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style71">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/ltblue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style118">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/ltblue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style137">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style112">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style99">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style139">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style30">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style138">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style120">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style145">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style35">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style51">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style96">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style64">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style142">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style132">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style122">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style84">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style72">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style52">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style136">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style105">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style19">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style55">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style46">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style90">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style85">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style28">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style73">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style121">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style42">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style82">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style39">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style65">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style143">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style135">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style3">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style117">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style83">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style4">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style32">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style80">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/restaurant.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style89">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style75">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style94">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style2">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style59">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style76">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style110">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style6">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style1">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style60">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style128">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style140">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style16">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style127">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style101">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style144">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style24">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style92">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style25">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style61">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style115">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style79">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style124">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style66">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style109">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style12">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style141">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style67">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/red-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style57">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/red-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style53">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/red-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style15">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/red-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style47">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/red-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style123">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/red-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style5">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/red-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style17">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/red-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style22">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/red-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style146">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/red-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style88">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/red-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Placemark>
+    <name>総合インフォメーション（湊町船着場）</name>
+    <Snippet>・インターネット予約チケットの受け渡し・当日券の販売</Snippet>
+    <description><![CDATA[<div dir="ltr">・インターネット予約チケットの受け渡し<br>・当日券の販売（1冊3,500円／バラ売り700円）<br>・全９エリアのバルメニュー掲示</div>]]></description>
+    <styleUrl>#style129</styleUrl>
+    <Point>
+      <coordinates>135.495361,34.668938,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>総合インフォメーション（天満橋八軒家船着場）</name>
+    <Snippet>・インターネット予約チケットの受け渡し・当日券の販売</Snippet>
+    <description><![CDATA[<div dir="ltr">・インターネット予約チケットの受け渡し<br>・当日券の販売（1冊3,500円／バラ売り700円）<br>・全９エリアのバルメニュー掲示</div>]]></description>
+    <styleUrl>#style37</styleUrl>
+    <Point>
+      <coordinates>135.515961,34.690567,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>航路１［天満橋ーミナミルート］</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">八軒家浜船着場⇔湊町船着場</div>]]></description>
+    <styleUrl>#style116</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        135.515793,34.690781,0.000000
+        135.512146,34.690830,0.000000
+        135.510300,34.690681,0.000000
+        135.509796,34.690441,0.000000
+        135.509613,34.690090,0.000000
+        135.509705,34.687000,0.000000
+        135.509903,34.682850,0.000000
+        135.510666,34.681999,0.000000
+        135.510986,34.678860,0.000000
+        135.510910,34.673561,0.000000
+        135.510513,34.669201,0.000000
+        135.510239,34.668869,0.000000
+        135.506104,34.669041,0.000000
+        135.500153,34.669041,0.000000
+        135.496994,34.668919,0.000000
+        135.495407,34.669083,0.000000
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>航路２［天満橋ー福島ルート］</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">八軒家浜船着場⇔大阪国際会議場港</div>]]></description>
+    <styleUrl>#style131</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        135.485718,34.690022,0.000000
+        135.487091,34.691647,0.000000
+        135.489960,34.693390,0.000000
+        135.495865,34.694500,0.000000
+        135.498581,34.694740,0.000000
+        135.501205,34.694740,0.000000
+        135.503983,34.694450,0.000000
+        135.510605,34.692108,0.000000
+        135.516083,34.690788,0.000000
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>航路３,４［淀屋橋ー天満橋］</name>
+    <description><![CDATA[<div dir="ltr">航路３［淀屋橋港⇒（遊覧）⇒八軒家浜］※チケットが２枚必要です。<br>航路４［淀屋橋港⇔八軒家浜船着場］</div>]]></description>
+    <styleUrl>#style125</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        135.501663,34.692852,0.000000
+        135.503906,34.692608,0.000000
+        135.506607,34.692429,0.000000
+        135.508804,34.691647,0.000000
+        135.510361,34.691029,0.000000
+        135.511719,34.690964,0.000000
+        135.512756,34.691029,0.000000
+        135.515076,34.690941,0.000000
+        135.516418,34.690842,0.000000
+        135.518616,34.691399,0.000000
+        135.520248,34.691956,0.000000
+        135.521759,34.693226,0.000000
+        135.522629,34.695164,0.000000
+        135.522552,34.697289,0.000000
+        135.522202,34.698780,0.000000
+        135.521576,34.699699,0.000000
+        135.521622,34.700111,0.000000
+        135.522141,34.700062,0.000000
+        135.522247,34.699512,0.000000
+        135.522675,34.698799,0.000000
+        135.522873,34.697987,0.000000
+        135.523132,34.696461,0.000000
+        135.523087,34.695068,0.000000
+        135.522232,34.693409,0.000000
+        135.520859,34.692017,0.000000
+        135.517990,34.690876,0.000000
+        135.516434,34.690681,0.000000
+        135.516418,34.690666,0.000000
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>航路５［福島ー中之島ゲートルート］</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">福島港（ほたるまち港）⇔大阪市中央卸売市場前港</div>]]></description>
+    <styleUrl>#style48</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        135.489334,34.693409,0.000000
+        135.486862,34.691719,0.000000
+        135.482758,34.687141,0.000000
+        135.480927,34.685169,0.000000
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>航路６［ミナミー大正］</name>
+    <description><![CDATA[<div dir="ltr">湊町船着場⇔三軒家特設船着場</div>]]></description>
+    <styleUrl>#style29</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        135.495316,34.669094,0.000000
+        135.490097,34.669678,0.000000
+        135.486481,34.670048,0.000000
+        135.481750,34.669201,0.000000
+        135.480087,34.667912,0.000000
+        135.475830,34.666889,0.000000
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>航路７［北浜ー中之島ー東横堀循環ルート］</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">北浜テラス特設船着場ーローズポートー本町橋船着場</div>]]></description>
+    <styleUrl>#style77</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        135.513016,34.691257,0.000000
+        135.512070,34.691116,0.000000
+        135.510696,34.690990,0.000000
+        135.509857,34.690231,0.000000
+        135.509979,34.685345,0.000000
+        135.509949,34.684689,0.000000
+        135.509689,34.684685,0.000000
+        135.509689,34.686401,0.000000
+        135.509537,34.690208,0.000000
+        135.509750,34.690521,0.000000
+        135.510040,34.690678,0.000000
+        135.509827,34.690948,0.000000
+        135.508972,34.691284,0.000000
+        135.508591,34.691601,0.000000
+        135.508347,34.691917,0.000000
+        135.508423,34.692207,0.000000
+        135.508667,34.692562,0.000000
+        135.509415,34.692226,0.000000
+        135.510208,34.692120,0.000000
+        135.511581,34.691750,0.000000
+        135.512726,34.691521,0.000000
+        135.513016,34.691257,0.000000
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>【天満橋】八軒家浜船着場</name>
+    <Snippet>・航路1（福島／ほたるまち港ルート）発着・航路2（東横堀</Snippet>
+    <description><![CDATA[<div dir="ltr"></div>]]></description>
+    <styleUrl>#style49</styleUrl>
+    <Point>
+      <coordinates>135.516083,34.690632,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>【北浜】北浜テラス特設船着場</name>
+    <Snippet>・航路4（天満橋八軒家浜ルート）発着・当日券販売</Snippet>
+    <description><![CDATA[<div dir="ltr"></div>]]></description>
+    <styleUrl>#style102</styleUrl>
+    <Point>
+      <coordinates>135.508926,34.691284,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>【中之島公園】ローズポート</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style8</styleUrl>
+    <Point>
+      <coordinates>135.509445,34.692116,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>【東横堀】本町橋船着場</name>
+    <Snippet>・航路3（天満橋八軒家浜ルート）発着・当日券販売</Snippet>
+    <description><![CDATA[<div dir="ltr"></div>]]></description>
+    <styleUrl>#style87</styleUrl>
+    <Point>
+      <coordinates>135.510040,34.684601,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>【淀屋橋】淀屋橋港</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style91</styleUrl>
+    <Point>
+      <coordinates>135.501465,34.692814,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>【中之島ゲート】大阪市中央卸売市場前港</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style134</styleUrl>
+    <Point>
+      <coordinates>135.480820,34.685177,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>【福島】福島港（ほたるまち港）</name>
+    <Snippet>・航路1（天満橋／八軒家浜ルート）発着・航路2（大正／三</Snippet>
+    <description><![CDATA[<div dir="ltr"></div>]]></description>
+    <styleUrl>#style111</styleUrl>
+    <Point>
+      <coordinates>135.489349,34.693447,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>【ミナミ】湊町船着場</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style43</styleUrl>
+    <Point>
+      <coordinates>135.495361,34.669048,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>【大正】三軒家特設船着場</name>
+    <Snippet>・航路2（福島ほたるまち港ルート）発着・当日券販売</Snippet>
+    <description><![CDATA[<div dir="ltr"></div>]]></description>
+    <styleUrl>#style69</styleUrl>
+    <Point>
+      <coordinates>135.475800,34.666779,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>001／Xing GARDEN</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">天満橋のリバーサイドで大川をながめながらカジュアルかつ優雅な一時を過ごしませんか?</div>]]></description>
+    <styleUrl>#style33</styleUrl>
+    <Point>
+      <coordinates>135.514542,34.690575,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>002／大阪キャッスルホテル ラウンジ「バルク」</name>
+    <description><![CDATA[<div dir="ltr">大川の見えるラウンジで、ゆったりとした時間をお過ごしください。限定１日100名様。</div>]]></description>
+    <styleUrl>#style56</styleUrl>
+    <Point>
+      <coordinates>135.515518,34.690426,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>003／錦城閣</name>
+    <description><![CDATA[<div dir="ltr">人気ナンバーワン！ボリューム満点の錦城閣定食。プチバイキングコーナーも食べ放題。</div>]]></description>
+    <styleUrl>#style9</styleUrl>
+    <Point>
+      <coordinates>135.515579,34.690430,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>004／紀州勝浦生まぐろの店 ほんまや 天満橋店</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">和歌山県勝浦漁港の直営店直送だから抜群に鮮度の良い築地に負けない旨い鯛を安くお召し上がり頂けます。</div>]]></description>
+    <styleUrl>#style78</styleUrl>
+    <Point>
+      <coordinates>135.515320,34.690044,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>005／インド料理アルナーチャラム</name>
+    <description><![CDATA[<div dir="ltr">5種のバルメニューをご用意いたしました。インドの窯で焼いたタンドール料理をお楽しみください。タンドリーチキン＆BEER、カレーとナン＆チャイ、ロール＆ソフトドリンク、他　全60席</div>]]></description>
+    <styleUrl>#style14</styleUrl>
+    <Point>
+      <coordinates>135.513748,34.690235,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>006／セカンドラボラトリ（interactivebar 2ndlab.）</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">普段は映像と音楽が楽しめるゆったり空間のBARです。テイクアウトもOK!川べりでお散歩がてらの方もどうぞ。</div>]]></description>
+    <styleUrl>#style133</styleUrl>
+    <Point>
+      <coordinates>135.512161,34.690308,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>007／酒蔵 多氣</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">創業30年 レトロな長屋風の店構えの気取らない店です。</div>]]></description>
+    <styleUrl>#style50</styleUrl>
+    <Point>
+      <coordinates>135.513626,34.689972,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>008／ULTRA2nd COFFEE AND DINNER</name>
+    <description><![CDATA[<div dir="ltr">ここは長距離列車の食堂車「DINER」自家製サンドイッチとコーヒーが自慢のお店です。</div>]]></description>
+    <styleUrl>#style100</styleUrl>
+    <Point>
+      <coordinates>135.513718,34.689945,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>009／Salon ib</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">ソファーでゆっくりくつろげるお店、カウンターも有。今回はお酒の種類も50種以上ご用意しております。</div>]]></description>
+    <styleUrl>#style26</styleUrl>
+    <Point>
+      <coordinates>135.513733,34.689983,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>010／自家製生パスタ専門店 竹井屋</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">人気メニュー3種より1品選べます。毎日お店で製麺するモチモチの自家製生パスタを是非！</div>]]></description>
+    <styleUrl>#style81</styleUrl>
+    <Point>
+      <coordinates>135.514481,34.689899,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>011／地鶏居酒屋ぼんじり</name>
+    <description><![CDATA[<div dir="ltr">こだわりの和空間で新鮮地鶏料理！「朝挽き」といわれる新鮮な地鶏をお召し上がり頂きます。</div>]]></description>
+    <styleUrl>#style106</styleUrl>
+    <Point>
+      <coordinates>135.517090,34.689274,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>012／LA TEPPARNYA</name>
+    <description><![CDATA[<div dir="ltr">鉄板焼きをリーズナブルに楽しめる！タパス・ピザ・パスタ・ステーキとメニューも豊富！今夜はテッパーニャで！</div>]]></description>
+    <styleUrl>#style44</styleUrl>
+    <Point>
+      <coordinates>135.514481,34.689297,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>013／Lecce</name>
+    <description><![CDATA[<div dir="ltr">"人気の前菜２種と、自家製ケーキ２種をお選びいただけます。<br>かわいいラテアートもお楽しみください♪"</div>]]></description>
+    <styleUrl>#style58</styleUrl>
+    <Point>
+      <coordinates>135.516006,34.688911,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>014／旬魚旬菜 風</name>
+    <description><![CDATA[<div dir="ltr">風（ふう）は、旬の魚と旬のお野菜お使いチェーン店にはない素材の美味しさ、きっと実感頂けます！</div>]]></description>
+    <styleUrl>#style114</styleUrl>
+    <Point>
+      <coordinates>135.515976,34.688488,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>015／居酒屋てんてん 天満橋店</name>
+    <description><![CDATA[<div dir="ltr">産地直送のこだわりの食材を、笑顔の素敵なスタッフ達が心を込めて提供します。テレビにも取り上げられた【マーボー豆腐の天ぷら】をこの機会に食べてみてください！</div>]]></description>
+    <styleUrl>#style93</styleUrl>
+    <Point>
+      <coordinates>135.516998,34.687981,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>016／立ち呑ミナ：ナカヨク</name>
+    <description><![CDATA[<div dir="ltr">北浜と南森町の間の、エアポケット菅原町に佇む酒場です。「みなさん、なかよくして下さい。」よろしくお願い致します。</div>]]></description>
+    <styleUrl>#style54</styleUrl>
+    <Point>
+      <coordinates>135.510132,34.694004,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>017／Label dining tetote</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">自社農家の京都亀岡の有機野菜を使った多彩なメニュー！大きな窓から川沿いの景色を見ながらゆっくりお食事を楽しめます.</div>]]></description>
+    <styleUrl>#style10</styleUrl>
+    <Point>
+      <coordinates>135.508774,34.693199,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>018／GARB weeks</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">中之島公園に佇むカフェ＆レストラン。テラスでのBBQや、お店の薪釜で焼く、本場ナポリのピッツァが楽しめます。大阪マルシェの農家さんより入荷の地野菜を使った料理も豊富なので、大阪をまるごと味わって頂けます。</div>]]></description>
+    <styleUrl>#style126</styleUrl>
+    <Point>
+      <coordinates>135.505692,34.692745,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>019／カジュアルレストラン OUI</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">水の都・大阪を代表する土佐堀川に面し、対岸には中之島公会堂。そんな気持ちいいロケーションで美味しいイタリアワインで乾杯！！心をいっぱい、いっぱい込めたシェフの料理はしっかり食事派、飲む派ともにお楽しみ頂けます。</div>]]></description>
+    <styleUrl>#style27</styleUrl>
+    <Point>
+      <coordinates>135.504410,34.692207,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>020／CARNIVAL　KITCHEN</name>
+    <description><![CDATA[<div dir="ltr">水都から始動する、おいしいお料理だけではなく、アートや音楽等、街を楽しくするプログラムも運ぶケータリングカーです。</div>]]></description>
+    <styleUrl>#style108</styleUrl>
+    <Point>
+      <coordinates>135.509598,34.691837,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>021／Bistro bar 真琴</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">1ドリンク＋前菜３種盛をご用意して皆様のお越しをお待ちしております。土佐堀川の流れを眺めながら自慢のテラスで素敵な時間を過ごしませんか？皆様のお越しをお待ちしております。</div>]]></description>
+    <styleUrl>#style40</styleUrl>
+    <Point>
+      <coordinates>135.508255,34.691422,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>022／泉州旬味 十六夜 北浜店</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">大阪泉州の漁港でその日に水あげされた新鮮な地魚をはじめ、地場食材が自慢。大阪川床・北浜テラス設置店</div>]]></description>
+    <styleUrl>#style13</styleUrl>
+    <Point>
+      <coordinates>135.508865,34.691196,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>023／Gallery  Amrita(ギャラリー＆プチバー）</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">ギャラリーでカフェ・バーが同時に楽しめる新空間。カウンターの窓から公園の緑、高速道路、空が広がります。</div>]]></description>
+    <styleUrl>#style31</styleUrl>
+    <Point>
+      <coordinates>135.508911,34.691174,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>024／畑の食堂 イシノナカ</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">畑の食堂イシノナカはお野菜を中心とした和食のお店です。旬の食材を使った料理をお楽しみ下さい。</div>]]></description>
+    <styleUrl>#style107</styleUrl>
+    <Point>
+      <coordinates>135.508194,34.690845,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>025／LO SCORFANO</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">南イタリア・プーリア州の魚介も豊富な暖かい郷土料理を召し上がれ。</div>]]></description>
+    <styleUrl>#style62</styleUrl>
+    <Point>
+      <coordinates>135.508652,34.690269,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>026／Mini Kitchen＆Bar SUN</name>
+    <description><![CDATA[<div dir="ltr">北浜で１番フランクで、カジュアルなBAR！を目指して営業中です！フラッと遊びに来て下さ〜い！！</div>]]></description>
+    <styleUrl>#style20</styleUrl>
+    <Point>
+      <coordinates>135.506470,34.690834,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>027／イタリアダイニングDAAK</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">自家製人気のサングリアと豚バラ肉のやわらか煮込みのセットでバルを充分に楽しんでください。</div>]]></description>
+    <styleUrl>#style97</styleUrl>
+    <Point>
+      <coordinates>135.507767,34.689835,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>028／お好み焼 鉄板焼 ArAKA</name>
+    <description><![CDATA[<div dir="ltr">お好み焼きピンチョス！！　山芋100％のチーズとろろ焼をワインと一緒にバルスタイルで！</div>]]></description>
+    <styleUrl>#style95</styleUrl>
+    <Point>
+      <coordinates>135.507889,34.689846,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>029／北浜酒場 GORI</name>
+    <description><![CDATA[<div dir="ltr">ワイン・ウィスキー・ラムを中心に、気軽にお酒を楽しんで頂けるように、ワイン￥290〜、他￥380〜各種ご用意しております。FOODも￥280〜!!!!</div>]]></description>
+    <styleUrl>#style86</styleUrl>
+    <Point>
+      <coordinates>135.505661,34.689327,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>030／CERVECERIA LUBIRO POSSA</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style119</styleUrl>
+    <Point>
+      <coordinates>135.505219,34.689156,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>031／BARオールズ</name>
+    <description><![CDATA[<div dir="ltr">お１人の方でも、安心かつゆっくりのある空間です。</div>]]></description>
+    <styleUrl>#style74</styleUrl>
+    <Point>
+      <coordinates>135.505035,34.689156,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>032／GASTRO PUB LONDON STAND 北浜</name>
+    <description><![CDATA[<div dir="ltr">プレミアムジン「タンカレー」を使ったジンリッキーを世界に１台の専用サーバーを使って注ぎます。食事もできるガストロパブです。</div>]]></description>
+    <styleUrl>#style41</styleUrl>
+    <Point>
+      <coordinates>135.506699,34.687931,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>033／北浜ダイナー</name>
+    <description><![CDATA[<div dir="ltr">おいしいワインと鉄板焼が楽しめる、立ち飲みスタイルのカジュアルワインバーです。お一人様もお気軽にどうぞ。</div>]]></description>
+    <styleUrl>#style18</styleUrl>
+    <Point>
+      <coordinates>135.505859,34.687756,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>034／海底バー シェルハウス</name>
+    <description><![CDATA[<div dir="ltr">海底をイメージした店内、サメの剥製やサンゴ、ノコギリエイなど不思議な空間です。立体駐車場の２階隠れ家的なお店です。</div>]]></description>
+    <styleUrl>#style21</styleUrl>
+    <Point>
+      <coordinates>135.506683,34.687378,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>035／G.Baccano</name>
+    <description><![CDATA[<div dir="ltr">ワイン一杯からがっつり食事まで、気軽に入れるアットホームなイタリアン!!おひとり様でも大歓迎!!</div>]]></description>
+    <styleUrl>#style63</styleUrl>
+    <Point>
+      <coordinates>135.504547,34.687599,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>036／健美宴-SANKYUBASHI-</name>
+    <description><![CDATA[<div dir="ltr">絶品の炭火焼・コラーゲンとヒアルロン酸たっぷりの健美鍋・季節の手作り料理など</div>]]></description>
+    <styleUrl>#style7</styleUrl>
+    <Point>
+      <coordinates>135.503525,34.687244,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>037／河内鶏料理と鴨鍋の店 瓦町 どら鴨</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style23</styleUrl>
+    <Point>
+      <coordinates>135.505493,34.685936,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>038／串ざんまい本店</name>
+    <description><![CDATA[<div dir="ltr">ほんまにうまい串カツを食べてもらいたい！魂込めた浪速の串カツをこの機会に！ソースの二度漬け禁止やで〜！</div>]]></description>
+    <styleUrl>#style103</styleUrl>
+    <Point>
+      <coordinates>135.507568,34.685612,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>039／ミオバル</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style98</styleUrl>
+    <Point>
+      <coordinates>135.501419,34.692818,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>040／旬彩工房 NICCOLI</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">イタリアンテイストを加えた創作料理を小皿でリーズナブルにご用意しております。ワイン、焼酎、日本酒、ウィスキーとお酒もいろいろお楽しみ頂けるお店です。ニッコリしてお帰りいただけるよう頑張っています。</div>]]></description>
+    <styleUrl>#style11</styleUrl>
+    <Point>
+      <coordinates>135.503159,34.692032,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>041／和多屋別荘うれし野</name>
+    <description><![CDATA[<div dir="ltr">バル当時は、当店料理長自慢の会席料理を凝縮した「ミニ八寸」をお楽しみ下さい。料理としてはもちろん、お酒との相性も抜群ですよ。</div>]]></description>
+    <styleUrl>#style113</styleUrl>
+    <Point>
+      <coordinates>135.500565,34.691360,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>042／ジョエル</name>
+    <description><![CDATA[<div dir="ltr">名物ビーフシチューを小皿でご用意してお待ちしております。オススメグラスワイン(赤・白)とご一緒にどうぞ。<br>名物ショコラを始め、ジョエルのお菓子は全ての店内の厨房で手作りしています。</div>]]></description>
+    <styleUrl>#style70</styleUrl>
+    <Point>
+      <coordinates>135.499863,34.691387,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>043／add PAINDUCE</name>
+    <description><![CDATA[<div dir="ltr">自家製天然酵母を使ったパンともち豚で作ったパテをはさんだサンドです。</div>]]></description>
+    <styleUrl>#style36</styleUrl>
+    <Point>
+      <coordinates>135.499908,34.691414,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>044／中之島グリル</name>
+    <description><![CDATA[<div dir="ltr">名物ビーフシチューを小皿でご用意してお待ちしております。オススメグラスワイン(赤・白)とご一緒にどうぞ。</div>]]></description>
+    <styleUrl>#style130</styleUrl>
+    <Point>
+      <coordinates>135.499908,34.691319,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>045／鉄板や上方御堂 淀屋橋店</name>
+    <description><![CDATA[<div dir="ltr">魚介、肉、野菜の鉄板焼き、お好み焼きを豊富なドリンクと共にお楽しみ下さい。服ににおいがつかない空間も人気の秘密です。</div>]]></description>
+    <styleUrl>#style34</styleUrl>
+    <Point>
+      <coordinates>135.499908,34.691204,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>046／旬和席うおまん</name>
+    <description><![CDATA[<div dir="ltr">新鮮な造りでも食べれる鯛を秘伝の出汁で茶漬けでお召しあがり下さい。</div>]]></description>
+    <styleUrl>#style38</styleUrl>
+    <Point>
+      <coordinates>135.499954,34.690926,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>047／串あげもの旬&#39;s</name>
+    <description><![CDATA[<div dir="ltr">当店人気の串３種を自家製の３種のタレでお楽しみ下さい。マイナスまで冷やしたコールドビールと相性抜群です。</div>]]></description>
+    <styleUrl>#style68</styleUrl>
+    <Point>
+      <coordinates>135.500122,34.690922,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>048／EL PONIENTE CARBÓN</name>
+    <description><![CDATA[<div dir="ltr">当店のバルの人気No.1の炭火焼ピンチョ(串焼き)をスペインワインやビールと一緒にお楽しみください。</div>]]></description>
+    <styleUrl>#style104</styleUrl>
+    <Point>
+      <coordinates>135.499680,34.691269,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>049／Belgian Beer CAFÉ Barrel</name>
+    <description><![CDATA[<div dir="ltr">ベルギーの味そのままのベルギーフリッツと、世界で最も飲まれているベルギービール「ステラ・アルトワ」 この日だけの特別セットで。</div>]]></description>
+    <styleUrl>#style45</styleUrl>
+    <Point>
+      <coordinates>135.498428,34.691460,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>050／チェディルアン 淀屋橋</name>
+    <description><![CDATA[<div dir="ltr">"本場タイ イサーン地方の料理と近隣諸国の麦酒が勢揃い。タイのミュージアムにいるようなひと時を"</div>]]></description>
+    <styleUrl>#style71</styleUrl>
+    <Point>
+      <coordinates>135.498306,34.691463,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>051／宮崎地鶏と旬彩 とり神楽</name>
+    <description><![CDATA[<div dir="ltr">都会の雑踏を忘れさせる洗練された空間で、よそでは味わえない「地頭鶏(じどっこ)地鶏」を中心とした地鶏料理を楽しむ事が出来る。</div>]]></description>
+    <styleUrl>#style118</styleUrl>
+    <Point>
+      <coordinates>135.497742,34.691101,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>052／もつ鍋 みやわき</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">前回のバルで大行列の２大看板メニュー「もつ鍋」と「にわか焼」は、どちらもヤミツキ必至の逸品です。</div>]]></description>
+    <styleUrl>#style137</styleUrl>
+    <Point>
+      <coordinates>135.511063,34.689213,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>053／おでん田八 高麗橋店</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">昆布、かつお、ウルメ、サバ、イリコ、鶏ガラスープから作る無化調の出汁に、全30種のこだわりおでん。全席掘りごたつでほっこり温まるおでん屋さん。</div>]]></description>
+    <styleUrl>#style112</styleUrl>
+    <Point>
+      <coordinates>135.509247,34.689083,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>054／麺点心酒家 Peggy Sue 高麗橋店</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">創業29年、北浜で10年のチャイニーズバル。じっくり煮込んだこだわりチャーシューと、黄く丸いカワイイ自家製ギョーザをお酒のお供にどうぞ！！</div>]]></description>
+    <styleUrl>#style99</styleUrl>
+    <Point>
+      <coordinates>135.509247,34.689030,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>055／中華酒場だるま庵</name>
+    <description><![CDATA[<div dir="ltr">高級中華レストランの味を居酒屋価格で楽しめる隠れ家的なお店です。</div>]]></description>
+    <styleUrl>#style139</styleUrl>
+    <Point>
+      <coordinates>135.510071,34.688694,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>056／EL PONIENTE GOZO（エルポニエンテ ゴソ）</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">スペインバルの気軽さを楽しんでください。</div>]]></description>
+    <styleUrl>#style30</styleUrl>
+    <Point>
+      <coordinates>135.508286,34.687523,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>057／野菜食堂 ぺスカード</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">土も体もよごさない。自家農園の無農薬野菜を使用した野菜食堂です。</div>]]></description>
+    <styleUrl>#style138</styleUrl>
+    <Point>
+      <coordinates>135.510101,34.686954,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>058／はまじま</name>
+    <description><![CDATA[<div dir="ltr">北新地はまじま本店の人気ランチメニューより、「漁師の爆弾丼」と「あおりイカのイカ漬丼」をご賞味ください。</div>]]></description>
+    <styleUrl>#style120</styleUrl>
+    <Point>
+      <coordinates>135.509445,34.685883,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>059／四川彩秀</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">本格派の四川料理の流れを守り、昨年は担々麺が人気メニューでしたので、今年も麺と鶏の揚げ物の２アイテムで！</div>]]></description>
+    <styleUrl>#style145</styleUrl>
+    <Point>
+      <coordinates>135.509521,34.684200,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>060／アジア舟</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">陽気なママが迎えてくれる小さな台湾料理店。日本と台湾文化の架け橋として、店内には台湾情報のパンフレットも豊富。</div>]]></description>
+    <styleUrl>#style35</styleUrl>
+    <Point>
+      <coordinates>135.509567,34.683826,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>061／自家焙煎珈琲 濱田屋</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">おいしい"コーヒーとケーキ"を目指して本町橋のたもとにお店を出させて頂いてから早や25年になり、街の中のオアシス緑いっぱいの木々に囲まれ安らぎも提供できる店と自負しております。"川と緑"感動がテーマのお店です。</div>]]></description>
+    <styleUrl>#style51</styleUrl>
+    <Point>
+      <coordinates>135.509552,34.683739,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>062／Bacaro MA DÉCOR</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">去年より営業時間をとれましたので、たくさんの方々に来店して頂きたいです。</div>]]></description>
+    <styleUrl>#style96</styleUrl>
+    <Point>
+      <coordinates>135.509613,34.683716,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>063／シティプラザ大阪 Cafe Pao</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">本町橋船着場降りてすぐ、シティプラザ大阪内「Cafe Pao」。バルで楽しんだ後は、「天然温泉の足湯」とおいしいお飲み物でおくつろぎください。タオルもご用意してお待ちしております。</div>]]></description>
+    <styleUrl>#style64</styleUrl>
+    <Point>
+      <coordinates>135.510483,34.683933,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>064／楽酒楽肴 越冬</name>
+    <description><![CDATA[<div dir="ltr">大阪産のお酒と食材をお手頃価格で楽しめるお店。「大阪づくし」のお酒とアテで「大阪のうまい」を再発見！</div>]]></description>
+    <styleUrl>#style142</styleUrl>
+    <Point>
+      <coordinates>135.511063,34.683189,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>065／osteri e bar Da Fronte</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">たった12席のイタリアンです。旬の食材と手づくりにこだわった料理と、コストパフォーマンスの高いリーズナブルなワイン(20種以上)をご用意しています。しっかりお食事。軽く１杯と気軽にご利用ください。</div>]]></description>
+    <styleUrl>#style132</styleUrl>
+    <Point>
+      <coordinates>135.510590,34.683350,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>066／和遊食バー 古都香</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">ママとママのお母さんによるささやかなお店です。懐かしい家庭料理から、素材にこだわった逸品まで。皆様のお越しをお待ちしております。</div>]]></description>
+    <styleUrl>#style122</styleUrl>
+    <Point>
+      <coordinates>135.510590,34.683247,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>067／E.lect Café</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">大きな窓が開放的でゆったりくつろげる店内です。オーナーこだわりのお食事とお飲み物をどうぞ！！</div>]]></description>
+    <styleUrl>#style84</styleUrl>
+    <Point>
+      <coordinates>135.510193,34.683308,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>068／ナチュラルモダン カフェ</name>
+    <description><![CDATA[<div dir="ltr">本町橋東側川沿い、ちょっとほっこりカフェギャラリー＋設計事務所＋ナチュラルモダンな空間</div>]]></description>
+    <styleUrl>#style72</styleUrl>
+    <Point>
+      <coordinates>135.510208,34.683212,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>069／mexicokitchen×bar ミュー～mu～</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">限定10食のお得なセットです！メキシコビールとタコス！最高です！赤字です！祭りを楽しみましょう！</div>]]></description>
+    <styleUrl>#style52</styleUrl>
+    <Point>
+      <coordinates>135.510208,34.683208,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>070／Angel Bee</name>
+    <description><![CDATA[<div dir="ltr">Angel Beeは昨年12月にオープンしたスイーツカフェ。旬のフルーツを使ったスイーツとお酒、新感覚をぜひお楽しみください。</div>]]></description>
+    <styleUrl>#style136</styleUrl>
+    <Point>
+      <coordinates>135.508698,34.682838,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>071／ワイン食堂Vintage</name>
+    <description><![CDATA[<div dir="ltr">美味しい前菜と美味しいワインで皆様のお越しをお待ちしてまっす！</div>]]></description>
+    <styleUrl>#style105</styleUrl>
+    <Point>
+      <coordinates>135.486633,34.695194,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>072／洋食ダイニング ダブル・オ―</name>
+    <description><![CDATA[<div dir="ltr">シーンに合わせて使い分けれるお店作りは、大工のオーナーならでは。気軽に楽しめるフレンチ＆イタリアン。秋は、是非テラス席を。</div>]]></description>
+    <styleUrl>#style19</styleUrl>
+    <Point>
+      <coordinates>135.486664,34.694935,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>073／無国籍バル Bar di Bonita</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">ヨーロッパの田舎にある小さな家と海賊船をモチーフにした扉が２つの小さな隠れ家です。</div>]]></description>
+    <styleUrl>#style55</styleUrl>
+    <Point>
+      <coordinates>135.486221,34.694851,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>074／ヒマールチュリ</name>
+    <description><![CDATA[<div dir="ltr">ネパールの家庭料理を提供しています。カレーをメインとしていますが、人気のあんこナン・チーズナン・ネパール餃子をぜひ一度食べにきて下さい。</div>]]></description>
+    <styleUrl>#style46</styleUrl>
+    <Point>
+      <coordinates>135.488708,34.695103,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>075／鉄板焼ホルモン鍋なす</name>
+    <description><![CDATA[<div dir="ltr">豚ホルモンは直接仕入＆国産、丁寧な下処理にこだわっています。プリプリでやわらかいホルモンとジューシーな自家製チャーシューは絶品！</div>]]></description>
+    <styleUrl>#style90</styleUrl>
+    <Point>
+      <coordinates>135.487961,34.694969,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>076／M2</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">気軽に、はいってきて下さい。世界チャンピオンの彫った氷の彫刻もかざってます。</div>]]></description>
+    <styleUrl>#style85</styleUrl>
+    <Point>
+      <coordinates>135.488663,34.694756,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>077／Trattoria Pino</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">その日仕入れた新鮮な食材を使い、季節にこだわり食事を気軽に楽しんで頂けるひと時をぜひトラットリアピノでお過ごしください。</div>]]></description>
+    <styleUrl>#style28</styleUrl>
+    <Point>
+      <coordinates>135.487762,34.694386,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>078／Restaurant Chez Noix 新福島店</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">前回も大好評でした自家製自慢のブリオッシュパンをフレンチトーストにしました。外はカリッと中がフワッと!!バニラアイスと生クリームをトッピングしています。</div>]]></description>
+    <styleUrl>#style73</styleUrl>
+    <Point>
+      <coordinates>135.485001,34.694035,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>079／ピンポン玉</name>
+    <description><![CDATA[<div dir="ltr">"ちめたいエビス生ビールと手作落し揚げをお楽しみください。<br>焼酎27種類、地酒17種類常時そろえてお待ちしております。"</div>]]></description>
+    <styleUrl>#style121</styleUrl>
+    <Point>
+      <coordinates>135.484879,34.693764,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>080／じゃがいも鍋　キュウロク</name>
+    <description><![CDATA[<div dir="ltr">本場韓国にも負けない本気のカムジャタンを是非ともお召し上がりください！</div>]]></description>
+    <styleUrl>#style42</styleUrl>
+    <Point>
+      <coordinates>135.485641,34.693607,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>081／「タッハンマリ」のお店  はるばん</name>
+    <description><![CDATA[<div dir="ltr">"H.24.6.30放送 マチャミ＆なるみのぶっちゃけナハーレ「福島グルメベスト１位」<br>H.24.7.4放送 「すまたんZIP」で当店タッハンマリが紹介！<br>ハナコウエスト23年1月 おいしい店グランプリ「変わり鍋」準グランプリ！"</div>]]></description>
+    <styleUrl>#style82</styleUrl>
+    <Point>
+      <coordinates>135.485489,34.693523,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>082／地中海料理アッラパーチェ</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">なんと地中海料理は世界遺産なんです。大阪で唯一のギリシャ料理店で、食べる世界遺産を体験してみませんか。</div>]]></description>
+    <styleUrl>#style39</styleUrl>
+    <Point>
+      <coordinates>135.485382,34.693447,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>083／藤乃</name>
+    <description><![CDATA[<div dir="ltr">"大阪特産の河内鴨とお酒と蕎麦のお店です。<br>河内鴨を使った色々なお料理や各地のお地酒、ワインや焼酎もそろえています。"</div>]]></description>
+    <styleUrl>#style65</styleUrl>
+    <Point>
+      <coordinates>135.484879,34.693428,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>084／カレー屋SUN</name>
+    <description><![CDATA[<div dir="ltr">フルーティー＆スパイス。オーソドックスから創作系までメニュー多数。落ち着いた雰囲気の店内でカレーライスをどうぞ！</div>]]></description>
+    <styleUrl>#style143</styleUrl>
+    <Point>
+      <coordinates>135.483994,34.693237,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>085／cafe hanuru</name>
+    <description><![CDATA[<div dir="ltr">"薬食同源の考えのもと、飲み継がれている韓国茶。hanuruでは、こだわりの無農薬の野草茶、その他韓国の伝統茶を提供しています。"</div>]]></description>
+    <styleUrl>#style135</styleUrl>
+    <Point>
+      <coordinates>135.484879,34.693192,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>086／bar Oshiri yes</name>
+    <description><![CDATA[<div dir="ltr">市場より旬の食材を仕入れて作る美味しいイタリア料理。ワインはもちろん、カクテルも充実！</div>]]></description>
+    <styleUrl>#style3</styleUrl>
+    <Point>
+      <coordinates>135.486176,34.693153,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>087／La Strada</name>
+    <description><![CDATA[<div dir="ltr">落ち着いた雰囲気のお店で、北イタリアの郷土色ある料理とワインのをお楽しみいただけます。</div>]]></description>
+    <styleUrl>#style117</styleUrl>
+    <Point>
+      <coordinates>135.484604,34.690712,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>088／SAINT-LOUIS AMUSE</name>
+    <description><![CDATA[<div dir="ltr">温かな居心地の良さを最高の景観の中で味わう！ビストロ感覚で、本格フレンチを気軽に楽しんで下さい！</div>]]></description>
+    <styleUrl>#style83</styleUrl>
+    <Point>
+      <coordinates>135.486450,34.690681,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>089／de sign de &gt; café</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">お店全体がガラス張りで、川を眺めながらゆったりできるリバーサイドカフェです。</div>]]></description>
+    <styleUrl>#style4</styleUrl>
+    <Point>
+      <coordinates>135.486252,34.690536,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>090／ALL DAY DINING REMONE</name>
+    <description><![CDATA[<div dir="ltr">水と緑のレストラン ALL DAY DINING REMONE(リモネ)。大きな窓から自然光が降り注ぐ店内で心地よい時間を。店内にはオープンキッチンが設置され、ホテルならではのお料理とサービスを堪能できます。</div>]]></description>
+    <styleUrl>#style32</styleUrl>
+    <Point>
+      <coordinates>135.487213,34.690426,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>091／オープンレストラン</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style80</styleUrl>
+    <Point>
+      <coordinates>135.480881,34.685272,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>092／マリブ食堂鉄板焼＆寿司 難波店</name>
+    <description><![CDATA[<div dir="ltr">"鉄板焼と寿司が出会った食堂。それが「マリブ食堂」<br>淡路島直送の玉ねぎステーキとタコのぶつ切りポン酢を是非！！"</div>]]></description>
+    <styleUrl>#style89</styleUrl>
+    <Point>
+      <coordinates>135.499634,34.669727,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>093／かさまつ</name>
+    <description><![CDATA[<div dir="ltr">立ち呑み屋だけどイスがある店。一番安い一品は50円から有ります。</div>]]></description>
+    <styleUrl>#style75</styleUrl>
+    <Point>
+      <coordinates>135.499557,34.669693,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>094／韓流スイーツモゴバヤ</name>
+    <description><![CDATA[<div dir="ltr">韓国のおやつ、アツアツのホットクもちっこドーナッツを楽しめるお店です。韓国スタッフが本場の味を提供します。</div>]]></description>
+    <styleUrl>#style94</styleUrl>
+    <Point>
+      <coordinates>135.499466,34.669720,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>095／I LOVE PIZZA</name>
+    <description><![CDATA[<div dir="ltr">本格ナポリピッツァと35種の世界のビールが楽しめるPIZZA＆WORLD BEERのお店。</div>]]></description>
+    <styleUrl>#style2</styleUrl>
+    <Point>
+      <coordinates>135.499161,34.669704,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>096／浪速たこ焼 八兵衛 西心斎橋店</name>
+    <description><![CDATA[<div dir="ltr">静岡県焼津産の桜えびと特製スープからとった濃厚な味が特徴です。</div>]]></description>
+    <styleUrl>#style59</styleUrl>
+    <Point>
+      <coordinates>135.499451,34.669495,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>097／グリル南風</name>
+    <description><![CDATA[<div dir="ltr">歴史ある洋食屋</div>]]></description>
+    <styleUrl>#style76</styleUrl>
+    <Point>
+      <coordinates>135.499344,34.669437,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>098／DINING MOHRI</name>
+    <description><![CDATA[<div dir="ltr">白を基調にした明るい店内で、昼はバイキング、夜はコースやアラカルト。どちらも大変リーズナブルです。</div>]]></description>
+    <styleUrl>#style110</styleUrl>
+    <Point>
+      <coordinates>135.498627,34.669392,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>099／Spanish Bar Pasion 西心斎橋店</name>
+    <description><![CDATA[<div dir="ltr">パエリアやアヒージョなど全100種類以上のメニューが全て399円で気軽に楽しめるスパニッシュバルです！</div>]]></description>
+    <styleUrl>#style6</styleUrl>
+    <Point>
+      <coordinates>135.499481,34.669266,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>100／スパゲッティーのナポリ</name>
+    <description><![CDATA[<div dir="ltr">今ではなかなか食べれないナポリタンとミートソースのお店です。この機会にぜひ味わって下さい。</div>]]></description>
+    <styleUrl>#style1</styleUrl>
+    <Point>
+      <coordinates>135.499786,34.668774,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>101／Jantar Laco ジャンタール ラッソ</name>
+    <description><![CDATA[<div dir="ltr">“Jantar”とは、晩餐の意味。ジャンルやスタイルにとらわれることなく、楽しんでいただきたいという思いからつけました。</div>]]></description>
+    <styleUrl>#style60</styleUrl>
+    <Point>
+      <coordinates>135.499481,34.668766,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>102／庵の梅</name>
+    <description><![CDATA[<div dir="ltr">ベテラン板前料理を、格安価格で。長崎産とらふぐの店</div>]]></description>
+    <styleUrl>#style128</styleUrl>
+    <Point>
+      <coordinates>135.499496,34.668762,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>103／Mexico</name>
+    <description><![CDATA[<div dir="ltr">メキシコ出身のスタッフが作るトルティーヤとサルサメヒカナを使ったタコス！特製のマルガリータと一緒にどうぞ。</div>]]></description>
+    <styleUrl>#style140</styleUrl>
+    <Point>
+      <coordinates>135.499512,34.668762,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>104／赤坂一龍 大阪難波店</name>
+    <description><![CDATA[<div dir="ltr">乳酸菌たっぷり美肌効果バツグンのマッコリと、おいしいチャプチェをご用意してお待ちしております。オソオセヨ〜！！</div>]]></description>
+    <styleUrl>#style16</styleUrl>
+    <Point>
+      <coordinates>135.499863,34.668598,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>105／らーめん亀王道頓堀店</name>
+    <description><![CDATA[<div dir="ltr">女性にも「こだわりチャーシュー」お試し頂きたく、バルのためにミニセットをご用意致しました。是非どうぞ！</div>]]></description>
+    <styleUrl>#style127</styleUrl>
+    <Point>
+      <coordinates>135.499466,34.668610,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>106／Gastro Garden on the 7th</name>
+    <description><![CDATA[<div dir="ltr">ウッドデッキテラスから見上げる広い空。心地よい風。噴水の水音。リラックスできるオープンエアバーです。</div>]]></description>
+    <styleUrl>#style101</styleUrl>
+    <Point>
+      <coordinates>135.499115,34.668591,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>107／七輪炭火焼ホルモン 番長ヨシダ</name>
+    <description><![CDATA[<div dir="ltr">雨の日も行列ができる東京・亀戸ホルモンの姉妹店。鮮度・値段・味・ボリューム、四拍子そろったホルモン専門店です。</div>]]></description>
+    <styleUrl>#style144</styleUrl>
+    <Point>
+      <coordinates>135.498291,34.668697,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>108／串かつのいっしょう</name>
+    <description><![CDATA[<div dir="ltr">大阪のソウルフード串カツ！出来たてサクサクを特製ソースでお召し上がりください。こんなとことがまた旨い。</div>]]></description>
+    <styleUrl>#style24</styleUrl>
+    <Point>
+      <coordinates>135.498138,34.668697,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>109／づぼらや道頓堀店</name>
+    <description><![CDATA[<div dir="ltr">大阪ミナミのど真ん中にあるつぼらやは、ふぐ料理をメインとする大阪を代表する和食レストランです。</div>]]></description>
+    <styleUrl>#style92</styleUrl>
+    <Point>
+      <coordinates>135.502304,34.668781,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>110／アメリカンダイナーKokopelli</name>
+    <description><![CDATA[<div dir="ltr">世界のビールを約30種揃えております。大阪の箕面ビールもあり☆アメリカンな当店で、ぜひ一杯!!</div>]]></description>
+    <styleUrl>#style25</styleUrl>
+    <Point>
+      <coordinates>135.502060,34.667927,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>111／アラビヤコーヒー</name>
+    <description><![CDATA[<div dir="ltr">創業昭和26年。ソフトでマイルドな香り高い自家焙煎コーヒーをお楽しみください。</div>]]></description>
+    <styleUrl>#style61</styleUrl>
+    <Point>
+      <coordinates>135.501831,34.667915,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>112／二色</name>
+    <description><![CDATA[<div dir="ltr">昭和24年創業のおでんと串かつの店です。ミナミを代表する庶民の居酒屋さんです。</div>]]></description>
+    <styleUrl>#style115</styleUrl>
+    <Point>
+      <coordinates>135.501572,34.667904,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>113／ひろの一本釣</name>
+    <description><![CDATA[<div dir="ltr">水産会社直営店が自信をもっておすすめする新鮮料理の数々を堪能して下さい</div>]]></description>
+    <styleUrl>#style79</styleUrl>
+    <Point>
+      <coordinates>135.501999,34.667820,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>114／フェローズ</name>
+    <description><![CDATA[<div dir="ltr">なんば駅近、徒歩2分法善寺前にある居酒屋。できてから30年の洋風の作りの老舗です。一度寄ってみて!</div>]]></description>
+    <styleUrl>#style124</styleUrl>
+    <Point>
+      <coordinates>135.501846,34.667782,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>115／備長炭やきとり笹屋</name>
+    <description><![CDATA[<div dir="ltr">備長炭で焼き上げる黒地鶏と新鮮な野菜をお楽しみください。ノリの良いスタッフにも注目！</div>]]></description>
+    <styleUrl>#style66</styleUrl>
+    <Point>
+      <coordinates>135.503525,34.667709,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>116／pasteria bambu</name>
+    <description><![CDATA[<div dir="ltr">毎日、粉から練り上げた、打ち立ての生パスタの店。打ち立ての生パスタをお楽しみください。</div>]]></description>
+    <styleUrl>#style109</styleUrl>
+    <Point>
+      <coordinates>135.503540,34.667709,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>117／MOULiN</name>
+    <description><![CDATA[<div dir="ltr">水の気配と風の流れを感じるオープンエアのテラス席でリゾート気分を。</div>]]></description>
+    <styleUrl>#style12</styleUrl>
+    <Point>
+      <coordinates>135.496201,34.669388,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>118／カフェスパッツ</name>
+    <description><![CDATA[<div dir="ltr">湊町リバープレイスとともに10周年を迎え、４月よりメニューもボリューム満点、種類も一新しました。</div>]]></description>
+    <styleUrl>#style141</styleUrl>
+    <Point>
+      <coordinates>135.496353,34.667973,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>119／BAR in</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">ウィスキーとカクテルが豊富な本格的BAR</div>]]></description>
+    <styleUrl>#style67</styleUrl>
+    <Point>
+      <coordinates>135.477081,34.666710,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>120／沖縄酒場きじむな～の森</name>
+    <description><![CDATA[<div dir="ltr">夜遅くまで沖縄料理が食べられて、わいわいアットホームな雰囲気でついつい時間を忘れてしまいそう。美味しい料理にお酒、楽しい音楽、お一人様でも気軽にどうぞ。</div>]]></description>
+    <styleUrl>#style57</styleUrl>
+    <Point>
+      <coordinates>135.477341,34.666607,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>121／炭焼茶屋 やけぼっくい</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">バルメニューとして、当店名物仙台直送・熟成厚切牛タンをご用意致しました。この機会に是非、ご賞味あれ！</div>]]></description>
+    <styleUrl>#style53</styleUrl>
+    <Point>
+      <coordinates>135.477753,34.666626,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>122／居酒屋 遊心</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">来てぇー！！</div>]]></description>
+    <styleUrl>#style15</styleUrl>
+    <Point>
+      <coordinates>135.477875,34.666401,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>123／石窯バール decore</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">石釜を使った香ばしい洋風創作料理。ピッツァなどメニューたくさん。ワイン・外国ビール、リーズナブルな値段でご提供します。ぜひお越しください！！</div>]]></description>
+    <styleUrl>#style47</styleUrl>
+    <Point>
+      <coordinates>135.477753,34.666367,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>124／よしのや食堂</name>
+    <description><![CDATA[<div dir="ltr">"昔ながらの大衆食堂　昭和の雰囲気を味わって下さい。"</div>]]></description>
+    <styleUrl>#style123</styleUrl>
+    <Point>
+      <coordinates>135.478210,34.666016,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>125／焼きとり居酒屋 遊</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">世界に広げよう あっちっちの輪！！</div>]]></description>
+    <styleUrl>#style5</styleUrl>
+    <Point>
+      <coordinates>135.479355,34.666237,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>126／島唄と沖縄料理 うすぱれ　豊年</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">ひと時を沖縄のムードにしたって下さいませ。</div>]]></description>
+    <styleUrl>#style17</styleUrl>
+    <Point>
+      <coordinates>135.479401,34.666115,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>127／居酒屋 へちま</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">メニュになくても、食べたい物を言ってみて下さい。</div>]]></description>
+    <styleUrl>#style22</styleUrl>
+    <Point>
+      <coordinates>135.479523,34.665974,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>128／琉球酒房 尚家</name>
+    <Snippet></Snippet>
+    <description><![CDATA[<div dir="ltr">那覇出身オーナーの手作りジーマーミー(ピーナッツ)豆腐は絶品！沖縄から直送食材の『まーさん♪うちなー料理』をお楽しみ下さい。おいしい料理・おいしい泡盛・よき出逢いをみなさまへ♪</div>]]></description>
+    <styleUrl>#style146</styleUrl>
+    <Point>
+      <coordinates>135.480362,34.665058,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>129／ミートde meat</name>
+    <description><![CDATA[<div dir="ltr">モチモチした食感の生パスタは8種類。濃厚ミートソースは3種類。あなた好みのパスタを作って下さい。</div>]]></description>
+    <styleUrl>#style88</styleUrl>
+    <Point>
+      <coordinates>135.478302,34.664570,0.000000</coordinates>
+    </Point>
+  </Placemark>
+</Document>
+</kml>

@@ -29,9 +29,12 @@ require('dbconnect.php');
 </script>
 </head>
 <body>
-	<header>
-		<h2>レストラン情報をさがす</h2>
+<header>
+		<div id= "page_top">
+		<img src= "img/logo.png" style="width:100%">
 		<img src= "img/line.png" style="width:100%">
+		</div>
+		<h1>お店情報をさがす！</h1>
 	</header>
 	目的の店が決まっている人は
 	<div class="search_rest">
