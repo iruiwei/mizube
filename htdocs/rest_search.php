@@ -90,7 +90,15 @@ require('dbconnect.php');
 		</div>
 	</form>
 	</div>
-	
+		<div class="search_rest">
+		<div class= "rest_text">
+			全エリアからのランキング！
+		</div>
+		<div class= "rest_submit">
+			<input type="image" src="img/arrow.png" name="" width= "45"></input>
+		</div>
+	</form>
+	</div>
 
 </body>
 </html>

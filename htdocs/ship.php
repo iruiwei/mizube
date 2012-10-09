@@ -146,9 +146,38 @@ else
 	?>
 	 </div>
 
-	 <div id="twitter">
-	 	天満橋エリア</br>
-	 	twiiterのエリア情報
+	 	エリア情報
+	 	 <div class="twitter">
+	 <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+version: 2,
+type: 'search',
+search: '#mizubebar',
+interval: 30000,
+title: '',
+subject: '水辺バル',
+width: 'auto',
+height: 400,
+theme: {
+shell: {
+background: '#ffffff33',
+color: '#8a8a8a'
+},
+tweets: {
+background: '#ffffff99',
+color: '#444444',
+links: '#1985b5'
+}
+},
+features: {
+scrollbar: false,
+loop: true,
+live: true,
+behavior: 'default'
+}
+}).render().start();
+</script>
 	 </div>
 
 </body>
