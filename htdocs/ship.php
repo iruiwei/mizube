@@ -40,7 +40,7 @@ else $d=3;
 		<img src= "img/line.png" style="width:100%">
 		</div>
 	</header>
-	<div id=""info">
+	<div id="info">
 		エリアを選んでください。
 	</div>
 	<form method= "post" action="ship.php">
