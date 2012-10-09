@@ -9,4 +9,7 @@
 	else{
 		echo 'Welcome!!';
 	}
+	
+	echo '<br>';
+	echo $showtime=date("d");
 ?>

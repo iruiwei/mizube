@@ -6,6 +6,17 @@ if(empty($_REQUEST['area'])){
 }
 else
 	$area=$_REQUEST['area'];
+	
+$day=date("d");
+if($day=='13'){
+	if(date("H")<13)
+		$d=0;
+	else
+		$d=1;
+}
+else if($day=='14')
+	$d=2;
+else $d=3;
 
 ?>
 
@@ -91,7 +102,8 @@ else
 		現在、５分遅れで運行しています。
 	</div>
 	<?php
-	$sql3=sprintf('select depTime, currentTicket1, falg from mb_shiptime where arrivalID="%d" and departureID="%d" and falg<>2',mysql_real_escape_string($data2[0]),mysql_real_escape_string($data1[0]));
+	
+	$sql3=sprintf('select depTime, currentTicket1, falg from mb_shiptime where arrivalID="%d" and departureID="%d" and falg<>"%d"  order by depTime asc',mysql_real_escape_string($data2[0]),mysql_real_escape_string($data1[0]),mysql_real_escape_string($d));
 	$recordset3=mysql_query($sql3)or die(mysql_error());
 	$count=0;
 	?>
@@ -99,12 +111,12 @@ else
 	<?php
 	while($data3=mysql_fetch_assoc($recordset3)){
 		$t=strtotime($data3['depTime']);
-		if($count!=0&&$i>3&&$count==idate('H',$t)){
+		if($count!=0&&$i>6&&$count==idate('H',$t)){
 			?></tr><?php
 		}
 		if($count==0||$count!=idate('H',$t)){
-			if($count!=0&&$count!=idate('H',$t)&&$i<4){
-				?><td colspan="<?php echo (4-$i);?>"><?php echo "  ";?></td></tr><?php  
+			if($count!=0&&$count!=idate('H',$t)&&$i<7){
+				?><td colspan="<?php echo (7-$i);?>"><?php echo "  ";?></td></tr><?php  
 			}
 			$count=idate('H',$t);
 			$i=0;
