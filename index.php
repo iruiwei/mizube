@@ -13,3 +13,11 @@
 	echo '<br>';
 	echo $showtime=date("d");
 ?>
+<form action="test.php" method="post">
+	<?php
+		for ($i=0;$i<4;$i++){
+			?><select name="<?php echo $i?>"><option value="1">1</option></select><?php
+		}
+	?>
+	<input type="submit" value="ok"/>
+</form>
