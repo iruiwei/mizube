@@ -12,7 +12,7 @@ echo $_REQUEST['lon'];
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>testdo</title>
+	<title>MAP</title>
 	<meta name="generator" content="TextMate http://macromates.com/">
 	<meta name="author" content="SHEN RUIWEI">
 	<!-- Date: 2012-10-11 -->
