@@ -115,6 +115,18 @@ header {
 	text-decoration: none;
 }
 
+.rest_menu{
+	padding: 5px;
+	border-bottom: dotted 3px;
+	border-bottom-color: #aaa;
+}
+
+hr {
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+    background: #999;
+}
+
 /* レストラン探す-----------------------------------------------------------------------------*/
 .search_rest{
 	width:99%;
