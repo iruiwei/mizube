@@ -32,6 +32,7 @@
 			document.write('/n');
 			document.write(lng);
 			
+			
 
 			$(function(){
 				$('#sw').click(
@@ -66,7 +67,7 @@
 	</script>
 </head>
 <body onload="initialize()">
-	<!--<div id="show_result"></div>-->
+	<div id="show_result"></div>
 	<br>
 	
 	<a href="javascript: void(0)" id="sw">switch</a><br/>
