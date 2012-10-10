@@ -55,6 +55,12 @@ header {
 	font-size: 1.2em;
 	text-align: center;
 }
+/* rest-----------------------------------------------------------------------------*/
+#map_canvas{
+	    border: 0;
+    height: 0; /* Firefox... */
+    box-shadow: 0 0 10px 1px black;
+}
 
 /* rest-----------------------------------------------------------------------------*/
 .restaurant{
@@ -134,7 +140,7 @@ hr {
 	border-color:  #888;
 	border-style: dotted none none none ;
 	border-width:3px;  
-	height: 80px;
+	height: 90px;
 	padding: 20px 20px 0 10px;
 }
 .rest_text{
@@ -145,7 +151,7 @@ hr {
 }
 .rest_submit{
 	width: 20%;
-	padding: 0;
+	padding: 10px 0 0 0;
 	height: 50px;
 	float: right;
 }
@@ -157,11 +163,11 @@ select{
     -webkit-appearance: button;
     appearance: button;
     padding: 4px;
-    background: rgba(200,200,255, 0.2);
+    background: rgba(255,255,255, 0.5);
     border: none;
     color: #000;
     font-size: 1.4em;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.32) inset;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4) inset;
 }
 
 #submit_botton{

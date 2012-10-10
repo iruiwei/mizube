@@ -4,7 +4,7 @@ require('dbconnect.php');
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
 
-<html lang="en">
+<html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>水辺バル</title>
@@ -41,7 +41,7 @@ require('dbconnect.php');
 		<div class= "rest_text">
 			店番号からさがす
 			<form method= "GET" action="">
-			<input type= "text" name="" size="3"></input>
+			<input type= "text" name="" size="3" style="font-size:1.3em;" ></input>
 		</div>
 		<div class= "rest_submit">
 			<input type="image" src="img/arrow.png" name="" width= "45"></input>
@@ -52,7 +52,7 @@ require('dbconnect.php');
 		<div class= "rest_text">
 			店の名前からさがす
 			<form method= "GET" action="">
-			<input type= "text" name="" size="20"></input>
+			<input type= "text" name="" size="20"style="font-size:1.3em;" ></input>
 		</div>
 		<div class= "rest_submit">
 			<input type="image" src="img/arrow.png" name="" width= "45"></input>
@@ -63,7 +63,7 @@ require('dbconnect.php');
 	<div class="search_rest">
 		<div class= "rest_text">
 			エリアからさがす
-			<form method= "GET" action="">
+			<form method= "GET" action="rest_area.php">
 			<?php
 			$sql0=sprintf('select mb_area.id,mb_area.name from mb_area');
 			$recordset0=mysql_query($sql0)or die(mysql_error());
@@ -83,38 +83,40 @@ require('dbconnect.php');
 		</div>
 	</form>
 	</div>
-	<div class="search_rest">
-		<div class= "rest_text">
-			ジャンルからさがす
-			<form method= "GET" action="">
-				<?php
-				$sql1=sprintf('select tag_id,tag_name from mb_tag');
-				$recordset1=mysql_query($sql1)or die(mysql_error());
-				?>
-				<select name='tag'>
-					<?php
-					while($data1=mysql_fetch_assoc($recordset1)){	
-					?>	
-						<option value=<?php echo $data1['tag_id'];?>><?php echo $data1['tag_name'];?></option>
-					<?php
-					}
-					?>
-				</select>
-		</div>
-		<div class= "rest_submit">
-			<input type="image" src="img/arrow.png" name="" width= "45"></input>
-		</div>
-	</form>
-	</div>
-		<div class="search_rest">
-		<div class= "rest_text">
-			全エリアからのランキング！
-		</div>
-		<div class= "rest_submit">
-			<input type="image" src="img/arrow.png" name="" width= "45"></input>
-		</div>
-	</form>
-	</div>
+
+ <div class="twitter">
+	 <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+version: 2,
+type: 'profile',
+rpp: 4,
+interval: 10000,
+title: '',
+subject: '水辺バル2012',
+width: 'auto',
+height: 400,
+theme: {
+shell: {
+background: '#ffffff33',
+color: '#8a8a8a'
+},
+tweets: {
+background: '#ffffff99',
+color: '#444444',
+links: '#1985b5'
+}
+},
+features: {
+scrollbar: false,
+loop: true,
+live: true,
+behavior: 'default'
+}
+}).render().setUser('mizube_barOSAKA').start();
+</script>
+
+</div>
 
 </body>
 </html>

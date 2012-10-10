@@ -1,4 +1,17 @@
-﻿<html xmlns="http://www.w3.org/1999/xhml">
+<?php
+session_start();
+
+if(empty($_REQUEST['area'])){
+	$area=1;
+}
+else
+	$area=$_REQUEST['area'];
+
+require('dbconnect.php');
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhml">
 <head>
 	<meta charset="utf-8" />
 	<title>水辺バル</title>
@@ -12,22 +25,26 @@
 	var lat=0;
 	var lng=0;
   	function initialize() {
-    var initPos = new google.maps.LatLng(34.682177, 135.497303); //->エリアによって変える
+    //kml読み込み部分
+    
+
+
+    var initPos = new google.maps.LatLng(34.690632, 135.516083); //->エリアによって変える
     var myOptions = {
     	noClear : true,
     	center : initPos,
-    	zoom : 13,
+    	zoom : 15,
     	mapTypeId : google.maps.MapTypeId.ROADMAP
     };
     var map_canvas = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
      
-    
-    //kml読み込み部分
-    
-    var kmlUrl = "https://maps.google.com/maps/ms?ie=UTF8&authuser=0&msa=0&output=kml&msid=214267887168441249308.0004c7e4364594a9c6c1e";
-    var kmlLayer = new google.maps.KmlLayer(kmlUrl);
-    kmlLayer.setMap(map_canvas);
-    
+    var kmlOptions = {
+          preserveViewport: true
+        }
+     var kmlUrl = "https://maps.google.com/maps/ms?ie=UTF8&authuser=0&msa=0&output=kml&msid=214267887168441249308.0004c7e4364594a9c6c1e";
+    var kmlLayer = new google.maps.KmlLayer(kmlUrl,kmlOptions);
+    kmlLayer.setMap(map_canvas); 
+
 
     //ユーザの位置情報取得
     navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
@@ -60,8 +77,7 @@
       });
      
         
-      //phpに値受け渡し
-　　　
+
 
     }
 
@@ -114,16 +130,23 @@
 	 <div id="info_top">エリア情報</div>
 	  <div id="map_canvas" style="width:100%; height:200px;"></div>
 
-	  <form method= "post" action="ship.php">
+	  <form method= "post" action="rest_area.php">
+	  <?php
+	  	$sql0=sprintf('select mb_area.id,mb_area.name from mb_area');
+		$recordset0=mysql_query($sql0)or die(mysql_error());
+	?>
 		<select name='area'>
-			<option value="1" selected="selected">天満橋エリア</option>
-			<option value=2>北浜エリア</option>
-			<option value=3>淀屋橋エリア</option>
-			<option value=4>東横堀エリア</option>
-			<option value=5>福島エリア</option>
-			<option value=6>中之島ゲートエリア</option>
-			<option value=7>ミナミエリア</option>
-			<option value=8>大正エリア</option>
+		<?php
+			while($data0=mysql_fetch_assoc($recordset0)){
+				echo '<option value="'. $data0['id'] .'"';
+				if($_REQUEST['area']==$data0['id']){
+					echo ' selected';
+				}
+				echo '>'. $data0['name']. '</option>';
+			}
+		
+		
+	?>
 				</select>
 	
 	 <input type="submit" value="決定" id= "submit_botton">
