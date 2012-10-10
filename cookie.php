@@ -35,10 +35,10 @@
 		if($table['cnt']==0){
 			$sql1=sprintf('insert into mb_guest values("%d","%d",0)',mysql_real_escape_string($_Id),mysql_real_escape_string($visit));
 			$record=mysql_query($sql1)or die(mysql_error());
-			echo "初めての訪問ありがとうございます.<br />あなたのIDは".$_Id."です．";
+			//echo "初めての訪問ありがとうございます.<br />あなたのIDは".$_Id."です．";
 		}
 		else{
-			echo "Error!";
+			//echo "Error!";
 		}
 	}
 	else 
@@ -48,8 +48,8 @@
 		$record=mysql_query($sql1)or die(mysql_error());
 	 	//$table=mysql_fetch_assoc($record);
 
-		echo "ID:".$_Id."さん.<br />
-		今回で".$visit."回目の訪問になります";}
+		//echo "ID:".$_Id."さん.<br />
+		//今回で".$visit."回目の訪問になります";}
 
 	?>
 
