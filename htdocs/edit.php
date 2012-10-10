@@ -1,13 +1,15 @@
 <?php
 session_start();
 require('dbconnect.php');
-if(!isset($_SESSION['area'])){
+if(!isset($_SESSION['area'])||!empty($_REQUEST['area'])){
 	$area=$_REQUEST['area'];
 	$_SESSION['area']=$area;
 }
+
 else{
 	$area=$_SESSION['area'];
 }
+
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
@@ -27,10 +29,11 @@ else{
 	<?php
 		
 		$nt=0;
-		$marks = array("◎","◯","△","ｘ");
+		$marks = array("◎","10","5","0");
 		$st=0;
 		$A_st;
-		
+		$at=0;
+		$A_at;
 		$sql0=sprintf('select 
 							count(t.departureID) cnt 
 						from(
@@ -50,14 +53,18 @@ else{
 			$sql2=sprintf('select distinct arrivalID as aid from mb_shiptime2 where departureID="%d"',mysql_real_escape_string($data1[0]));
 			$recordset2=mysql_query($sql2)or die(mysql_error());
 			while($data2=mysql_fetch_row($recordset2)){
-				$sql2n=sprintf('select t1.area_name c1,t2.area_name c2 from mb_port as t1,mb_port as t2 where t1.aid="%d" and t2.aid="%d"',mysql_real_escape_string($data1[0]),mysql_real_escape_string($data2[0]));
+				$sql2n=sprintf('select t1.area_name as c1,t2.area_name as c2,comText,id from mb_shipcomments,mb_port as t1,mb_port as t2 where departureID="%d" and arrivalID="%d" and t1.aid="%d" and t2.aid="%d"',mysql_real_escape_string($data1[0]),mysql_real_escape_string($data2[0]),mysql_real_escape_string($data1[0]),mysql_real_escape_string($data2[0]));
 				$recordset2n=mysql_query($sql2n)or die(mysql_error());
 				$data2n=mysql_fetch_assoc($recordset2n);
 	?>
 	 <div class="ship_to"><?php echo $data2n['c1'];?> →　<?php echo $data2n['c2'];?>	</div>
-
+<!----><input type="text" name="<?php echo $data2n['id'];?>" value="<?php echo $data2n['comText'];?>">
+		<?php
+			$A_at[$at]=$data2n['id'];
+			$at++;
+		?>
 	 	<div class="ship_info">
-		現在、５分遅れで運行しています。
+		
 	</div>
 	<?php
 	
@@ -127,8 +134,9 @@ else{
 					?><option value="3"><?php echo "ｘ";$nt=3;?></option><?php
 				}
 				for($n=0;$n<4;$n++){
-					if($n!=$nt)
+					if($n!=$nt){
 						?><option value="<?php echo $n;?>"><?php echo $marks[$n];?></option><?php
+					}
 				}
 				?>
 				</select>
@@ -140,9 +148,6 @@ else{
 		$st++;
 	}
 	?>
-	<br>
-	<select name="0">
-		<option value="0">0</option>
 	</table>
 	<?php
 }
@@ -151,6 +156,7 @@ else{
 	 </div>
 	<?php
 	$_SESSION['sid']=$A_st;
+	$_SESSION['aid']=$A_at;
 	?>
 	<br>
 	<input type="submit" value="OK"/>

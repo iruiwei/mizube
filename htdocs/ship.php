@@ -9,15 +9,14 @@ else
 	
 $day=date("d");
 if($day=='13'){
-	if(date("H")<13)
-		$d=0;
-	else
+	if(date("H")<15)
 		$d=1;
+	else
+		$d=0;
 }
 else if($day=='14')
 	$d=2;
-else $d=3;
-
+else $d=2;
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
@@ -83,7 +82,7 @@ else $d=3;
 	
 	<div id="ship_info">
 	 <h3 class="ship_title">運行情報</h3>
-	 <div class="ship_ex">整理券の残り枚数<br>（◎:多数、◯:10枚以下、△：５枚以下、ｘ：なし、運休）
+	 <div class="ship_ex">整理券の残り枚数<br>（◎:多数、◯:10枚以下、△：５枚以下、ｘ：なし、運休）<br>乗船の際は必ず各便出発地の船着場で配布される整理券が必要です。また、17時以降の整理券は15時より配布されます。
 	 </div>
 	<?php
 		$sql0=sprintf('select 
