@@ -193,37 +193,6 @@ else{
 	
 	?>
 
-	
-
-	<a href= "rest_info.php?rid=6"><div class= "restaurant">
-		<div class="rest_title">カツカレーの店	
-		</div>
-		<div class= "rest_left">
-		<img src="img/curry.jpg" class= "image_style" >
-		</div>
-		<div class="rest_right">
-		カツカレー食べたい
-		</div>
-		<div class= "rest_arrow">
-		</div>
-	</div>
-	</a>
-
-		<a href= "rest_info.php?rid=7"><div class= "restaurant">
-		<div class="rest_title">
-			カツカレーの店	
-		</div>
-		<div class= "rest_left">
-		<img src="img/curry.jpg" class= "image_style" >
-		</div>
-		<div class="rest_right">
-		カツカレー食べたい
-		</div>
-		<div class= "rest_arrow">
-		</div>
-	</div>
-	</a>
-
 	</div>
 
 	 <div class="twitter">
