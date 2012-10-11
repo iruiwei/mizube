@@ -164,7 +164,7 @@ require('dbconnect.php');
 
 
 	 <div id="info">レストラン情報</div>
-	<a href= "rest_info.php"><div class= "restaurant">
+	<a href= "rest_info.php?rid=5"><div class= "restaurant">
 		<div class="rest_title">カツカレーの店	
 		</div>
 		<div class= "rest_left">
@@ -181,7 +181,7 @@ require('dbconnect.php');
 	</div>
 	</a>
 
-	<a href= "rest_info.html"><div class= "restaurant">
+	<a href= "rest_info.php?rid=6"><div class= "restaurant">
 		<div class="rest_title">カツカレーの店	
 		</div>
 		<div class= "rest_left">
@@ -195,7 +195,7 @@ require('dbconnect.php');
 	</div>
 	</a>
 
-		<a href= "rest_info.html"><div class= "restaurant">
+		<a href= "rest_info.php?rid=7"><div class= "restaurant">
 		<div class="rest_title">
 			カツカレーの店	
 		</div>

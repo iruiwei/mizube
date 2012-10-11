@@ -1,4 +1,16 @@
-﻿<html xmlns="http://www.w3.org/1999/xhml">
+<?php
+session_start();
+
+if(empty($_REQUEST['rid'])){
+  $rid=1;
+}
+else
+  $rid=$_REQUEST['rid'];
+
+require('dbconnect.php');
+?>
+
+<html xmlns="http://www.w3.org/1999/xhml">
 <head>
 	<meta charset="utf-8" />
 	<title>水辺バル</title>
@@ -146,9 +158,8 @@
 		<img src= "img/line.png" style="width:100%">
 	
 	</header>
-	<div id="info_top">店情報</div>
-	ルート案内
-	<div id="map_canvas" style="width:100%; height:300px;margin:10px 0;"></div>
+
+
 	<div class="rest_title">カツカレーの店</div>
 	  <img src="img/curry.jpg" style= "width:100%;" >
 	<div class="rest_menu">
@@ -165,9 +176,13 @@
 	電話番号：0788036627
 	</div>
 
-
+  地図
+  <div id="map_canvas" style="width:100%; height:100px;margin:10px 0;"></div>
+  <div class="rest_route">
+  <a href="route.php">ここへの道案内をする</a>
+  </div>  
 	<div class="rest_menu">
-	エリア：天満橋エリア
+	<a href="" >エリア：天満橋エリア
 	</div>
 
 	<div class="rest_menu">
@@ -175,7 +190,7 @@
 	</div>	
 
 	<div class="rest_menu">
-	口コミを表示
+	おいしかった〜（口コミを表示）
 	</div>	
 	口コミを書く
 	<form method= "GET" action="">

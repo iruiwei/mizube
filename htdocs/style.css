@@ -132,7 +132,13 @@ hr {
     border-bottom: 1px dashed #ccc;
     background: #999;
 }
-
+.rest_route{
+	background:  rgba(0,0,0, 0.1);
+		padding: 5px;
+	border-bottom: dotted 3px;
+	border-bottom-color: #aaa;
+	text-align: center;
+}
 /* レストラン探す-----------------------------------------------------------------------------*/
 .search_rest{
 	width:99%;
