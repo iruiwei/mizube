@@ -59,14 +59,27 @@ $lon=$_REQUEST['lon'];
 		//今回で".$visit."回目の訪問になります";
 	}
 	
-	//data
-	$sql0="select (('".$lat."'-lat)*('".$lat."'-lat)+('".$lon."'-lon)*('".$lon."'-lon)) dis, name from mb_restaurant order by dis asc";
+	if($_Id%2==0){
+		$sql0="select (('".$lat."'-lat)*('".$lat."'-lat)+('".$lon."'-lon)*('".$lon."'-lon)) dis, name from mb_restaurant order by dis asc limit 0,5";
 
-	$table=mysql_query($sql0)or die(mysql_error());
-	while($data=mysql_fetch_assoc($table)){
-		echo $data['name']."  ".$data['dis'];
-		echo '<br/>';
+		$table=mysql_query($sql0)or die(mysql_error());
+		while($data=mysql_fetch_assoc($table)){
+			echo $data['name']."  ".$data['dis'];
+			echo '<br/>';
+		}
 	}
+	else{
+		$sql0="select (('".$lat."'-lat)*('".$lat."'-lat)+('".$lon."'-lon)*('".$lon."'-lon)) dis,name,mb_fake_rest.id from mb_restaurant,mb_fake_rest where mb_fake_rest.rid=mb_restaurant.rid order by mb_fake_rest.id asc limit 0,5";
+		$table=mysql_query($sql0)or die(mysql_error());
+		while($data=mysql_fetch_assoc($table)){
+			echo $data['name']."  ".$data['dis'];
+			echo '<br/>';
+		}
+	}
+	
+	
+	//data
+	
 
 
 	?>
