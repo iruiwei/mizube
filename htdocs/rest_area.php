@@ -1,13 +1,17 @@
 <?php
 session_start();
 
-if(empty($_REQUEST['area'])){
-	$area=1;
-}
-else
-	$area=$_REQUEST['area'];
-
 require('dbconnect.php');
+if(!isset($_REQUEST['area'])){
+	header('location:rest_search.php');
+	exit();
+}
+else{
+	$area=$_REQUEST['area'];
+	$sql0=sprintf('select rid,mb_restaurant.name as rname,view,uniqueuser,area_id,menu,opentime,closetime,opentime2,closetime2,photo,phone,introduction from mb_restaurant where area_id="%d"',mysql_real_escape_string($area));
+	$record0=mysql_query($sql0)or die(mysql_error());
+	//$data=mysql_fetch_assoc($record0);
+}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
@@ -140,7 +144,7 @@ require('dbconnect.php');
 	  <div id="map_canvas" style="width:100%; height:200px;"></div>
 
 
-	  <form method= "post" action="rest_area.php">
+	  <form method= "get" action="rest_area.php">
 	  <?php
 	  	$sql0=sprintf('select mb_area.id,mb_area.name from mb_area');
 		$recordset0=mysql_query($sql0)or die(mysql_error());
@@ -162,24 +166,34 @@ require('dbconnect.php');
 	 <input type="submit" value="決定" id= "submit_botton">
  </form>
 
+<div id="info">レストラン情報</div>
 
-	 <div id="info">レストラン情報</div>
-	<a href= "rest_info.php?rid=5"><div class= "restaurant">
-		<div class="rest_title">カツカレーの店	
-		</div>
-		<div class= "rest_left">
-		<img src="img/curry.jpg" class= "image_style" >
-		</div>
-		<div class="rest_right">
-		バルメニュー：牛頬肉の黒ビール煮込み<br>
-		その日仕入れた新鮮な食材を使い、季節にこだわり食事を気軽に楽しんで頂けるひと時をぜひトラットリアピノでお過ごしください。
-		その日仕入れた新鮮な食材を使い、季節にこだわり食事を気軽に楽しんで頂けるひと時をぜひトラットリアピノでお過ごしください。
+	<?php
+	while($data=mysql_fetch_assoc($record0)){
+		?>
 		
+		<a href= "rest_info.php?rid=<?php echo $data['rid']?>"><div class= "restaurant">
+			<div class="rest_title"><?php echo $data['rname']?>	
+			</div>
+			<div class= "rest_left">
+			<img src="img/curry.jpg" class= "image_style" >
+			</div>
+			<div class="rest_right">
+			バルメニュー：<?php echo $data['menu']?><br>
+			<?php echo $data['introduction']?>
+
+			</div>
+			<div class= "rest_arrow">
+			</div>
 		</div>
-		<div class= "rest_arrow">
-		</div>
-	</div>
-	</a>
+		</a>
+		
+		<?php
+	}
+	
+	?>
+
+	
 
 	<a href= "rest_info.php?rid=6"><div class= "restaurant">
 		<div class="rest_title">カツカレーの店	

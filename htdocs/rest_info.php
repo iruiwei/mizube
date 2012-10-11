@@ -2,12 +2,18 @@
 session_start();
 require('dbconnect.php');
 
-if(!isset($_POST['id'])){
-  	header('location:rest_search.php');
-	exit();
+if(isset($_POST['id'])){
+	$rid=$_POST['id'];
+}
+else if(isset($_REQUEST['rid'])){
+	$rid=$_REQUEST['rid'];
 }
 else{
-	$rid=$_POST['id'];
+	header('location:rest_search.php');
+	exit();
+}
+
+	//$rid=$_POST['id'];
 	$sql0=sprintf('select count(*) as cnt from mb_restaurant where rid="%d"',mysql_real_escape_string($rid));
 	$record0=mysql_query($sql0)or die(mysql_error());
 	$table0=mysql_fetch_assoc($record0);
@@ -15,11 +21,11 @@ else{
 		echo 'No result!';
 	}
 	else{
-		$sql1=sprintf('select lon,lat,name,view,uniqueuser,area_id,menu,opentime,closetime,opentime2,closetime2,photo,phone,introduction from mb_restaurant where rid="%d"',mysql_real_escape_string($rid));
+		$sql1=sprintf('select mb_area.name as aname, mb_restaurant.lon as rlon,mb_restaurant.lat as rlat,mb_restaurant.name as rname,view,uniqueuser,area_id,menu,opentime,closetime,opentime2,closetime2,photo,phone,introduction from mb_restaurant,mb_area where rid="%d" and area_id=id',mysql_real_escape_string($rid));
 		$record1=mysql_query($sql1)or die(mysql_error());
 		$data=mysql_fetch_assoc($record1);
 	}
-}
+
   
 
 ?>
@@ -38,7 +44,7 @@ else{
 	var lat=0;
 	var lng=0;
   	function initialize() {
-    var initPos = new google.maps.LatLng(34.682177, 135.497303); //->場所によって変える
+    var initPos = new google.maps.LatLng(<?php echo $data['rlat']?>, <?php echo $data['rlon']?>); //->場所によって変える
     var myOptions = {
     	noClear : true,
     	center : initPos,
@@ -174,7 +180,7 @@ else{
 	</header>
 
 
-	<div class="rest_title"><?php echo $data['name']?></div>
+	<div class="rest_title"><?php echo $data['rname']?></div>
 	  <img src="img/curry.jpg" style= "width:100%;" >
 	<div class="rest_menu">
 	バルメニュー：<br>
@@ -195,11 +201,11 @@ else{
   <a href="rest_route.php">ここへの道案内をする</a>
   </div>  
 	<div class="rest_menu">
-	エリア：<a href="" >天満橋エリア </a>
+	エリア：<a href="" ><?php echo $data['aname'];?> </a>
 	</div>
 
 	<div class="rest_menu">
-	<a href= "ship.html">舟の情報をみる</a>
+	<a href= "ship.php?area=<?php echo $data['area_id'];?>">舟の情報をみる</a>
 	</div>	
 
 	<div class="rest_menu">
