@@ -154,7 +154,7 @@ require('dbconnect.php');
 
 <body onload="initialize()">
 	<header>
-		<a href="index.html"><img src= "img/logo.png" style="width:100%"></a>
+		<a href="./"><img src= "img/logo.png" style="width:100%"></a>
 		<img src= "img/line.png" style="width:100%">
 	
 	</header>

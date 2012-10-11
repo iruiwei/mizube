@@ -129,7 +129,7 @@ require('dbconnect.php');
 <body onload="initialize()">
 	<header>
 		<div id= "page_top">
-		<a href="index.html"><img src= "img/logo.png" style="width:100%"></a>
+		<a href="./"><img src= "img/logo.png" style="width:100%"></a>
 		<img src= "img/line.png" style="width:100%">
 		</div>
 	</header>
