@@ -173,14 +173,24 @@ else $d=2;
 	 	エリア情報
 	 	 <div class="twitter">
 	 <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+    <?php
+	  	$sql1=sprintf('select name,hashtag from mb_area where id = "%d"',mysql_real_escape_string($area));
+		$recordset1=mysql_query($sql1)or die(mysql_error()); 
+		$hashtag="";
+		$name="";
+			while($data1=mysql_fetch_assoc($recordset1)){
+				$name = $data1['name']; 
+				$hashtag = $data1['hashtag']; 
+				}
+	?>
 <script>
 new TWTR.Widget({
 version: 2,
 type: 'search',
-search: '#mizubebar',
+search: '<? echo $hashtag ?>',
 interval: 30000,
 title: '',
-subject: '水辺バル',
+subject: '<? echo $name ?>',
 width: 'auto',
 height: 400,
 theme: {
