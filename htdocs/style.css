@@ -139,6 +139,12 @@ hr {
 	border-bottom-color: #aaa;
 	text-align: center;
 }
+
+#show_result{
+	padding: 0px 10px 10px 10px;
+	text-align: center;
+}
+
 /* レストラン探す-----------------------------------------------------------------------------*/
 .search_rest{
 	width:99%;

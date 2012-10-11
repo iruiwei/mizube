@@ -24,56 +24,59 @@ require('dbconnect.php');
 	var lat=0;
 	var lng=0;
   	function initialize() {
-    var initPos = new google.maps.LatLng(34.682177, 135.497303); //->場所によって変える
+      <?php
+      $sql1=sprintf('select name,lat,lon,area_id from mb_restaurant where rid = "%d"',mysql_real_escape_string($rid));
+    $recordset1=mysql_query($sql1)or die(mysql_error()); 
+    $areaLat=34.690632;
+    $areaLon= 135.516083;
+    $restName = "";
+    $areaID = 1;
+      while($data1=mysql_fetch_assoc($recordset1)){
+        $areaLat = $data1['lat']; 
+        $areaLon = $data1['lon'];
+        $restName =$data1['name'];
+        $areaID =  $data1['area_id'];
+        }
+  ?>
+    var initPos = new google.maps.LatLng(<?php echo $areaLat ?>, <?php echo $areaLon ?>);
     var myOptions = {
     	noClear : true,
     	center : initPos,
     	zoom : 14,
-    	mapTypeId : google.maps.MapTypeId.ROADMAP
+    	mapTypeId : google.maps.MapTypeId.ROADMAP,
+    	preserveViewport: true
     };
     var map_canvas = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
      
-    
-    //kml読み込み部分
-    
-   // var kmlUrl = "https://maps.google.com/maps/ms?ie=UTF8&authuser=0&msa=0&output=kml&msid=214267887168441249308.0004c7e4364594a9c6c1e";
-  //  var kmlLayer = new google.maps.KmlLayer(kmlUrl);
-  //  kmlLayer.setMap(map_canvas);
-    
+ 	
 
     //ユーザの位置情報取得
     navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 
     //位置情報取得成功時
-　//　	function successCallback(position){
-    　// 	var gl_text = "緯度：" + position.coords.latitude + "<br>";
-　　　// 	gl_text += "経度：" + position.coords.longitude + "<br>";
-　　　//		document.getElementById("show_result").innerHTML = gl_text;
-
-      	//phpに値送信
+　　	function successCallback(position){
 　　　		lat = position.coords.latitude;
     	lng = position.coords.longitude;
-      	       	 
+   
 
 		
 
          //現在位置マーカーの生成
-      var nowlatlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+      var nowlatlng = new google.maps.LatLng(lat, lng);
 　　　var marker = new google.maps.Marker({
        position: nowlatlng,
        map: map_canvas,
-       title: "CurrentPosition"
       });
       //情報ウィンドウの追加
-　　　var info = new google.maps.InfoWindow({content: '<p>You are here!</p>'});
+　　　var info = new google.maps.InfoWindow({content: '<p>現在位置</p>'});
       //クリックしたら情報提示
 　　　google.maps.event.addListener(marker, 'click', function(){
        info.open(map_canvas, marker);
       });
-      
+      var gl_text ="";
       //ルート表示
-      var From = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);	//現在地
-      var To = new google.maps.LatLng(<?= htmlspecialchars($_POST['key1'], ENT_QUOTES, 'UTF-8'); ?>34.702643,135.497131);	//目的地
+      var From = new google.maps.LatLng(lat, lng);	//現在地
+      var To = new google.maps.LatLng(<?php echo $areaLat ?>, <?php echo $areaLon ?>);	//目的地
 　　　new google.maps.DirectionsService().route({
        origin: From,
        destination: To,
@@ -83,7 +86,7 @@ require('dbconnect.php');
         new google.maps.DirectionsRenderer({map: map_canvas}).setDirections(result);
         SetDistance(result);
 	var duration = result.routes[0].legs[0].duration.text; //更新箇所
-	gl_text += "所要時間：" + duration + "<br>"; 	//
+		 gl_text += "所要時間：" + duration + "<br>"; 	//
 	document.getElementById("show_result").innerHTML = gl_text;
        }
       });
@@ -113,8 +116,8 @@ require('dbconnect.php');
        return journey / 1000;
       }
 　　　
-
-    }
+ }
+}
 
 　　//位置情報取得ができない場合
 　　function errorCallback(error) {
@@ -156,21 +159,23 @@ require('dbconnect.php');
 	<header>
 		<a href="./"><img src= "img/logo.png" style="width:100%"></a>
 		<img src= "img/line.png" style="width:100%">
-	
+		
 	</header>
 
 
-	<div class="rest_title">カツカレーの店</div>
+	<div class="rest_title"><? echo $restName ?></div>
 
-  <div id="map_canvas" style="width:100%; height:500px;margin:10px 0;"></div>
+  <div id="map_canvas" style="width:100%; height:300px;margin:10px 0;"></div>
+  　<div id="show_result"></div>
+
   <div class="rest_route">
   </div>  
 	<div class="rest_menu">
-	エリア：<a href="" >天満橋エリア </a>
+	エリア：<a href="rest_area.php?area=<? echo $areaID ?> " >天満橋エリア </a>
 	</div>
 
 	<div class="rest_menu">
-	<a href= "ship.html">舟の情報をみる</a>
+	<a href= "ship.php?area=<? echo $areaID ?> ">舟の情報をみる</a>
 	</div>	
 
 

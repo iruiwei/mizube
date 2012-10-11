@@ -44,48 +44,42 @@ else{
 	var lat=0;
 	var lng=0;
   	function initialize() {
+<<<<<<< HEAD
     var initPos = new google.maps.LatLng(<?php echo $data['rlat']?>, <?php echo $data['rlon']?>); //->場所によって変える
+=======
+      <?php
+      $sql1=sprintf('select name,lat,lon from mb_restaurant where rid = "%d"',mysql_real_escape_string($rid));
+    $recordset1=mysql_query($sql1)or die(mysql_error()); 
+    $areaLat=34.690632;
+    $areaLon= 135.516083;
+    $restName = "";
+      while($data1=mysql_fetch_assoc($recordset1)){
+        $areaLat = $data1['lat']; 
+        $areaLon = $data1['lon'];
+        $restName =$data1['name'];
+        }
+  ?>
+
+    var initPos = new google.maps.LatLng(<?php echo $areaLat ?>, <?php echo $areaLon ?>); 
+>>>>>>> rest_route完成
     var myOptions = {
     	noClear : true,
     	center : initPos,
-    	zoom : 14,
+    	zoom : 17,
     	mapTypeId : google.maps.MapTypeId.ROADMAP
     };
     var map_canvas = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
      
-    
-    //kml読み込み部分
-    
-   // var kmlUrl = "https://maps.google.com/maps/ms?ie=UTF8&authuser=0&msa=0&output=kml&msid=214267887168441249308.0004c7e4364594a9c6c1e";
-  //  var kmlLayer = new google.maps.KmlLayer(kmlUrl);
-  //  kmlLayer.setMap(map_canvas);
-    
-
-    //ユーザの位置情報取得
-    navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
-
-    //位置情報取得成功時
-　//　	function successCallback(position){
-    　// 	var gl_text = "緯度：" + position.coords.latitude + "<br>";
-　　　// 	gl_text += "経度：" + position.coords.longitude + "<br>";
-　　　//		document.getElementById("show_result").innerHTML = gl_text;
-
-      	//phpに値送信
-　　　		lat = position.coords.latitude;
-    	lng = position.coords.longitude;
-      	       	 
-
 		
 
-         //現在位置マーカーの生成
-      var nowlatlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+         //店マーカーの生成
+      var nowlatlng = new google.maps.LatLng(<?php echo $areaLat ?>, <?php echo $areaLon ?>);
 　　　var marker = new google.maps.Marker({
        position: nowlatlng,
-       map: map_canvas,
-       title: "CurrentPosition"
+       map: map_canvas
       });
       //情報ウィンドウの追加
-　　　var info = new google.maps.InfoWindow({content: '<p>You are here!</p>'});
+　　　var info = new google.maps.InfoWindow({content: '<p><? echo $restName ?></p>'});
       //クリックしたら情報提示
 　　　google.maps.event.addListener(marker, 'click', function(){
        info.open(map_canvas, marker);
@@ -196,9 +190,9 @@ else{
 	電話番号：<?php echo $data['phone']?>
 	</div>
 
-  <div id="map_canvas" style="width:100%; height:100px;margin:10px 0;"></div>
+  <div id="map_canvas" style="width:100%; height:150px;margin:10px 0;"></div>
   <div class="rest_route">
-  <a href="rest_route.php">ここへの道案内をする</a>
+  <a href="rest_route.php?rid=<? echo $rid ?> ">ここへのルート表示</a>
   </div>  
 	<div class="rest_menu">
 	エリア：<a href="" ><?php echo $data['aname'];?> </a>
