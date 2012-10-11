@@ -40,8 +40,8 @@ require('dbconnect.php');
 	<div class="search_rest">
 		<div class= "rest_text">
 			店番号からさがす
-			<form method= "GET" action="">
-			<input type= "text" name="" size="3" style="font-size:1.3em;" ></input>
+			<form method= "post" action="rest_info.php">
+			<input type="text" name="id" size="3" style="font-size:1.3em;" value="<?php echo htmlspecialchars($_POST['id'],ENT_QUOTES,'UTF-8')?>"/>
 		</div>
 		<div class= "rest_submit">
 			<input type="image" src="img/arrow.png" name="" width= "45"></input>
@@ -51,8 +51,8 @@ require('dbconnect.php');
 	<div class="search_rest">
 		<div class= "rest_text">
 			店の名前からさがす
-			<form method= "GET" action="">
-			<input type= "text" name="" size="20"style="font-size:1.3em;" ></input>
+			<form method= "post" action="rest_area.php">
+			<input type="text" name="name" size="10" maxlength="50" style="font-size:1.3em;" value="<?php echo htmlspecialchars($_POST['name'],ENT_QUOTES,'UTF-8')?>"/>
 		</div>
 		<div class= "rest_submit">
 			<input type="image" src="img/arrow.png" name="" width= "45"></input>
