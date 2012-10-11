@@ -51,7 +51,7 @@ require('dbconnect.php');
 	<div class="search_rest">
 		<div class= "rest_text">
 			店の名前からさがす
-			<form method= "post" action="rest_area.php">
+			<form method= "post" action="rest_name.php">
 			<input type="text" name="name" size="10" maxlength="50" style="font-size:1.3em;" value="<?php echo htmlspecialchars($_POST['name'],ENT_QUOTES,'UTF-8')?>"/>
 		</div>
 		<div class= "rest_submit">

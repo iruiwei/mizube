@@ -1,13 +1,27 @@
 <?php
 session_start();
-
-if(empty($_REQUEST['rid'])){
-  $rid=1;
-}
-else
-  $rid=$_REQUEST['rid'];
-
 require('dbconnect.php');
+
+if(!isset($_POST['id'])){
+  	header('location:rest_search.php');
+	exit();
+}
+else{
+	$rid=$_POST['id'];
+	$sql0=sprintf('select count(*) as cnt from mb_restaurant where rid="%d"',mysql_real_escape_string($rid));
+	$record0=mysql_query($sql0)or die(mysql_error());
+	$table0=mysql_fetch_assoc($record0);
+	if($table0['cnt']==0){
+		echo 'No result!';
+	}
+	else{
+		$sql1=sprintf('select lon,lat,name,view,uniqueuser,area_id,menu,opentime,closetime,opentime2,closetime2,photo,phone,introduction from mb_restaurant where rid="%d"',mysql_real_escape_string($rid));
+		$record1=mysql_query($sql1)or die(mysql_error());
+		$data=mysql_fetch_assoc($record1);
+	}
+}
+  
+
 ?>
 
 <html xmlns="http://www.w3.org/1999/xhml">
@@ -160,20 +174,20 @@ require('dbconnect.php');
 	</header>
 
 
-	<div class="rest_title">カツカレーの店</div>
+	<div class="rest_title"><?php echo $data['name']?></div>
 	  <img src="img/curry.jpg" style= "width:100%;" >
 	<div class="rest_menu">
 	バルメニュー：<br>
 
-	牛頬肉の黒ビール煮込み
+	<?php echo $data['menu']?>
 	</div>
 
 	<div class="rest_menu">
-	その日仕入れた新鮮な食材を使い、季節にこだわり食事を気軽に楽しんで頂けるひと時をぜひトラットリアピノでお過ごしください。
+	<?php echo $data['introduction']?>
 	</div>
 	
 	<div class="rest_menu">
-	電話番号：0788036627
+	電話番号：<?php echo $data['phone']?>
 	</div>
 
   <div id="map_canvas" style="width:100%; height:100px;margin:10px 0;"></div>
