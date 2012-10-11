@@ -43,10 +43,9 @@ else{
 	<script type="text/javascript">
 	var lat=0;
 	var lng=0;
-  	function initialize() {
-<<<<<<< HEAD
-    var initPos = new google.maps.LatLng(<?php echo $data['rlat']?>, <?php echo $data['rlon']?>); //->場所によって変える
-=======
+function initialize() {
+    var initPos = new google.maps.LatLng(<?php echo $data['rlat']?>, <?php echo $data['rlon']?>); 
+
       <?php
       $sql1=sprintf('select name,lat,lon from mb_restaurant where rid = "%d"',mysql_real_escape_string($rid));
     $recordset1=mysql_query($sql1)or die(mysql_error()); 
@@ -61,7 +60,6 @@ else{
   ?>
 
     var initPos = new google.maps.LatLng(<?php echo $areaLat ?>, <?php echo $areaLon ?>); 
->>>>>>> rest_route完成
     var myOptions = {
     	noClear : true,
     	center : initPos,
@@ -85,69 +83,7 @@ else{
        info.open(map_canvas, marker);
       });
       
-      //ルート表示
-      var From = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);	//現在地
-      var To = new google.maps.LatLng(<?= htmlspecialchars($_POST['key1'], ENT_QUOTES, 'UTF-8'); ?>34.702643,135.497131);	//目的地
-　　　new google.maps.DirectionsService().route({
-       origin: From,
-       destination: To,
-       travelMode: google.maps.DirectionsTravelMode.WALKING
-      }, function(result, status){
-       if (status == google.maps.DirectionsStatus.OK){
-        new google.maps.DirectionsRenderer({map: map_canvas}).setDirections(result);
-        SetDistance(result);
-	var duration = result.routes[0].legs[0].duration.text; //更新箇所
-	gl_text += "所要時間：" + duration + "<br>"; 	//
-	document.getElementById("show_result").innerHTML = gl_text;
-       }
-      });
-
-      //移動距離計算
-      function SetDistance(routeData)
-      {
-	　　　var distance = GetDistanceKm(routeData.routes[0].legs); 
-	      if (distance > 100) 
-	      { 
-	       distance = distance.toFixed(0); 
-	      } 
-	      else if (distance > 10) 
-	      { 
-	       distance = distance.toFixed(1); 
-	      } 
-	      gl_text += "移動距離："+ distance + "km" +"<br>";
-	      document.getElementById("show_result").innerHTML = gl_text;
-	      }
-      function GetDistanceKm(legs)
-      {
-       var journey = 0;
-       for(var i in legs)
-       {
-         journey += legs[i].distance.value;
-       }
-       return journey / 1000;
-      }
-　　　
-
-    }
-
-　　//位置情報取得ができない場合
-　　function errorCallback(error) {
-     var err_msg = "";
-     switch(error.code){
-      case 1:
-       err_msg = "位置情報の利用が許可されていません";
-       break;
-      case 2:
-       err_msg = "デバイスの位置が判定できません";
-       break;
-      case 3:
-       err_msg = "タイムアウトしました";
-       break;
-     }
-      document.getElementById("show_result").innerHTML = err_msg;
-      //デバッグ用→　document.getElementById("show_result").innerHTML = error.message;
-    }
-
+}
   
 
 </script>
