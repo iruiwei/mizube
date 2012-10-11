@@ -38,7 +38,6 @@ require('dbconnect.php');
 				}
 	?>
 
-    //var initPos = new google.maps.LatLng(34.690632, 135.516083); //->エリアによって変える
     var initPos = new google.maps.LatLng(<?php echo $areaLat ?>, <?php echo $areaLon ?>); 
     var myOptions = {
     	noClear : true,
@@ -165,7 +164,7 @@ require('dbconnect.php');
 
 
 	 <div id="info">レストラン情報</div>
-	<a href= "rest_info.html"><div class= "restaurant">
+	<a href= "rest_info.php"><div class= "restaurant">
 		<div class="rest_title">カツカレーの店	
 		</div>
 		<div class= "rest_left">
