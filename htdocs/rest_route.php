@@ -161,24 +161,9 @@ require('dbconnect.php');
 
 
 	<div class="rest_title">カツカレーの店</div>
-	  <img src="img/curry.jpg" style= "width:100%;" >
-	<div class="rest_menu">
-	バルメニュー：<br>
 
-	牛頬肉の黒ビール煮込み
-	</div>
-
-	<div class="rest_menu">
-	その日仕入れた新鮮な食材を使い、季節にこだわり食事を気軽に楽しんで頂けるひと時をぜひトラットリアピノでお過ごしください。
-	</div>
-	
-	<div class="rest_menu">
-	電話番号：0788036627
-	</div>
-
-  <div id="map_canvas" style="width:100%; height:100px;margin:10px 0;"></div>
+  <div id="map_canvas" style="width:100%; height:500px;margin:10px 0;"></div>
   <div class="rest_route">
-  <a href="rest_route.php">ここへの道案内をする</a>
   </div>  
 	<div class="rest_menu">
 	エリア：<a href="" >天満橋エリア </a>
@@ -188,14 +173,7 @@ require('dbconnect.php');
 	<a href= "ship.html">舟の情報をみる</a>
 	</div>	
 
-	<div class="rest_menu">
-	おいしかった〜（口コミを表示）
-	</div>	
-	口コミを書く
-	<form method= "GET" action="">
-			<textarea name="" rows="3" cols="50"></textarea>
-	 <input type="submit" value="送信" id= "submit_botton">
-		</div>
+
 	<footer>
 	</footer>	
 </body>
