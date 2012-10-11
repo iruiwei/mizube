@@ -26,10 +26,20 @@ require('dbconnect.php');
 	var lng=0;
   	function initialize() {
     //kml読み込み部分
-    
 
+    <?php
+	  	$sql1=sprintf('select mb_area.lon,mb_area.lat from mb_area where id = "%d"',mysql_real_escape_string($area));
+		$recordset1=mysql_query($sql1)or die(mysql_error()); 
+		$areaLat=34.690632;
+		$areaLon= 135.516083;
+			while($data1=mysql_fetch_assoc($recordset1)){
+				$areaLat = $data1['lat']; 
+				$areaLon = $data1['lon'];
+				}
+	?>
 
-    var initPos = new google.maps.LatLng(34.690632, 135.516083); //->エリアによって変える
+    //var initPos = new google.maps.LatLng(34.690632, 135.516083); //->エリアによって変える
+    var initPos = new google.maps.LatLng(<?php echo $areaLat ?>, <?php echo $areaLon ?>); 
     var myOptions = {
     	noClear : true,
     	center : initPos,
@@ -129,6 +139,7 @@ require('dbconnect.php');
 
 	 <div id="info_top">エリア情報</div>
 	  <div id="map_canvas" style="width:100%; height:200px;"></div>
+
 
 	  <form method= "post" action="rest_area.php">
 	  <?php
