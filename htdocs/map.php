@@ -18,6 +18,20 @@ setcookie('visitcount', $visit); // 有効期限なしのクッキーを設定
 //echo $_REQUEST['lon'];
 $lat=$_REQUEST['lat'];
 $lon=$_REQUEST['lon'];
+
+$A_rid;
+$i=0;
+$sql00="select (('".$lat."'-lat)*('".$lat."'-lat)+('".$lon."'-lon)*('".$lon."'-lon)) dis,lat,lon,menu,introduction, photo,rid,name from mb_restaurant order by dis asc limit 0,3";
+
+$table00=mysql_query($sql00)or die(mysql_error());
+while($data00=mysql_fetch_assoc($table00)){
+	$A_rid[$i]=$data00['rid'];
+	$i++;
+}
+//----------array test-------------
+echo $A_rid[0]."  ".$A_rid[1]."  ".$A_rid[2];
+echo '<br>';
+//---------------------------------
 ?>
 <html>
 <head>
@@ -131,7 +145,7 @@ function errorCallback(error) {
 	
 	echo '<br>';
 	
-	if($_Id%2==0){
+	if($_Id%3==0){
 		$sql0="select (('".$lat."'-lat)*('".$lat."'-lat)+('".$lon."'-lon)*('".$lon."'-lon)) dis,lat,lon,menu,introduction, photo,rid,name from mb_restaurant order by dis asc limit 0,3";
 
 		$table=mysql_query($sql0)or die(mysql_error());
@@ -174,7 +188,7 @@ function errorCallback(error) {
 		//	echo '<br/>';
 		//}
 	}
-	else{
+	else if($_Id%3==1){
 		$sql0="select (('".$lat."'-lat)*('".$lat."'-lat)+('".$lon."'-lon)*('".$lon."'-lon)) dis,lat,lon,photo,introduction,name,mb_restaurant.rid as rrid,mb_fake_rest.id from mb_restaurant,mb_fake_rest where mb_fake_rest.rid=mb_restaurant.rid order by mb_fake_rest.id asc limit 0,3";
 		$table=mysql_query($sql0)or die(mysql_error());
 		?>
@@ -212,6 +226,9 @@ function errorCallback(error) {
 		//	echo $data['name']."  ".$data['dis'];
 		//	echo '<br/>';
 		//}
+	}
+	else{
+		
 	}
 	?>
 
