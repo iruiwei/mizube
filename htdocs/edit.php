@@ -26,6 +26,7 @@ $d=2;
 	<!-- Date: 2012-10-09 -->
 </head>
 <body>
+	<div id="admin">
 	<a href="admin.php">エリア選択に戻る</a><br>
 	<form action="done.php" method="post">
 	
@@ -61,7 +62,7 @@ $d=2;
 				$data2n=mysql_fetch_assoc($recordset2n);
 	?>
 	 <div class="ship_to"><?php echo $data2n['c1'];?> →　<?php echo $data2n['c2'];?>	</div>
-<!----><input type="text" name="<?php echo $data2n['id'];?>" value="<?php echo $data2n['comText'];?>">
+<!----><input type="text" name="<?php echo $data2n['id'];?>" value="<?php echo $data2n['comText'];?> " style="font-size:1.3em;">
 		<?php
 			$A_at[$at]=$data2n['id'];
 			$at++;
@@ -162,8 +163,9 @@ $d=2;
 	$_SESSION['aid']=$A_at;
 	?>
 	<br>
-	<input type="submit" value="OK"/>
-	
+	<input type="submit" value="OK" style="font-size:1.3em;"/>
+	<br>
+</div>	
 </form>
 </body>
 </html>

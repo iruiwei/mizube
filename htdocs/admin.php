@@ -17,6 +17,7 @@ require('dbconnect.php');
 	<!-- Date: 2012-10-09 -->
 </head>
 <body>
+	<div id="admin">
 	<?php
 		echo "エリア";
 		echo '<br/>';
@@ -34,6 +35,6 @@ require('dbconnect.php');
 		}
 		?>
 		</table>
-
+	</dic>
 </body>
 </html>
