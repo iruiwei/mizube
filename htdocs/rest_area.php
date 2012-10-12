@@ -8,7 +8,7 @@ if(!isset($_REQUEST['area'])){
 }
 else{
 	$area=$_REQUEST['area'];
-	$sql0=sprintf('select rid,mb_restaurant.name as rname,view,uniqueuser,area_id,menu,opentime,closetime,opentime2,closetime2,photo,phone,introduction from mb_restaurant where area_id="%d"',mysql_real_escape_string($area));
+	$sql0=sprintf('select rid,mb_restaurant.name as rname,view,uniqueuser,area_id,menu,opentime,closetime,opentime2,closetime2,photo,phone,introduction from mb_restaurant where area_id="%d"  ORDER BY RAND()' ,mysql_real_escape_string($area));
 	$record0=mysql_query($sql0)or die(mysql_error());
 	//$data=mysql_fetch_assoc($record0);
 }
@@ -169,10 +169,12 @@ else{
 <div id="info">レストラン情報</div>
 
 	<?php
+	$rcount=0;
 	while($data=mysql_fetch_assoc($record0)){
+		$rcount++;
 		?>
 		
-		<a href= "rest_info.php?rid=<?php echo $data['rid']?>"><div class= "restaurant">
+		<a href= "rest_info.php?rid=<?php echo $data['rid']?>&rank=<? echo $rcount ?>  "><div class= "restaurant">
 			<div class="rest_title"><?php echo $data['rname']?>	
 			</div>
 			<div class= "rest_left">
