@@ -14,9 +14,10 @@ if($day=='13'){
 	else
 		$d=0;
 }
-else if($day=='14')
+else if($day=='14'){
 	$d=2;
-else $d=2;
+}
+$d=2;
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"

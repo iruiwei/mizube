@@ -9,7 +9,7 @@ if(!isset($_SESSION['area'])||!empty($_REQUEST['area'])){
 else{
 	$area=$_SESSION['area'];
 }
-
+$d=2;
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
@@ -43,17 +43,17 @@ else{
 							select distinct 
 								departureID 
 							from 
-								mb_shiptime2 
+								mb_shiptime 
 							where 
 								areaId="%d") as t',
 					mysql_real_escape_string($area));
 		$recordset0=mysql_query($sql0)or die(mysql_error());
 		$data0=mysql_fetch_assoc($recordset0);
 		$cnt=$data0['cnt'];
-		$sql1=sprintf('select distinct departureID as did from mb_shiptime2 where areaId="%d"',mysql_real_escape_string($area));
+		$sql1=sprintf('select distinct departureID as did from mb_shiptime where areaId="%d"',mysql_real_escape_string($area));
 		$recordset1=mysql_query($sql1)or die(mysql_error());
 		while($data1=mysql_fetch_row($recordset1)){
-			$sql2=sprintf('select distinct arrivalID as aid from mb_shiptime2 where departureID="%d"',mysql_real_escape_string($data1[0]));
+			$sql2=sprintf('select distinct arrivalID as aid from mb_shiptime where departureID="%d"',mysql_real_escape_string($data1[0]));
 			$recordset2=mysql_query($sql2)or die(mysql_error());
 			while($data2=mysql_fetch_row($recordset2)){
 				$sql2n=sprintf('select t1.area_name as c1,t2.area_name as c2,comText,id from mb_shipcomments,mb_port as t1,mb_port as t2 where departureID="%d" and arrivalID="%d" and t1.aid="%d" and t2.aid="%d"',mysql_real_escape_string($data1[0]),mysql_real_escape_string($data2[0]),mysql_real_escape_string($data1[0]),mysql_real_escape_string($data2[0]));
@@ -71,7 +71,7 @@ else{
 	</div>
 	<?php
 	
-	$sql3=sprintf('select sid, depTime, currentTicket1, falg from mb_shiptime2 where arrivalID="%d" and departureID="%d" and falg<>"%d"  order by depTime asc',mysql_real_escape_string($data2[0]),mysql_real_escape_string($data1[0]),mysql_real_escape_string($d));
+	$sql3=sprintf('select sid, depTime, currentTicket1, falg from mb_shiptime where arrivalID="%d" and departureID="%d" and falg<>"%d"  order by depTime asc',mysql_real_escape_string($data2[0]),mysql_real_escape_string($data1[0]),mysql_real_escape_string($d));
 	$recordset3=mysql_query($sql3)or die(mysql_error());
 	$count=0;
 	?>
