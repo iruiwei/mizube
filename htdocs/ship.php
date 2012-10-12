@@ -113,9 +113,15 @@ else $d=2;
 	 	<div class="ship_info">
 		<? $sql4=sprintf('select comText from mb_shipcomments where departureID="%d" and arrivalID="%d" ',$data1[0],$data2[0]); 
 			$recordset4=mysql_query($sql4)or die(mysql_error());
+<<<<<<< HEAD
 			while($data4=mysql_fetch_assoc($recordset4)){
 				echo $data4['comText'] ;
 				//echo $sql4;
+=======
+			while($data4=mysql_fetch_row($recordset4)){
+				echo $data4['comText'] ;
+				echo $sql4;
+>>>>>>> 画像なおした
 			}
 
 			?>

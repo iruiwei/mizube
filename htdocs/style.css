@@ -71,15 +71,20 @@ header {
 	background:  rgba(0,0,0,0.1);
 	border-bottom: dotted 3px;
 	border-bottom-color: #aaa;
-
+	z-index: 1;
+	overflow: hidden;
 }
 .rest_left{
 	width: 30%;
-
+	max-height:120px;
 	padding: 10px 1%;
 	margin: 0;
 	float: left;
 	overflow: hidden;
+	z-index: 1;
+}
+.rest_left img{
+	z-index: 1;
 }
 .rest_right{
 	width: 60%;
@@ -104,7 +109,7 @@ header {
 	text-align: center;
 	background:  rgba(0,0,0,0.3);
 	color: #333;
-
+	z-index: 10;
 	   background: #fff;
     border-top:1px solid #ddd;
     border-bottom:1px solid #ddd;
@@ -114,6 +119,7 @@ header {
 }
 .image_style{
 	width: 100%;
+	z-index: 1;
 }
 
 #rest_area a{
