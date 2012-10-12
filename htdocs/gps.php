@@ -1,3 +1,4 @@
+<?echo "読み込み中、しばらく待ってください";?>
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true&hl=ja"></script>
 <script type="text/javascript" src="jquery-1.8.2.min.js"></script>
 

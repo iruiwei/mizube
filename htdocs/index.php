@@ -85,7 +85,7 @@
 	<a href="gps.php"><img src="img/osusume.png" style="width:100%"></a>
 	</div>
 	<div class= "nav">
-	<a href="ship_search.html"><img src="img/fune.png" style="width:100%"></a>
+	<a href="ship_search.php"><img src="img/fune.png" style="width:100%"></a>
 	</div>
 	<div class= "nav">
 	<a href="rest_search.php"><img src="img/resutoran.png" style="width:100%"></a>

@@ -111,7 +111,14 @@ else $d=2;
 	 <div class="ship_to"><?php echo $data2n['c1'];?> →　<?php echo $data2n['c2'];?>	</div>
 
 	 	<div class="ship_info">
-		現在、５分遅れで運行しています。
+		<? $sql4=sprintf('select comText from mb_shipcomments where departureID="%d" and arrivalID="%d" ',$data1[0],$data2[0]); 
+			$recordset4=mysql_query($sql4)or die(mysql_error());
+			while($data4=mysql_fetch_assoc($recordset4)){
+				echo $data4['comText'] ;
+				//echo $sql4;
+			}
+
+			?>
 	</div>
 	<?php
 	

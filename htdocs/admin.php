@@ -12,6 +12,7 @@ require('dbconnect.php');
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>admin</title>
 	<meta name="generator" content="TextMate http://macromates.com/">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
 	<meta name="author" content="SHEN RUIWEI">
 	<!-- Date: 2012-10-09 -->
 </head>

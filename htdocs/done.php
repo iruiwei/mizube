@@ -42,17 +42,17 @@ if(isset($_SESSION['sid'])&&isset($_SESSION['aid'])){
 		}
 		$count++;
 	}
-	echo '<br>';
-	echo $case;
-	echo '<br>';
-	echo $asid;
+	//echo '<br>';
+	//echo $case;
+	//echo '<br>';
+	//echo $asid;
 	$sql="update mb_shipcomments set comText=case id ".$case." end where id in (".mysql_real_escape_string($asid).")";
-	echo '<br>';
-	echo $sql;
-	echo '<br>';
+	//echo '<br>';
+	//echo $sql;
+	//echo '<br>';
 	mysql_query($sql)or die(mysql_error());
 	echo "done!";
-	
+	echo '<br>';
 }
 //print_r($_POST);
 ?>
@@ -64,10 +64,15 @@ if(isset($_SESSION['sid'])&&isset($_SESSION['aid'])){
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>done</title>
 	<meta name="generator" content="TextMate http://macromates.com/">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
 	<meta name="author" content="SHEN RUIWEI">
 	<!-- Date: 2012-10-10 -->
 </head>
 <body>
+	
+	<a href="admin.php" >エリア選択に戻る</a><br>
+	<br>
+	<a href="edit.php">同じエリアに戻る</a>
 
 </body>
 </html>

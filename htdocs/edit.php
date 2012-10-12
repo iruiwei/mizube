@@ -20,10 +20,13 @@ else{
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>edit</title>
 	<meta name="generator" content="TextMate http://macromates.com/">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
 	<meta name="author" content="SHEN RUIWEI">
+	<link rel="stylesheet" href="style.css">
 	<!-- Date: 2012-10-09 -->
 </head>
 <body>
+	<a href="admin.php">エリア選択に戻る</a><br>
 	<form action="done.php" method="post">
 	
 	<?php
@@ -97,13 +100,13 @@ else{
 						?><option value="0"><?php echo "◎";$nt=0;?></option><?php
 					}
 					else if($data3['currentTicket1']<10&&$data3['currentTicket1']>=5){
-						?><option value="1"><?php echo "◯";$nt=1;?></option><?php
+						?><option value="1"><?php echo "10";$nt=1;?></option><?php
 					}
 					else if($data3['currentTicket1']<5&&$data3['currentTicket1']>0){
-						?><option value="2"><?php echo "△";$nt=2;?></option><?php
+						?><option value="2"><?php echo "5";$nt=2;?></option><?php
 					}
 					else {
-						?><option value="3"><?php echo "ｘ";$nt=3;?></option><?php
+						?><option value="3"><?php echo "0";$nt=3;?></option><?php
 					}
 					for($n=0;$n<4;$n++){
 						if($n!=$nt){
@@ -125,13 +128,13 @@ else{
 					?><option value="0"><?php echo "◎";$nt=0;?></option><?php
 				}
 				else if($data3['currentTicket1']<10&&$data3['currentTicket1']>=5){
-					?><option value="1"><?php echo "◯";$nt=1;?></option><?php
+					?><option value="1"><?php echo "10";$nt=1;?></option><?php
 				}
 				else if($data3['currentTicket1']<5&&$data3['currentTicket1']>0){
-					?><option value="2"><?php echo "△";$nt=2;?></option><?php
+					?><option value="2"><?php echo "5";$nt=2;?></option><?php
 				}
 				else {
-					?><option value="3"><?php echo "ｘ";$nt=3;?></option><?php
+					?><option value="3"><?php echo "0";$nt=3;?></option><?php
 				}
 				for($n=0;$n<4;$n++){
 					if($n!=$nt){
