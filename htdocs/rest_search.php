@@ -35,6 +35,7 @@ require('dbconnect.php');
 		<img src= "img/line.png" style="width:100%">
 		</div>
 		<div id="info_top">お店情報をさがす！</div>
+		お店の口コミ情報の入力にもご協力お願いします！	<br><br>	
 	</header>
 	目的の店が決まっている人は
 	<div class="search_rest">
