@@ -198,11 +198,7 @@ function errorCallback(error) {
 			</div>
 		
 		<?php
-		
-		//while($data=mysql_fetch_assoc($table)){
-		//	echo $data['name']."  ".$data['dis'];
-		//	echo '<br/>';
-		//}
+	
 	}
 	else if($_Id%3==1){
 		$sql0="select (('".$lat."'-lat)*('".$lat."'-lat)+('".$lon."'-lon)*('".$lon."'-lon)) dis,lat,lon,photo,introduction,name,mb_restaurant.rid as rrid,mb_fake_rest.id from mb_restaurant,mb_fake_rest where mb_fake_rest.rid=mb_restaurant.rid order by mb_fake_rest.id asc limit 0,3";
@@ -238,15 +234,13 @@ function errorCallback(error) {
 			</div>
 			<?php
 		
-		//while($data=mysql_fetch_assoc($table)){
-		//	echo $data['name']."  ".$data['dis'];
-		//	echo '<br/>';
-		//}
 	}
 	else{
 		$sql2=sprintf('select sid from mb_state where id=(select max(id) from mb_state)');
 		$table2=mysql_query($sql2)or die(mysql_error());
 		$data2=mysql_fetch_assoc($table2);
+		
+		//state is 0;
 		if($data2['sid']==0){
 			$sql0="select (('".$lat."'-lat)*('".$lat."'-lat)+('".$lon."'-lon)*('".$lon."'-lon)) dis,lat,lon,menu,introduction, photo,rid,name from mb_restaurant order by dis asc limit 0,3";
 
@@ -285,6 +279,8 @@ function errorCallback(error) {
 
 			<?php
 		}
+		
+		//state is 1
 		else if($data2['sid']==1){
 			echo "show something";
 		}
