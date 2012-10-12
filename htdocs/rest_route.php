@@ -167,7 +167,7 @@ require('dbconnect.php');
 
   <div id="map_canvas" style="width:100%; height:300px;margin:10px 0;"></div>
   　<div id="show_result"></div>
-
+  	 <small> *GPSを利用した位置情報を使用します。設定や機種によって対応していません。</small>
   <div class="rest_route">
   </div>  
 	<div class="rest_menu">
