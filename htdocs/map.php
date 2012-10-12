@@ -132,7 +132,7 @@ function errorCallback(error) {
 	echo '<br>';
 	
 	if($_Id%2==0){
-		$sql0="select (('".$lat."'-lat)*('".$lat."'-lat)+('".$lon."'-lon)*('".$lon."'-lon)) dis,lat,lon,menu,introduction, photo,rid,name from mb_restaurant order by dis asc limit 0,5";
+		$sql0="select (('".$lat."'-lat)*('".$lat."'-lat)+('".$lon."'-lon)*('".$lon."'-lon)) dis,lat,lon,menu,introduction, photo,rid,name from mb_restaurant order by dis asc limit 0,3";
 
 		$table=mysql_query($sql0)or die(mysql_error());
 		
@@ -175,7 +175,7 @@ function errorCallback(error) {
 		//}
 	}
 	else{
-		$sql0="select (('".$lat."'-lat)*('".$lat."'-lat)+('".$lon."'-lon)*('".$lon."'-lon)) dis,lat,lon,photo,introduction,name,mb_restaurant.rid as rrid,mb_fake_rest.id from mb_restaurant,mb_fake_rest where mb_fake_rest.rid=mb_restaurant.rid order by mb_fake_rest.id asc limit 0,5";
+		$sql0="select (('".$lat."'-lat)*('".$lat."'-lat)+('".$lon."'-lon)*('".$lon."'-lon)) dis,lat,lon,photo,introduction,name,mb_restaurant.rid as rrid,mb_fake_rest.id from mb_restaurant,mb_fake_rest where mb_fake_rest.rid=mb_restaurant.rid order by mb_fake_rest.id asc limit 0,3";
 		$table=mysql_query($sql0)or die(mysql_error());
 		?>
 		<div id="info">一番近いお店</div>
