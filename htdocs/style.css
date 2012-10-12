@@ -248,6 +248,11 @@ select{
 	border-right:solid 1px #CCC;
 }
 
+.train{
+	padding:0 0 20px 0 ;
+	text-align: center;
+}
+
 /* ship_search-----------------------------------------------------------------------------*/
 .area{
 	width:350px;

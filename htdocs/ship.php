@@ -173,6 +173,17 @@ $d=2;
 	?>
 	</table>
 	<?php
+	//echo $data1[0].$data2[0];
+	$sql5=sprintf('select train,walk from mb_shiptime where departureID="%d" and arrivalID="%d"' ,mysql_real_escape_string($data1[0]),mysql_real_escape_string($data2[0]));
+	$recordset5=mysql_query($sql5)or die(mysql_error());
+	$data5=mysql_fetch_assoc($recordset5);
+	$train = $data5['train'];
+	echo '<div class="train" >';
+	if($train != "")
+	{
+		echo "電車：".$train ."<br>";
+	}
+	echo "徒歩：".  $data5['walk'] ."</div>" ;
 }
 }
 	?>
