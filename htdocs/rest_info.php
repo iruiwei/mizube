@@ -21,12 +21,11 @@ else{
 		echo 'No result!';
 	}
 	else{
-		$sql1=sprintf('select mb_area.name as aname, mb_restaurant.lon as rlon,mb_restaurant.lat as rlat,mb_restaurant.name as rname,view,uniqueuser,area_id,menu,opentime,closetime,opentime2,closetime2,photo,phone,introduction from mb_restaurant,mb_area where rid="%d" and area_id=id',mysql_real_escape_string($rid));
+		$sql1=sprintf('select mb_comments.rid,mb_comments.comText,mb_area.name as aname, mb_restaurant.lon as rlon,mb_restaurant.lat as rlat,mb_restaurant.name as rname,view,uniqueuser,area_id,menu,opentime,closetime,opentime2,closetime2,photo,phone,introduction from mb_restaurant,mb_area where rid="%d" and area_id=id and mb_comments.rid=mb_restaurant.rid',mysql_real_escape_string($rid));
 		$record1=mysql_query($sql1)or die(mysql_error());
 		$data=mysql_fetch_assoc($record1);
 	}
 
-  
 
 ?>
 
