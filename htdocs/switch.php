@@ -1,8 +1,5 @@
 <?php
 	require('dbconnect.php');
-	if(!isset($_POST[r1])||!isset($_POST[r1])||!isset($_POST[r1])){
-		$sql=sprintf('select * from mb_fake_rest where id=(select max(id) from mb_fake_rest where rank=1)')
-	}
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
@@ -18,11 +15,25 @@
 	<!-- Date: 2012-10-12 -->
 </head>
 <body>
-	<form action="rank.php" method="post">
-		<input type="text" name="r1" value=""/><br>
-		<input type="text" name="r2" value=""/><br>
-		<input type="text" name="r3" value=""/><br>
-		<input type="subbmit" value="OK">
+	<?php
+	if(isset($_POST[s])){
+		$sql=sprintf('insert into mb_state (sid) values ("%d")',mysql_real_escape_string($_POST[s]));
+		mysql_query($sql)or die(mysql_error());
+		echo "State_Now:"."  ".$_POST[s];
+	}
+	else{
+		//if(!isset($_POST[s0])&&!isset($_POST[s1])){
+			$sql=sprintf('select sid from mb_state where id=(select max(id) from mb_state)');
+			$recordset=mysql_query($sql)or die(mysql_error());
+			$data=mysql_fetch_assoc($recordset);
+			echo "State_Now:"."  ".$data['sid'];
+		//}
+	}
+	?>
+	<form action="switch.php" method="post">
+		<input type="radio" name="s" value="0">NO<br>
+		<input type="radio" name="s" value="1">YES<br>
+		<input type="submit" value="OK">
 	</form>
 
 </body>
