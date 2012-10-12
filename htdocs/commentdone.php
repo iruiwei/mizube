@@ -8,7 +8,7 @@ else{ // クッキーがなければ初回訪問としてカウント値は0
   $visit = 1;
 }
 setcookie('visitcount', $visit);
-echo $visit;
+//echo $visit;
 if(!isset($_POST['com'])||!isset($_POST['rid'])){
 	header('location:rest_info.php');
 	exit();
@@ -16,6 +16,7 @@ if(!isset($_POST['com'])||!isset($_POST['rid'])){
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
+<meta http-equiv='refresh'content=2;URL='http://2ndlab.net/mizubesystem/htdocs/rest_info.php?rid=<?php echo $_POST['rid'];?>'>
 
 <html lang="en">
 <head>
@@ -34,8 +35,9 @@ if(!isset($_POST['com'])||!isset($_POST['rid'])){
 	else
 		$_Id = $_COOKIE['IDcookie'];
 	
-	$sql=sprintf('insert into mb_comments(rid,comName,comText) values(%d,%d,%d)',mysql_real_escape_string($_POST['rid']),mysql_real_escape_string($_Id),mysql_real_escape_string($_POST['com']));
-	mysql_query($sql1)or die(mysql_error());
+	$sql=sprintf('insert into mb_comments(rid,comName,comText) values("%d","%d","%s")',mysql_real_escape_string($_POST['rid']),mysql_real_escape_string($_Id),mysql_real_escape_string($_POST['com']));
+	mysql_query($sql)or die(mysql_error());
+	//echo $_POST['com'];
 	echo "Thank You!";
 	?>
 
