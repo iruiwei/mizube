@@ -19,13 +19,23 @@ setcookie('visitcount', $visit); // 有効期限なしのクッキーを設定
 $lat=$_REQUEST['lat'];
 $lon=$_REQUEST['lon'];
 
+<<<<<<< HEAD
 $A_rid;
+=======
+$A_rid;$A_rlat;$A_rlon;$A_rname;
+>>>>>>> map の map
 $i=0;
 $sql00="select (('".$lat."'-lat)*('".$lat."'-lat)+('".$lon."'-lon)*('".$lon."'-lon)) dis,lat,lon,menu,introduction, photo,rid,name from mb_restaurant order by dis asc limit 0,3";
 
 $table00=mysql_query($sql00)or die(mysql_error());
 while($data00=mysql_fetch_assoc($table00)){
 	$A_rid[$i]=$data00['rid'];
+<<<<<<< HEAD
+=======
+	$A_rlat[$i]=$data00['lat'];
+	$A_rlon[$i]=$data00['lon'];
+	$A_rname[$i]=$data00['name'];
+>>>>>>> map の map
 	$i++;
 }
 //----------array test-------------
@@ -50,7 +60,7 @@ function initialize() {
 	var myOptions = {
     	noClear : true,
     	center : initPos,
-    	zoom : 17,
+    	zoom : 15,
     	mapTypeId : google.maps.MapTypeId.ROADMAP
     };
     var map_canvas = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
@@ -65,20 +75,24 @@ function initialize() {
     	lng = position.coords.longitude;
    
 
-         //現在位置マーカーの生成
-      var nowlatlng = new google.maps.LatLng(lat, lng);
-　　　var marker = new google.maps.Marker({
-       position: nowlatlng,
+        
+	<?php for($j=0;$j<3;$j++){ ?>   
+      var rest<? echo $j ?> = new google.maps.LatLng( <? echo $A_rlat[$j] ."," .$A_rlon[$j] ?> );
+　　　var marker<? echo $j ?> = new google.maps.Marker({
+       position: rest<? echo $j ?>,
        map: map_canvas,
       });
 
-	var info = new google.maps.InfoWindow({content: '<p>現在位置</p>'});
+	var info<? echo $j ?> = new google.maps.InfoWindow({content: '<p><? echo $A_rname[$j] ?></p>'});
 
-	　google.maps.event.addListener(marker, 'click', function(){
-       info.open(map_canvas, marker);
+	　google.maps.event.addListener(marker<? echo $j ?>, 'click', function(){
+       info<? echo $j ?>.open(map_canvas, marker<? echo $j ?>);
       });
 
+	<? } ?>   
+
 	  }
+
 
 function errorCallback(error) {
      var err_msg = "";
@@ -228,7 +242,11 @@ function errorCallback(error) {
 		//}
 	}
 	else{
+<<<<<<< HEAD
 		
+=======
+			
+>>>>>>> map の map
 	}
 	?>
 
