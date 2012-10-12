@@ -13,16 +13,13 @@ $visit++; // カウント値+1
 
 setcookie('visitcount', $visit); // 有効期限なしのクッキーを設定
 
-echo $_REQUEST['lat'];
-echo '<br>';
-echo $_REQUEST['lon'];
+//echo $_REQUEST['lat'];
+//echo '<br>';
+//echo $_REQUEST['lon'];
 $lat=$_REQUEST['lat'];
 $lon=$_REQUEST['lon'];
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-   "http://www.w3.org/TR/html4/loose.dtd">
-
-<html lang="en">
+<html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>MAP</title>
@@ -30,9 +27,78 @@ $lon=$_REQUEST['lon'];
 	<meta name="author" content="SHEN RUIWEI">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
 	<link rel="stylesheet" href="style.css">
-	<!-- Date: 2012-10-11 -->
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true&hl=ja"></script>
+<script type="text/javascript">
+	var lat=0;
+	var lng=0;
+function initialize() {
+    var initPos = new google.maps.LatLng(<?php echo $lat ?>, <?php echo $lon ?>); 
+	var myOptions = {
+    	noClear : true,
+    	center : initPos,
+    	zoom : 17,
+    	mapTypeId : google.maps.MapTypeId.ROADMAP
+    };
+    var map_canvas = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+		
+//ユーザの位置情報取得
+    navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+
+    //位置情報取得成功時
+　　	function successCallback(position){
+　　　		lat = position.coords.latitude;
+    	lng = position.coords.longitude;
+   
+
+         //現在位置マーカーの生成
+      var nowlatlng = new google.maps.LatLng(lat, lng);
+　　　var marker = new google.maps.Marker({
+       position: nowlatlng,
+       map: map_canvas,
+      });
+
+	var info = new google.maps.InfoWindow({content: '<p>現在位置</p>'});
+
+	　google.maps.event.addListener(marker, 'click', function(){
+       info.open(map_canvas, marker);
+      });
+
+	  }
+
+function errorCallback(error) {
+     var err_msg = "";
+     switch(error.code){
+      case 1:
+       err_msg = "位置情報の利用が許可されていません";
+       break;
+      case 2:
+       err_msg = "デバイスの位置が判定できません";
+       break;
+      case 3:
+       err_msg = "タイムアウトしました";
+       break;
+     }
+      document.getElementById("show_result").innerHTML = err_msg;
+      //デバッグ用→　document.getElementById("show_result").innerHTML = error.message;
+    }
+
+  
+
+}
+</script>
 </head>
-<body>
+<body onload="initialize()">
+
+	<header>
+		<a href="./"><img src= "img/logo.png" style="width:100%"></a>
+		<img src= "img/line.png" style="width:100%">
+	
+	</header>
+
+
+
+
 	<div id="rest_area">
 	<?php
 	
@@ -66,7 +132,7 @@ $lon=$_REQUEST['lon'];
 	echo '<br>';
 	
 	if($_Id%2==0){
-		$sql0="select (('".$lat."'-lat)*('".$lat."'-lat)+('".$lon."'-lon)*('".$lon."'-lon)) dis,menu,introduction, photo,rid,name from mb_restaurant order by dis asc limit 0,5";
+		$sql0="select (('".$lat."'-lat)*('".$lat."'-lat)+('".$lon."'-lon)*('".$lon."'-lon)) dis,lat,lon,menu,introduction, photo,rid,name from mb_restaurant order by dis asc limit 0,5";
 
 		$table=mysql_query($sql0)or die(mysql_error());
 		
@@ -109,7 +175,7 @@ $lon=$_REQUEST['lon'];
 		//}
 	}
 	else{
-		$sql0="select (('".$lat."'-lat)*('".$lat."'-lat)+('".$lon."'-lon)*('".$lon."'-lon)) dis,photo,introduction,name,mb_restaurant.rid as rrid,mb_fake_rest.id from mb_restaurant,mb_fake_rest where mb_fake_rest.rid=mb_restaurant.rid order by mb_fake_rest.id asc limit 0,5";
+		$sql0="select (('".$lat."'-lat)*('".$lat."'-lat)+('".$lon."'-lon)*('".$lon."'-lon)) dis,lat,lon,photo,introduction,name,mb_restaurant.rid as rrid,mb_fake_rest.id from mb_restaurant,mb_fake_rest where mb_fake_rest.rid=mb_restaurant.rid order by mb_fake_rest.id asc limit 0,5";
 		$table=mysql_query($sql0)or die(mysql_error());
 		?>
 		<div id="info">一番近いお店</div>
@@ -147,13 +213,16 @@ $lon=$_REQUEST['lon'];
 		//	echo '<br/>';
 		//}
 	}
-	
-	
-	//data
-	
-
-
 	?>
+
+
+	  <div id="map_canvas" style="width:100%; height:200px;margin:10px 0;"></div>
+
+
+	
+
+
+
 </div>
 </body>
 </html>
