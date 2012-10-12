@@ -19,29 +19,20 @@ setcookie('visitcount', $visit); // 有効期限なしのクッキーを設定
 $lat=$_REQUEST['lat'];
 $lon=$_REQUEST['lon'];
 
-<<<<<<< HEAD
-$A_rid;
-=======
+
 $A_rid;$A_rlat;$A_rlon;$A_rname;
->>>>>>> map の map
 $i=0;
 $sql00="select (('".$lat."'-lat)*('".$lat."'-lat)+('".$lon."'-lon)*('".$lon."'-lon)) dis,lat,lon,menu,introduction, photo,rid,name from mb_restaurant order by dis asc limit 0,3";
 
 $table00=mysql_query($sql00)or die(mysql_error());
 while($data00=mysql_fetch_assoc($table00)){
 	$A_rid[$i]=$data00['rid'];
-<<<<<<< HEAD
-=======
 	$A_rlat[$i]=$data00['lat'];
 	$A_rlon[$i]=$data00['lon'];
 	$A_rname[$i]=$data00['name'];
->>>>>>> map の map
 	$i++;
 }
-//----------array test-------------
-echo $A_rid[0]."  ".$A_rid[1]."  ".$A_rid[2];
-echo '<br>';
-//---------------------------------
+
 ?>
 <html>
 <head>
@@ -74,7 +65,18 @@ function initialize() {
 　　　		lat = position.coords.latitude;
     	lng = position.coords.longitude;
    
-
+         //現在位置マーカーの生成
+      var nowlatlng = new google.maps.LatLng(lat, lng);
+　　　var marker = new google.maps.Marker({
+       position: nowlatlng,
+       map: map_canvas,
+      });
+      //情報ウィンドウの追加
+　　　var info = new google.maps.InfoWindow({content: '<p>現在位置</p>'});
+      //クリックしたら情報提示
+　　　google.maps.event.addListener(marker, 'click', function(){
+       info.open(map_canvas, marker);
+      });
         
 	<?php for($j=0;$j<3;$j++){ ?>   
       var rest<? echo $j ?> = new google.maps.LatLng( <? echo $A_rlat[$j] ."," .$A_rlon[$j] ?> );
@@ -123,7 +125,7 @@ function errorCallback(error) {
 		<img src= "img/line.png" style="width:100%">
 	
 	</header>
-
+  <div id="map_canvas" style="width:100%; height:200px;margin:10px 0;"></div>
 
 
 
@@ -242,9 +244,6 @@ function errorCallback(error) {
 		//}
 	}
 	else{
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 		$sql2=sprintf('select sid from mb_state where id=(select max(id) from mb_state)');
 		$table2=mysql_query($sql2)or die(mysql_error());
 		$data2=mysql_fetch_assoc($table2);
@@ -289,16 +288,11 @@ function errorCallback(error) {
 		else if($data2['sid']==1){
 			echo "show something";
 		}
->>>>>>> map
-		
-=======
-			
->>>>>>> map の map
 	}
 	?>
 
 
-	  <div id="map_canvas" style="width:100%; height:200px;margin:10px 0;"></div>
+	
 
 
 	
