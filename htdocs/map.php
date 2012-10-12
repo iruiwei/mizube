@@ -243,6 +243,53 @@ function errorCallback(error) {
 	}
 	else{
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+		$sql2=sprintf('select sid from mb_state where id=(select max(id) from mb_state)');
+		$table2=mysql_query($sql2)or die(mysql_error());
+		$data2=mysql_fetch_assoc($table2);
+		if($data2['sid']==0){
+			$sql0="select (('".$lat."'-lat)*('".$lat."'-lat)+('".$lon."'-lon)*('".$lon."'-lon)) dis,lat,lon,menu,introduction, photo,rid,name from mb_restaurant order by dis asc limit 0,3";
+
+			$table=mysql_query($sql0)or die(mysql_error());
+
+			?>
+
+			<div id="info">一番近いお店</div>
+
+				<?php
+				while($data=mysql_fetch_assoc($table)){
+					?>
+
+					<a href= "rest_info.php?rid=<?php echo $data['rid']?>"><div class= "restaurant">
+						<div class="rest_title"><?php echo $data['name']?>	
+						</div>
+						<div class= "rest_left">
+						<img src="<?php echo $data['photo']?>" class= "image_style" >
+						</div>
+						<div class="rest_right">
+						バルメニュー：<?php echo $data['menu']?><br>
+						<?php echo $data['introduction']?>
+
+						</div>
+						<div class= "rest_arrow">
+						</div>
+					</div>
+					</a>
+
+					<?php
+				}
+
+				?>
+
+				</div>
+
+			<?php
+		}
+		else if($data2['sid']==1){
+			echo "show something";
+		}
+>>>>>>> map
 		
 =======
 			
