@@ -1,6 +1,7 @@
 <?php
 session_start();
 require('dbconnect.php');
+$empty=0;
 if(!isset($_POST['name'])){
 	header('location:rest_search.php');
 	exit();
@@ -12,7 +13,8 @@ else{
 		$record0=mysql_query($sql0)or die(mysql_error());
  		$table0=mysql_fetch_assoc($record0);
  		if($table0['cnt']==0){
-			echo 'No result!';
+			echo '見つかりません!';
+			$empty=1;
 		}
 		else{
 			//echo $table0['cnt'] ." results";
@@ -24,7 +26,8 @@ else{
 		}
 	}
 	else{
-		echo "No result";
+		echo "見つかりません";
+		$empty=1;
 	}
 }
 ?>
@@ -162,6 +165,7 @@ else{
 <div id="info">レストラン情報</div>
 
 	<?php
+	if($empty==0){
 	while($data=mysql_fetch_assoc($recordset)){
 		?>
 		
@@ -183,6 +187,7 @@ else{
 		
 		<?php
 	}
+}
 	
 	?>
 

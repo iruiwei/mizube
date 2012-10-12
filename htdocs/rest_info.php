@@ -12,13 +12,14 @@ else{
 	header('location:rest_search.php');
 	exit();
 }
-
+  $empty = 0;
 	//$rid=$_POST['id'];
 	$sql0=sprintf('select count(*) as cnt from mb_restaurant where rid="%d"',mysql_real_escape_string($rid));
 	$record0=mysql_query($sql0)or die(mysql_error());
 	$table0=mysql_fetch_assoc($record0);
 	if($table0['cnt']==0){
-		echo 'No result!';
+		echo '見つかりません!';
+    $empty=1;
 	}
 	else{
 		$sql1=sprintf('select mb_area.name as aname, mb_restaurant.lon as rlon,mb_restaurant.lat as rlat,mb_restaurant.name as rname,view,uniqueuser,area_id,menu,opentime,closetime,opentime2,closetime2,photo,phone,introduction from mb_restaurant,mb_area where rid="%d" and area_id=id',mysql_real_escape_string($rid));
@@ -144,9 +145,11 @@ function initialize() {
 
 	<div class="rest_menu">
 	<?php
+  if($empty ==0){
 	while($data2=mysql_fetch_assoc($record2)){
 		echo $data2['comText'].'<br>';
 	}
+}
 	?>
 	</div>	
 	口コミを書く
