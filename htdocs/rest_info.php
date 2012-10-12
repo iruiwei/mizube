@@ -136,7 +136,7 @@ function initialize() {
   <a href="rest_route.php?rid=<? echo $rid ?> ">ここへのルート表示</a>
   </div>  
 	<div class="rest_menu">
-	エリア：<a href="" ><?php echo $data['aname'];?> </a>
+	エリア：<a href="rest_area.php?area=<?php echo $data['area_id'];?>" ><?php echo $data['aname'];?> </a>
 	</div>
 
 	<div class="rest_menu">

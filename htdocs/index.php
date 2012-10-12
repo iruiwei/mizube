@@ -80,7 +80,7 @@
 	  ・船の時刻や整理券の残り状況などを確認できます<br>
 	  ・お店を検索したり場所を案内できます<br>
 	 <small> *一部の機能にGPSを利用した位置情報を使用します。スマートフォン用のサイトです。位置が正確ではなかったり、対応していない機種があります。</small><br>
-	<a href=>アンケートにご協力お願いします。</a>
+	<a href="https://docs.google.com/spreadsheet/viewform?formkey=dDVUOWIzRjhzejZCOXVXSnhzNUtPYlE6MQ">アンケートにご協力お願いします。</a>
 	</div>
 	<div class= "nav">
 	<a href="gps.php"><img src="img/osusume.png" style="width:100%"></a>
