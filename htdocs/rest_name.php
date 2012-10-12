@@ -2,6 +2,14 @@
 session_start();
 require('dbconnect.php');
 $empty=0;
+if(isset($_POST['tlat'])&&isset($_POST['lon'])){
+	echo "aaa";
+	echo $_POST['tlat'].'<br>';
+	echo $_POST['tlon'];
+}
+if(!isset($_POST['tlat'])&&!isset($_POST['lon'])){
+	echo "Nooooo";
+}
 if(!isset($_POST['name'])){
 	header('location:rest_search.php');
 	exit();
@@ -159,7 +167,7 @@ else{
 	</header>
 	<div id="rest_area">
 
-	 <div id="info_top">エリア情報</div>
+	 <div id="info_top">エリア情報<?php $_POST['tlat'];?></div>
 	  <div id="map_canvas" style="width:100%; height:200px;"></div>
 
 <div id="info">レストラン情報</div>
