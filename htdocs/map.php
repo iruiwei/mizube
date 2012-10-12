@@ -139,7 +139,8 @@ function errorCallback(error) {
 		//$rec=mysql_query($sql0)or die(mysql_error());
 		//$table=mysql_fetch_assoc($rec);
 		//if($table['cnt']==0){
-			$sql1=sprintf('insert into mb_guest (id,views,lat,lon) values("%d","%d","%d","%d")',mysql_real_escape_string($_Id),mysql_real_escape_string($visit),$lat,$lon);
+			$sql1="insert into mb_guest (id,views,lat,lon) values(".mysql_real_escape_string($_Id).",".mysql_real_escape_string($visit).",".$lat.",".$lon.")";
+		
 			$record=mysql_query($sql1)or die(mysql_error());
 			//echo "初めての訪問ありがとうございます.<br />あなたのIDは".$_Id."です．";
 		//}
@@ -150,8 +151,9 @@ function errorCallback(error) {
 	else 
 	{
 		$_Id = $_COOKIE['IDcookie'];
-		$sql1=sprintf('insert into mb_guest (id,views,lat,lon) values("%d","%d","%d","%d")',mysql_real_escape_string($_Id),mysql_real_escape_string($visit),$lat,$lon);
+		$sql1="insert into mb_guest (id,views,lat,lon) values(".mysql_real_escape_string($_Id).",".mysql_real_escape_string($visit).",".$lat.",".$lon.")";
 		//$sql1=sprintf('update mb_guest set lat="%d",lon="%d",views="%d" where id="%d"',mysql_real_escape_string($lat),mysql_real_escape_string($lon),mysql_real_escape_string($visit),mysql_real_escape_string($_Id));
+	
 		$record1=mysql_query($sql1)or die(mysql_error());
 	 	//$table=mysql_fetch_assoc($record);
 
