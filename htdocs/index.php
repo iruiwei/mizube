@@ -79,7 +79,8 @@
 	  ・現在地からおすすめを自動で選択します<br>
 	  ・船の整理券の残り枚数をほぼリアルタイムで案内します<br>
 	  ・レストランの場所を案内します<br>
-	 <small> *GPS情報を使用します。位置が正確ではなかったり、対応していない機種があります。</small>
+	 <small> *GPS情報を使用します。スマートフォン用のサイトです。位置が正確ではなかったり、対応していない機種があります。</small><br>
+	 現在テスト運用中です。
 	</div>
 	<div class= "nav">
 	<a href="gps.php"><img src="img/osusume.png" style="width:100%"></a>
@@ -94,6 +95,8 @@
 	 <div id="info">
 	 <a href="http://osaka-mizubebar2012.seesaa.net/">水辺バル2012 公式サイト</a><br>
 	 開催期間：2012.10.13-14<br>
+	 <a href="">水先あんない帳について</a><br>
+
 	 </div>
 	 <div class="twitter">
 	 <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
