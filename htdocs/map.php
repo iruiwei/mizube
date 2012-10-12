@@ -236,7 +236,7 @@ function errorCallback(error) {
 		
 	}
 	else{
-<<<<<<< HEAD
+
 		$sql2=sprintf('select sid from mb_state where id=(select max(id) from mb_state)');
 		$table2=mysql_query($sql2)or die(mysql_error());
 		$data2=mysql_fetch_assoc($table2);
@@ -285,9 +285,7 @@ function errorCallback(error) {
 		else if($data2['sid']==1){
 			echo "show something";
 		}
-=======
 
->>>>>>> mapのmap2
 	}
 	?>
 
