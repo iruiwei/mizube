@@ -111,7 +111,7 @@ function initialize() {
 
 
 	<div class="rest_title"><?php echo $data['rname']?></div>
-	  <img src="img/curry.jpg" style= "width:100%;" >
+	  <img src="<?php echo $data['photo']?>" style= "width:100%;" >
 	<div class="rest_menu">
 	バルメニュー：<br>
 

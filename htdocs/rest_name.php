@@ -169,7 +169,7 @@ else{
 			<div class="rest_title"><?php echo $data['name']?>	
 			</div>
 			<div class= "rest_left">
-			<img src="img/curry.jpg" class= "image_style" >
+			<img src="<?php echo $data['photo']?>" class= "image_style" >
 			</div>
 			<div class="rest_right">
 			バルメニュー：<?php echo $data['menu']?><br>
