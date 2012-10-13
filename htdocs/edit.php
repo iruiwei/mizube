@@ -80,7 +80,7 @@ $d=2;
 	<?php
 	while($data3=mysql_fetch_assoc($recordset3)){
 		$t=strtotime($data3['depTime']);
-		$A_st[$st]=$data3['sid'];
+		$A_st[$st]=$data3['sid']+100;
 		if($count!=0&&$i>6&&$count==idate('H',$t)){
 			?></tr><?php
 		}
@@ -95,7 +95,7 @@ $d=2;
 				<th><?php echo idate('H',$t)?></th>
 				<td>
 					<?php echo idate('i',$t)." ";?>
-					<select name="<?php echo $data3['sid']?>" >
+					<select name="<?php echo ($data3['sid']+100)?>" >
 					<?php
 					if($data3['currentTicket1']>=10){
 						?><option value="0"><?php echo "◎";$nt=0;?></option><?php
@@ -123,7 +123,7 @@ $d=2;
 		else{?>
 			<td>
 				<?php echo idate('i',$t)." ";?>
-				<select name="<?php echo $data3['sid']?>" >
+				<select name="<?php echo ($data3['sid']+100)?>" >
 				<?php
 				if($data3['currentTicket1']>=10){
 					?><option value="0"><?php echo "◎";$nt=0;?></option><?php

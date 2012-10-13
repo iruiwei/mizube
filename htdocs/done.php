@@ -15,12 +15,12 @@ if(isset($_SESSION['sid'])&&isset($_SESSION['aid'])){
 		else if($_POST[$sid]==1) $ch=9;
 		else if($_POST[$sid]==2) $ch=4;
 		else $ch=0;
-		$case=$case."when ".$sid." then ".$ch." ";
+		$case=$case."when ".($sid-100)." then ".$ch." ";
 		if($count==0){
-			$asid=$sid;
+			$asid=($sid-100);
 		}
 		else{
-			$asid=$asid.",".$sid;
+			$asid=$asid.",".($sid-100);
 		}
 		$count++;
 	}
