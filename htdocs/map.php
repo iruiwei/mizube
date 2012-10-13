@@ -139,7 +139,7 @@ function errorCallback(error) {
 		//$rec=mysql_query($sql0)or die(mysql_error());
 		//$table=mysql_fetch_assoc($rec);
 		//if($table['cnt']==0){
-			$sql1="insert into mb_guest (id,views,lat,lon) values(".mysql_real_escape_string($_Id).",".mysql_real_escape_string($visit).",".$lat.",".$lon.")";
+			$sql1="insert into mb_guest (id,views,lat,lon,page) values(".mysql_real_escape_string($_Id).",".mysql_real_escape_string($visit).",".$lat.",".$lon.",1)";
 		
 			$record=mysql_query($sql1)or die(mysql_error());
 			//echo "初めての訪問ありがとうございます.<br />あなたのIDは".$_Id."です．";
@@ -151,7 +151,7 @@ function errorCallback(error) {
 	else 
 	{
 		$_Id = $_COOKIE['IDcookie'];
-		$sql1="insert into mb_guest (id,views,lat,lon) values(".mysql_real_escape_string($_Id).",".mysql_real_escape_string($visit).",".$lat.",".$lon.")";
+		$sql1="insert into mb_guest (id,views,lat,lon,page) values(".mysql_real_escape_string($_Id).",".mysql_real_escape_string($visit).",".$lat.",".$lon.",1)";
 		//$sql1=sprintf('update mb_guest set lat="%d",lon="%d",views="%d" where id="%d"',mysql_real_escape_string($lat),mysql_real_escape_string($lon),mysql_real_escape_string($visit),mysql_real_escape_string($_Id));
 	
 		$record1=mysql_query($sql1)or die(mysql_error());
@@ -163,7 +163,7 @@ function errorCallback(error) {
 	
 	echo '<br>';
 	
-	if($_Id%3==0){
+	if($_Id%3==1){
 		$sql0="select (('".$lat."'-lat)*('".$lat."'-lat)+('".$lon."'-lon)*('".$lon."'-lon)) dis,lat,lon,menu,introduction, photo,rid,name from mb_restaurant order by dis asc limit 0,3";
 
 		$table=mysql_query($sql0)or die(mysql_error());
@@ -194,6 +194,7 @@ function errorCallback(error) {
 
 				<?php
 			}
+			
 
 			?>
 
@@ -202,9 +203,12 @@ function errorCallback(error) {
 		<?php
 	
 	}
-	else if($_Id%3==1){
-		$sql0="select (('".$lat."'-lat)*('".$lat."'-lat)+('".$lon."'-lon)*('".$lon."'-lon)) dis,lat,lon,photo,introduction,name,mb_restaurant.rid as rrid,mb_fake_rest.id from mb_restaurant,mb_fake_rest where mb_fake_rest.rid=mb_restaurant.rid order by mb_fake_rest.id asc limit 0,3";
+	else if($_Id%3==0){
+		$sql0="select (('".$lat."'-lat)*('".$lat."'-lat)+('".$lon."'-lon)*('".$lon."'-lon)) dis,lat,lon,menu,introduction, photo,rid,name from mb_restaurant order by dis asc limit 0,3";
+		$sql1="select (('".$lat."'-lat)*('".$lat."'-lat)+('".$lon."'-lon)*('".$lon."'-lon)) dis,lat,lon,aid,area_name from mb_port order by dis asc limit 0,3";
+		//$sql0="select (('".$lat."'-lat)*('".$lat."'-lat)+('".$lon."'-lon)*('".$lon."'-lon)) dis,lat,lon,photo,introduction,name,mb_restaurant.rid as rrid,mb_fake_rest.id from mb_restaurant,mb_fake_rest where mb_fake_rest.rid=mb_restaurant.rid order by mb_fake_rest.id asc limit 0,3";
 		$table=mysql_query($sql0)or die(mysql_error());
+		$table1=mysql_query($sql1)or die (mysql_error());
 		?>
 		<div id="info">一番近いお店</div>
 
@@ -228,6 +232,13 @@ function errorCallback(error) {
 				</div>
 				</a>
 
+				<?php
+			}
+			echo "お近くの船着場も行ってみましょう〜".'<br>';
+			while($data1=mysql_fetch_assoc($table1)){
+				?>
+				<a href="ship_route.php?rid=<?php echo $data1['aid'];?>"><?php echo $data1['area_name'];?></a><br>
+				
 				<?php
 			}
 

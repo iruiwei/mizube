@@ -11,67 +11,50 @@
 	<script type="text/javascript" src="jquery-1.8.2.min.js"></script>
 	<!-- Date: 2012-10-07 -->
 	
-	<script type="text/javascript">
-	var lat=0;
-	var lng=0;
-	
-	function initialize(){
-		
-		navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
-		
-		function successCallback(position){
-			var gl_text = "緯度：" + position.coords.latitude + "<br>";
-			gl_text += "経度：" + position.coords.longitude + "<br>";
-			document.getElementById("show_result").innerHTML = gl_text;
-
-			//phpに値送信
-			lat = position.coords.latitude;
-			lng = position.coords.longitude;
-			
-			document.write(lat);
-			document.write('/n');
-			document.write(lng);
-			
-			
-
-			$(function(){
-				$('#sw').click(
-					function(){
-						$.post("test_post.php",  // リクエストURL
-							   {"key1": lat, "key2": lng}, // データ	//ここに緯度経度
-								"html" // 応答データ形式
-						);
-					}
-				);
-			}
-			);
-		}
-		
-		function errorCallback(error) {
-		     var err_msg = "";
-		     switch(error.code){
-		      case 1:
-		       err_msg = "位置情報の利用が許可されていません";
-		       break;
-		      case 2:
-		       err_msg = "デバイスの位置が判定できません";
-		       break;
-		      case 3:
-		       err_msg = "タイムアウトしました";
-		       break;
-		     }
-		      document.getElementById("show_result").innerHTML = err_msg;
-		      //デバッグ用→　document.getElementById("show_result").innerHTML = error.message;
-		}
-	}	
-	</script>
 </head>
-<body onload="initialize()">
-	<div id="show_result"></div>
-	<br>
+<body>
+	<!--<div id="show_result"></div>-->
+	<form method="post" action="test_post.php">
 	
-	<a href="javascript: void(0)" id="sw">switch</a><br/>
-	<br>
+	
+	
+	<script>
+	//gps
+	navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+
+	function successCallback(position){
+		//phpに値送信
+		//window.location.href="map.php?lat="+position.coords.latitude+"&lon="+position.coords.longitude;
+		
+		var lat = position.coords.latitude;
+		var lon= position.coords.longitude;
+		var tlat = document.getElementById("tlat");
+		var tlon = document.getElementById("tlon");
+		tlat.value = position.coords.latitude;
+		tlon.value = position.coords.longitude;
+	}
+	function errorCallback(error) {
+	     var err_msg = "";
+	     switch(error.code){
+	      case 1:
+	       err_msg = "位置情報の利用が許可されていません";
+	       break;
+	      case 2:
+	       err_msg = "デバイスの位置が判定できません";
+	       break;
+	      case 3:
+	       err_msg = "タイムアウトしました";
+	       break;
+	     }
+	}
+	</script>
+	
+	<input type="hidden" name="tlat" >
+	<input type="hidden" name="tlon" >
+	<input type="submit" value="ok">
+	
+	</form>
+	
 	
 
 </body>

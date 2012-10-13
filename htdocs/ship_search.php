@@ -84,8 +84,8 @@
 		<div class="bar">
 			<img src= "img/horizontalbar.png">
 		</div>
-		<div class="s_point?area=4">
-			<a href="ship.php"><img src= "img/6.png"class="s_point"></a>
+		<div class="s_point">
+			<a href="ship.php?area=4"><img src= "img/6.png"class="s_point"></a>
 		</div>
 	</div>	
 	<footer>

@@ -25,7 +25,7 @@ require('dbconnect.php');
 	var lng=0;
   	function initialize() {
       <?php
-      $sql1=sprintf('select area_name,lat,lon from mb_restaurant where aid = "%d"',mysql_real_escape_string($rid));
+      $sql1=sprintf('select distinct areaId as area_id,area_name as name,lat,lon areaId from mb_port,mb_shiptime where departureID=mb_port.aid and mb_port.aid =  "%d"',mysql_real_escape_string($rid));
     $recordset1=mysql_query($sql1)or die(mysql_error()); 
     $areaLat=34.690632;
     $areaLon= 135.516083;
@@ -171,7 +171,7 @@ require('dbconnect.php');
   <div class="rest_route">
   </div>  
 	<div class="rest_menu">
-	エリア：<a href="rest_area.php?area=<? echo $areaID ?> " >天満橋エリア </a>
+	エリア：<a href="rest_area.php?area=<? echo $areaID ?> " ><?php echo $data1['name'];?> </a>
 	</div>
 
 	<div class="rest_menu">

@@ -25,7 +25,7 @@ if(isset($_SESSION['sid'])&&isset($_SESSION['aid'])){
 		$count++;
 	}
 	
-	$sql="update mb_shiptime2 set currentTicket1=case sid ".mysql_real_escape_string($case)." end where sid in (".mysql_real_escape_string($asid).")";
+	$sql="update mb_shiptime set currentTicket1=case sid ".mysql_real_escape_string($case)." end where sid in (".mysql_real_escape_string($asid).")";
 	echo '<br>';
 	mysql_query($sql)or die(mysql_error());
 	$case="";

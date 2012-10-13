@@ -1,5 +1,23 @@
 <?php
 require('dbconnect.php');
+
+if( isset($_COOKIE['visitcount']) )
+{ // クッキーがあればその値がカウント値
+  $visit = $_COOKIE['visitcount'];
+} 
+else{ // クッキーがなければ初回訪問としてカウント値は0
+  $visit = 0;
+}
+
+$visit++; // カウント値+1
+
+setcookie('visitcount', $visit); // 有効期限なしのクッキーを設定
+
+//echo $_REQUEST['lat'];
+//echo '<br>';
+//echo $_REQUEST['lon'];
+$lat=$_REQUEST['lat'];
+$lon=$_REQUEST['lon'];
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
@@ -37,36 +55,37 @@ require('dbconnect.php');
 </script>
 </head>
 <body>
-	<script>
-	//gps
-	navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
-
-	function successCallback(position){
-		//phpに値送信
-		//window.location.href="map.php?lat="+position.coords.latitude+"&lon="+position.coords.longitude;
+	<?php
+	
+	if($visit == 1) {
+		$_Id = mt_rand();
+		setcookie('IDcookie', $_Id); // 有効期限なしのクッキーを設定
+		//$sql0=sprintf('select count(*) as cnt from mb_guest where id="%d"',mysql_real_escape_string($_Id));
+		//$rec=mysql_query($sql0)or die(mysql_error());
+		//$table=mysql_fetch_assoc($rec);
+		//if($table['cnt']==0){
+			$sql1="insert into mb_guest (id,views,lat,lon,page) values(".mysql_real_escape_string($_Id).",".mysql_real_escape_string($visit).",".$lat.",".$lon.",2)";
 		
-		var lat = position.coords.latitude;
-		var lon= position.coords.longitude;
-		var tlat = document.getElementById("tlat");
-		var tlon = document.getElementById("tlon");
-		tlat.value = lat;
-		tlon.value = lon;
+			$record=mysql_query($sql1)or die(mysql_error());
+			//echo "初めての訪問ありがとうございます.<br />あなたのIDは".$_Id."です．";
+		//}
+		//else{
+		//	echo "Error!";
+		//}
 	}
-	function errorCallback(error) {
-	     var err_msg = "";
-	     switch(error.code){
-	      case 1:
-	       err_msg = "位置情報の利用が許可されていません";
-	       break;
-	      case 2:
-	       err_msg = "デバイスの位置が判定できません";
-	       break;
-	      case 3:
-	       err_msg = "タイムアウトしました";
-	       break;
-	     }
+	else 
+	{
+		$_Id = $_COOKIE['IDcookie'];
+		$sql1="insert into mb_guest (id,views,lat,lon,page) values(".mysql_real_escape_string($_Id).",".mysql_real_escape_string($visit).",".$lat.",".$lon.",2)";
+		//$sql1=sprintf('update mb_guest set lat="%d",lon="%d",views="%d" where id="%d"',mysql_real_escape_string($lat),mysql_real_escape_string($lon),mysql_real_escape_string($visit),mysql_real_escape_string($_Id));
+	
+		$record1=mysql_query($sql1)or die(mysql_error());
+	 	//$table=mysql_fetch_assoc($record);
+
+		//echo "ID:".$_Id."さん".'<br />';
+		//echo "今回で".$visit."回目の訪問になります";
 	}
-	</script>
+	?>
 	
 	
 <header>
