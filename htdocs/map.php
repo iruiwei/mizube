@@ -204,12 +204,25 @@ function errorCallback(error) {
 	
 	}
 	else if($_Id%3==0){
+
+
 		$sql0="select (('".$lat."'-lat)*('".$lat."'-lat)+('".$lon."'-lon)*('".$lon."'-lon)) dis,lat,lon,menu,introduction, photo,rid,name from mb_restaurant order by dis asc limit 0,3";
 		$sql1="select (('".$lat."'-lat)*('".$lat."'-lat)+('".$lon."'-lon)*('".$lon."'-lon)) dis,lat,lon,aid,area_name from mb_port order by dis asc limit 0,3";
 		//$sql0="select (('".$lat."'-lat)*('".$lat."'-lat)+('".$lon."'-lon)*('".$lon."'-lon)) dis,lat,lon,photo,introduction,name,mb_restaurant.rid as rrid,mb_fake_rest.id from mb_restaurant,mb_fake_rest where mb_fake_rest.rid=mb_restaurant.rid order by mb_fake_rest.id asc limit 0,3";
 		$table=mysql_query($sql0)or die(mysql_error());
 		$table1=mysql_query($sql1)or die (mysql_error());
-		?>
+
+
+			echo "お近くの船着場に行ってみましょう〜！".'<br>';
+			while($data1=mysql_fetch_assoc($table1)){
+				?>
+				<a href="ship_route.php?rid=<?php echo $data1['aid'];?>"><?php echo $data1['area_name'];?></a><br>
+				
+				<?php
+			}
+
+			?>
+
 		<div id="info">一番近いお店</div>
 
 			<?php
@@ -234,14 +247,6 @@ function errorCallback(error) {
 
 				<?php
 			}
-			echo "お近くの船着場も行ってみましょう〜".'<br>';
-			while($data1=mysql_fetch_assoc($table1)){
-				?>
-				<a href="ship_route.php?rid=<?php echo $data1['aid'];?>"><?php echo $data1['area_name'];?></a><br>
-				
-				<?php
-			}
-
 			?>
 
 			</div>
@@ -298,8 +303,20 @@ function errorCallback(error) {
 		else if($data2['sid']==1){
 		//	echo "show something";
 		$sql0="select (('".$lat."'-lat)*('".$lat."'-lat)+('".$lon."'-lon)*('".$lon."'-lon)) dis,lat,lon,menu,introduction, photo,rid,name from mb_restaurant order by dis asc limit 0,3";
+		$sql1="select (('".$lat."'-lat)*('".$lat."'-lat)+('".$lon."'-lon)*('".$lon."'-lon)) dis,lat,lon,aid,area_name from mb_port order by dis asc limit 0,3";
 
 			$table=mysql_query($sql0)or die(mysql_error());
+
+			$table1=mysql_query($sql1)or die (mysql_error());
+
+
+			echo "お近くの船着場に行ってみましょう〜！！".'<br>';
+			while($data1=mysql_fetch_assoc($table1)){
+				?>
+				<a href="ship_route.php?rid=<?php echo $data1['aid'];?>"><?php echo $data1['area_name'];?></a><br>
+				
+				<?php
+			}
 
 			?>
 

@@ -51,7 +51,7 @@ require('dbconnect.php');
  	
 
     //ユーザの位置情報取得
-    navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+    navigator.geolocation.watchPosition(successCallback, errorCallback);
 
     //位置情報取得成功時
 　　	function successCallback(position){
